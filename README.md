@@ -1,8 +1,10 @@
 # AI Close Skills
 
-An agency founder wants to give a client a report they can trust. A VP at a cash services company wants a list of prospects the team can actually serve. This library starts with the business result and gives people a way to bring the work into their own AI workspace.
+A library of business workflows for your AI workspace. Pick the result you need, open the skill file, and give your model the instructions and inputs.
 
-## Find a skill by outcome
+[Browse the skill index](#skill-index) · [Run an example](#agency-reporting-example) · [Contribute a case](#contribute-a-case)
+
+## Skill index
 
 | Category | What someone needs to get done | Where to start |
 | --- | --- | --- |
