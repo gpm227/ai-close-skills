@@ -1,35 +1,40 @@
 # AI Close Skills
 
-Give your team a way to do a job with AI and judge whether the work is good enough to use. Start with the result you need. Each skill is a Markdown file you can bring into your own AI workspace.
+An agency founder wants to give a client a report they can trust. A VP at a cash services company wants a list of prospects the team can actually serve. This library starts with the business result and gives people a way to bring the work into their own AI workspace.
 
-## What do you need to do?
+## Find a skill by outcome
 
-| I need to… | Bring this | Get this |
+| Category | What someone needs to get done | Where to start |
 | --- | --- | --- |
-| [Tell whether orders are actually down this month](plugins/department-skills/skills/period-report/SKILL.md) | Daily totals for this month and last month, plus the reporting cutoff | A like-for-like comparison showing the dates, totals, and change. |
-| [Fix a mistake the team keeps making with AI](plugins/department-skills/skills/improve-skill/SKILL.md) | The skill version, an output that missed the mark, and evidence of what should have happened | A proposed change the team lead can review, with a test for the next time someone does the job. |
+| Agency | Give a client an accurate month-to-date performance update. | [Compare matching periods](plugins/department-skills/skills/period-report/SKILL.md) · available |
+| Financial and cash services | Give sales a list of institutions that fit the offer and operate inside its service area. | [Target-account lists and buying contacts](CATALOG.md) · planned, §4.1–4.2 |
+| Marketing and growth | Turn an approved offer and customer proof into a one-sheet a rep can send or an email sequence the team can run. | [One-sheets, outbound email, and sequences](CATALOG.md) · planned, §3.7, §3.3, §4.3 |
+| Analytics | Determine whether a metric moved and show the dates and totals behind the conclusion. | [Run the reporting example](#agency-reporting-example) · available with a Python check |
+| Fast-casual restaurants | Tell an operator whether orders at a location are up or down through the same day last month. | [Use the period report](plugins/department-skills/skills/period-report/SKILL.md) with one location’s daily totals · available |
 
-## Try it on a report
+The [outbound catalog](CATALOG.md) describes 21 planned skills and the deliverable each one will produce. The two skills you can use today are **Period Report** and **Improve a Skill**.
 
-You’re 18 days into May. The team has 180 orders. April closed at 300. Someone looking at those two numbers could report a 40% decline. But April also had 180 orders through the 18th. Orders are flat. The decision to investigate a drop turns on which dates you compare.
+## Agency reporting example
 
-1. Copy the [reporting skill](plugins/department-skills/skills/period-report/SKILL.md) into a fresh conversation in Claude or your preferred LLM.
-2. Attach the [sample order export](proof/a/daily.csv) and ask: **How did orders change month over month through May 18, 2026?**
-3. Check the answer. It should compare May 1–18 with April 1–18, show 180 orders in each period, and report 0% change.
+A client asks whether orders are down. It’s May 18. They have 180 orders against 300 for all of April. That looks like a 40% decline. Through April 18, they also had 180 orders. The line that belongs in the client report is **“Orders are flat through the 18th.”**
 
-To verify the result locally, save the JSON object from the answer as `actual-a.json` in a local copy of this repo. Run `python3 proof/check.py a actual-a.json`. The checker names any field that differs from the expected result. There’s a [second export](proof/b/daily.csv) to try in a fresh conversation.
+1. Copy the [reporting instructions](plugins/department-skills/skills/period-report/SKILL.md) into a fresh conversation in your LLM.
+2. Attach the [sample daily orders](proof/a/daily.csv) and ask, **“How did orders change month over month through May 18, 2026?”**
+3. Look for both date ranges, 180 orders in each period, and a change of 0%.
 
-## What we’re building for outbound teams
+## Use a skill in your team or application
 
-A rep needs a one-sheet for a buyer meeting. To produce one they can send, the writer needs to know who the buyer is, what the company can promise, which claims it can prove, and how the company sounds. The next outbound email needs much of the same material. Define it once and both jobs get better inputs.
+Each skill lives in a readable Markdown file. Give it to the model along with the input it calls for. To integrate the reporting skill into an application, run the [checker](proof/check.py) against the model’s actual output. Save the JSON object from the response as `actual-a.json` and run the following from a local copy of the repo.
 
-The [outbound catalog](CATALOG.md) lays out 21 planned skills, from defining an ideal customer to writing the one-sheet and evaluating a campaign. Each entry names the deliverable. The two skills at the top of this page are available today.
+```sh
+python3 proof/check.py a actual-a.json
+```
 
-## Bring it into your company
+The checker reports which fields differ from the expected answer and exits with a nonzero status on failure. Use the [second export](proof/b/daily.csv) to test another case.
 
-Keep your rules, examples, and approved changes in a private repo your company owns. When someone spots a recurring error, the team lead can review a correction and the evidence behind it. Once released, the next person can use what the team learned. The [deployment guide](company/DEPLOY.md) covers that process. The [run record](company/run-record.json) gives you a place to connect a prompt and its output to cost and the business result when you can observe them.
+When the team finds a recurring mistake, use [Improve a Skill](plugins/department-skills/skills/improve-skill/SKILL.md) to turn the example into a proposed correction and a regression test. The [deployment guide](company/DEPLOY.md) shows how a company can own its private rules, approve a change, and distribute it to the next person doing the work.
 
-For help putting a departmental workflow into practice, visit [AI Close](https://aiclosehq.com/).
+For help implementing a workflow in your company, visit [AI Close](https://aiclosehq.com/).
 
 ## Contribute a case
 
