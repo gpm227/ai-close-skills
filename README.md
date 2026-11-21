@@ -3,7 +3,7 @@
 Pick the job you need to do. Open the linked skill and give your AI workspace the instructions and the inputs it asks for.
 
 - [Reporting](#reporting) — Find out whether orders rose or fell over comparable dates.
-- [Outbound](#outbound) — Decide which accounts to pursue and write the page those buyers will see.
+- [Outbound](#outbound) — Choose target accounts, draft an email sequence, or write a landing page.
 
 ## Reporting
 
@@ -27,6 +27,7 @@ The checker identifies fields that differ from the expected answer and exits wit
 | --- | --- | --- |
 | Decide what makes an account a fit. | [Define the ideal customer profile](plugins/department-skills/skills/define-icp/SKILL.md) | Eligibility rules, exclusions and the evidence needed to make a decision. |
 | Decide which accounts sales should pursue. | [Build a target-account list](plugins/department-skills/skills/build-target-accounts/SKILL.md) | One row per account with a decision, the reason and the supporting record. |
+| Draft an outbound email sequence. | [Write outbound email](plugins/department-skills/skills/write-outbound-email/SKILL.md) | An opener and follow-ups grounded in the buyer, offer and evidence. [Try a two-email brief](plugins/department-skills/skills/write-outbound-email/references/worksheet-sequence.md). |
 | Write the landing page for an offer. | [Write conversion copy](plugins/department-skills/skills/write-conversion-copy/SKILL.md) | A headline, supporting copy and a call to action that matches what happens after the click. |
 
 **Which accounts qualify?** Try the worked example in [Build a target-account list](plugins/department-skills/skills/build-target-accounts/SKILL.md). The offer covers companies with 5–20 sites in one state and excludes current customers. Give the model the four account records from the example and check its decisions.
@@ -40,9 +41,11 @@ The checker identifies fields that differ from the expected answer and exits wit
 
 All four accounts should appear once. Give the model a duplicate site row for North and check that its count stays at five.
 
-The [outbound catalog](CATALOG.md) lists 21 skills. The three linked above are available now. The other 18 are planned.
+The [outbound catalog](CATALOG.md) lists 21 skills. The four linked above are available now. The other 17 are planned.
 
 ## Use a skill with your team
+
+Use [Build a Department Skill](plugins/department-skills/skills/build-department-skill/SKILL.md) to turn a recurring job into skill instructions, a standard the lead can confirm, and examples that test the standard. See [a one-question lead review](plugins/department-skills/skills/build-department-skill/references/outbound-standard.md).
 
 When the team finds a recurring mistake, use [Improve a Skill](plugins/department-skills/skills/improve-skill/SKILL.md) to turn the example into a proposed correction and a regression test. The [private deployment guide](company/DEPLOY.md) includes an installer, release verification, rollback instructions, and a local feedback recorder. Start there to put the skills under company ownership.
 

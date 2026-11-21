@@ -15,7 +15,7 @@ These 21 skills are grouped by the work they support. Sections 1–4 cover custo
 | 2.5 | Retrieve brand assets | Correct file and usage guidance |
 | 3.1 | Write brand copy | Reusable company and product descriptions |
 | 3.2 | [Write conversion copy](plugins/department-skills/skills/write-conversion-copy/SKILL.md) | Page headline, supporting evidence and CTA |
-| 3.3 | Write outbound email | Buyer-specific email and follow-ups |
+| 3.3 | [Write outbound email](plugins/department-skills/skills/write-outbound-email/SKILL.md) | Buyer-specific email and follow-ups |
 | 3.4 | Write LinkedIn outreach | Connection note and messages |
 | 3.5 | Develop thought leadership | Attributed point of view and supporting argument |
 | 3.6 | Write a LinkedIn post | Publishable post in the author's voice |

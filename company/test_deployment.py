@@ -43,7 +43,10 @@ class DeploymentTest(unittest.TestCase):
         expected_sha = subprocess.check_output(["git", "-C", SOURCE, "rev-parse", "HEAD"], text=True).strip()
         self.assertEqual(json.loads((self.company / "UPSTREAM.json").read_text())["commit"], expected_sha)
         self.assertEqual(self.run_command("git", "remote").strip(), "")
-        self.assertEqual(len(list(self.plugin.glob("skills/*/RELEASE.json"))), 5)
+        public_skills = {path.parent.name for path in (SOURCE / "plugins/department-skills").glob("skills/*/SKILL.md")}
+        installed_receipts = {path.parent.name for path in self.plugin.glob("skills/*/RELEASE.json")}
+        self.assertTrue({"build-department-skill", "write-outbound-email"} <= public_skills)
+        self.assertEqual(installed_receipts, public_skills)
         self.run_command(*self.install, status=1)
         self.run_command(sys.executable, "company/release.py", "verify", str(self.plugin))
 
