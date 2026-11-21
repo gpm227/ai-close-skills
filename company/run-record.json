@@ -1,0 +1,14 @@
+{
+  "run_id": null,
+  "completed_at": null,
+  "skill": null,
+  "served_version": null,
+  "prompt_ref": null,
+  "response_ref": null,
+  "cost": {"amount": null, "currency": null, "source": null},
+  "business_outcome": {"measure": null, "baseline": null, "observed": null, "unit": null, "evidence_ref": null},
+  "check": {"benchmark_version": null, "verdict": "pending", "evidence_ref": null},
+  "staff_feedback": {"vote": null, "reason": null},
+  "review_ref": null,
+  "verified_release": null
+}
