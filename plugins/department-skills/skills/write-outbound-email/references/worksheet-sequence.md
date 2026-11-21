@@ -20,6 +20,8 @@ Would the worksheet be useful?
 
 ## Check your draft
 
-Both touches give the reader one decision. Try replacing the opening sentence with “Tell me how you compare orders across stores.” The new opener has a second ask even though it still has just one question mark.
+Both touches ask whether the buyer wants the worksheet. Try changing the close to “Would you like the worksheet, and are you free Thursday for a walkthrough?” A buyer who wants the worksheet still has a separate scheduling decision. For this brief, keep the worksheet offer.
+
+Now try a brief where the buyer has asked to see the worksheet in a live walkthrough and the sender can offer Tuesday or Thursday. “Would Tuesday or Thursday work?” passes. The two options resolve one scheduling decision.
 
 Try changing the request to say the sender can only share a blank worksheet. An offer to analyze the recipient's data would then fail the delivery check. A conversion or time-savings claim would also fail unless the brief supplied evidence.

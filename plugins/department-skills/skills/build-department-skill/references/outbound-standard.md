@@ -10,7 +10,7 @@ Synthetic example. Status: proposed.
 
 **Ready to use when**
 
-1. Every email asks the reader for one decision they can make by replying. The original draft asks for permission and a meeting. It fails even though it has one question mark.
+1. Each outbound touch asks the buyer for one decision they can make by replying. The original draft asks for permission and a meeting. It fails even though it has one question mark.
 2. Each claim about the offer can be traced to the brief. A claimed savings percentage fails when the brief only describes the worksheet.
 3. Each follow-up gives the reader a fresh reason to consider the same offer. Repeating the opener with “bumping this” fails.
 
@@ -20,6 +20,11 @@ Synthetic example. Status: proposed.
 
 ## From one edit to a proposed improvement
 
-Suppose a prior version said “End with one question.” The approved standard above would support changing that instruction to “Ask for one decision. Count the commitments, including requests in the body.” Compare both snippets, then try an independent example: “Reply with a store count. Would you like the worksheet?” The request for information and the offer are still two asks.
+Suppose a prior version said “End with one question.” The approved standard above would support changing that instruction to “Ask for one decision. Count the commitments, including requests in the body.” Then test a different brief where the goal is to schedule a walkthrough:
+
+- **Pass** — “Would Tuesday or Thursday work for a walkthrough?” Either answer schedules the same next step.
+- **Fail** — “Would Tuesday or Thursday work for a walkthrough, and should I put together a proposal?” The buyer could accept the walkthrough and decline the proposal. The sender needs two independent decisions.
+
+Keep this standard scoped to outbound email when using the builder for another department or deliverable.
 
 In a company deployment, the draft editor could supply the saved revisions and skill version. A campaign system could later supply a reply tied to the message. A teammate's edit alone establishes neither the reason for the edit nor a buyer response. Include the observed revision, the relevant confirmed rule, and results on fresh input in a private change request. The lead decides whether it ships.
