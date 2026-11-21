@@ -1,9 +1,13 @@
 {
   "name": "ai-close-skills",
-  "owner": {"name": "AI Close"},
-  "plugins": [{
-    "name": "department-skills",
-    "source": "./plugins/department-skills",
-    "description": "Compare reporting periods and propose reviewed improvements."
-  }]
+  "owner": {
+    "name": "AI Close"
+  },
+  "plugins": [
+    {
+      "name": "department-skills",
+      "source": "./plugins/department-skills",
+      "description": "Define an ICP, build a target-account list, write conversion copy, compare reporting periods, and propose reviewed corrections."
+    }
+  ]
 }

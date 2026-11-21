@@ -9,12 +9,12 @@ A library of business workflows for your AI workspace. Pick the result you need,
 | Category | What someone needs to get done | Where to start |
 | --- | --- | --- |
 | Agency | Give a client an accurate month-to-date performance update. | [Compare matching periods](plugins/department-skills/skills/period-report/SKILL.md) · available |
-| Financial and cash services | Give sales a list of institutions that fit the offer and operate inside its service area. | [Target-account lists and buying contacts](CATALOG.md) · planned, §4.1–4.2 |
-| Marketing and growth | Turn an approved offer and customer proof into a one-sheet a rep can send or an email sequence the team can run. | [One-sheets, outbound email, and sequences](CATALOG.md) · planned, §3.7, §3.3, §4.3 |
+| Financial and cash services | Give sales a list of institutions that fit the offer and operate inside its service area. | [Build a target-account list](plugins/department-skills/skills/build-target-accounts/SKILL.md) · available |
+| Marketing and growth | Give a buyer a landing page with a credible claim and a next step sales can deliver. | [Write conversion copy](plugins/department-skills/skills/write-conversion-copy/SKILL.md) · available |
 | Analytics | Determine whether a metric moved and show the dates and totals behind the conclusion. | [Run the reporting example](#agency-reporting-example) · available with a Python check |
 | Fast-casual restaurants | Tell an operator whether orders at a location are up or down through the same day last month. | [Use the period report](plugins/department-skills/skills/period-report/SKILL.md) with one location’s daily totals · available |
 
-The [outbound catalog](CATALOG.md) describes 21 planned skills and the deliverable each one will produce. The two skills you can use today are **Period Report** and **Improve a Skill**.
+The [outbound catalog](CATALOG.md) tracks 21 skills. Three are available: [define the ICP](plugins/department-skills/skills/define-icp/SKILL.md), build a target-account list, and write conversion copy. Period Report and Improve a Skill are also available.
 
 ## Agency reporting example
 
@@ -34,7 +34,7 @@ python3 proof/check.py a actual-a.json
 
 The checker reports which fields differ from the expected answer and exits with a nonzero status on failure. Use the [second export](proof/b/daily.csv) to test another case.
 
-When the team finds a recurring mistake, use [Improve a Skill](plugins/department-skills/skills/improve-skill/SKILL.md) to turn the example into a proposed correction and a regression test. The [deployment guide](company/DEPLOY.md) shows how a company can own its private rules, approve a change, and distribute it to the next person doing the work.
+When the team finds a recurring mistake, use [Improve a Skill](plugins/department-skills/skills/improve-skill/SKILL.md) to turn the example into a proposed correction and a regression test. The [private deployment guide](company/DEPLOY.md) includes an installer, release verification, rollback instructions, and a local feedback recorder. Start there to put the skills under company ownership.
 
 For help implementing a workflow in your company, visit [AI Close](https://aiclosehq.com/).
 

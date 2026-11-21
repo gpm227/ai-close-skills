@@ -1,8 +1,68 @@
-# Start a department trial
+# Install a company-owned skills library
 
-1. The company admin creates a private repository from a named starter commit or release tag. Retain the upstream version in the private repo. Add department policy, examples, and private evaluation cases there. The team lead owns the expected answers.
-2. Connect the company's repository to its Claude organization marketplace using the organization's plugin settings. Assign the pilot audience. Record the actual Claude surface, skill version served, and two employee accounts used for the trial.
-3. Pick one recurring deliverable. Collect the baseline time, rework and downstream use from recent work. For each completed pilot output, keep one private run record with output and prompt references. Unknown cost stays null. If using account qualification, obtain the current approved ICP, service footprint, exclusions and rules for missing evidence from the team lead before labeling the benchmark.
-4. On the sample reporting task use proof/check.py on each returned JSON artifact. Record the machine verdict. Collect an optional Worked or Didn't work vote separately. Compare the completed-output inventory to the check records. A missed check stays pending and is retried. Probe a revised output, interrupted run and follow-up question before claiming automatic coverage. This starter provides a local evaluator. A company-specific capture integration is a separate deployment step.
-5. Use improve-skill on an actionable issue. Retain the failing artifact, proposed diff, automated results, team lead's approval, updated tag, workspace sync and second employee's fresh-session result. Test once with no vote and once with a human-reported problem after a machine pass.
-6. Ask the team lead whether the result was used, how long review took and which problems recurred. A useful outcome could be a qualified list used in campaign preparation with fewer minutes spent rechecking it. Store an observed value and its source.
+The result is a standalone Git repository with the departmental skills, their release receipts and synthetic reporting checks. The company owns its hosting account and Claude workspace. The installer runs locally with Python 3.9+ and Git. It copies tracked files from one commit and initializes fresh history.
+
+## 1. Prepare the private copy
+
+From a clone of the [public skills repository](https://github.com/gpm227/ai-close-skills), choose a reviewed commit. The commands below take the currently checked-out commit. Replace the example company name before running them.
+
+```sh
+python3 company/install.py ../example-company-skills --name example-company --ref HEAD
+cd ../example-company-skills
+python3 company/release.py verify plugins/department-skills
+git add .
+git commit -m "Install departmental skills from pinned upstream"
+```
+
+The script requires a new directory outside the public checkout. It does not contact a hosting service. UPSTREAM.json pins the public commit. Each skill's RELEASE.json identifies its company plugin version and a SHA-256 digest of the content shipped in that plugin. Store company rules in the skills that use them or their referenced files. Make changes through the company's normal review process.
+
+## 2. Publish inside the company's account
+
+The admin creates an empty private repository owned by the company and confirms its visibility. Add its clone URL as origin and push main. A company using the GitHub CLI can instead run the following in the generated repo, substituting its actual organization and repo name. The command creates the private remote and pushes the initial commit.
+
+```sh
+gh repo create COMPANY/department-skills --private --source=. --remote=origin --push
+```
+
+For a managed install, the business owns the organization, billing, and recovery access and can revoke the implementer's access. For an IT-led install, the CTO reviews repo scope, Claude permissions, approved data destinations, retention, and access removal. The team lead owns the department's standard. Configure review protection on the release branch where supported. Keep business data and employee run records out of the public project.
+
+## 3. Connect Claude and verify delivery
+
+A workspace Owner or Primary Owner confirms the supported plan and that Cowork and Skills are enabled. In organization settings under Plugins & skills, add a marketplace and select Sync from GitHub. Connect the company-owned private or internal GitHub repo. Grant the Claude GitHub App access to that repo and select the intended employee audience. For automatic updates, approve the required webhook permission and use a merged PR with a plugin version bump. The admin can also re-sync manually. [Organization marketplace settings](https://support.claude.com/en/articles/13837433-manage-plugins-for-your-organization)
+
+Record the private release commit, the locally verified digest, Claude's sync result, the plugin version shown in the workspace, and the date. Have two employees use separate accounts and fresh sessions. Employee A runs the period report on proof/a/daily.csv. Employee B uses proof/b/daily.csv. Give each the same ordinary request about orders through May 18. Ask for the installed release receipt after the report. Compare the returned digest with the verified local receipt and the admin's sync record. Treat an unreadable receipt as unknown. Record the actual outputs, source dates, checks, workspace surface and evidence in a company-approved location. A model's statement alone cannot establish what was served.
+
+## 4. Ship a change or restore prior behavior
+
+Change the skill in a private branch and increase the version in plugins/department-skills/.claude-plugin/plugin.json. Stamp and verify the release before review.
+
+```sh
+python3 company/release.py stamp plugins/department-skills
+python3 company/release.py verify plugins/department-skills
+```
+
+The team lead reviews the behavior change and examples. Merge, sync and confirm the served receipt in a fresh session. To roll back, restore the working instructions and any associated reference files from a known-good commit on a new branch. Keep the current receipts, assign a newer plugin version, then stamp, test and review the restoration. The release history shows when the old behavior returned. For upstream upgrades, compare the pinned upstream revision with the proposed revision and bring selected changes into a private PR.
+
+## Feedback for the reporting example
+
+The local command below is a reference implementation of a completed-output event. An integration can call it when it produces the final artifact. Supply the run ID, case, JSON output, approved input reference and receipt from the release actually used. Use an independent ID for each completed revision. The local database defaults to .local/feedback.sqlite3. It stores the actual reporting JSON, plus the receipt, benchmark fingerprint, verdict and any subsequent employee or outcome records. Use synthetic data locally until the company approves storage, access and retention. The example evaluator supports the two reporting benchmarks.
+
+```sh
+python3 company/feedback.py finish run-a a actual-a.json --input-ref case-a --receipt plugins/department-skills/skills/period-report/RELEASE.json
+python3 company/feedback.py summary
+python3 company/feedback.py retry
+python3 company/feedback.py reconcile completed-run-ids.txt
+```
+
+The finish command persists the artifact before the check. Replaying the same event is safe. Conflicting evidence under the same ID is rejected. A failed check records the evidence and exits 1. A checker interruption leaves the run pending. Retry checks pending runs using the original benchmark. Reconcile compares against an independent list from the delivery system, one completed run ID per line for the same pilot scope. It reports outputs missing from capture separately from pending checks and outputs outside that inventory.
+
+An employee can optionally record a correction even after an automatic pass. Outcomes arrive separately, with evidence from the system where they were observed.
+
+```sh
+python3 company/feedback.py vote run-a didnt-work --reason "Missing context for the client"
+python3 company/feedback.py outcome run-a used-in-report --evidence report-123
+```
+
+For other skills, establish an owner-approved standard and evaluator first. A workspace connector still needs to supply real completion events and the correct release, then reconcile interrupted work, revisions and follow-ups against an independent inventory. Ordinary Claude chat does not run plugin hooks. Cowork and Claude Code have different capabilities. [Plugin support by surface](https://support.claude.com/en/articles/13837440-use-plugins-in-claude)
+
+If a check or staff report reveals a repeatable issue, give the evidence to improve-skill. The optional run-record.json template also provides fields for measured costs and private prompt references. An observed outcome and the quality-check verdict answer different questions.
