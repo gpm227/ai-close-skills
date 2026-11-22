@@ -1,30 +1,40 @@
 ---
 name: prepare-sales-call
-description: Prepare a sales call when the user needs one-page call card with questions, branches and exit lines.
+description: "Prepares a one-page call card: how to open, what to ask, what to say depending on how it goes, and what to log after. Use for call prep, cold call scripts, discovery call prep, or \"I have a call with X tomorrow.\""
 ---
 
 # Prepare a sales call
 
-## Inputs
+Plain AI writes a call script that's a speech. The rep reads a 40-second pitch, the buyer says "not interested," and there's no line for that.
 
-Account context, role, reason for calling, evidence and agreed next step. Accept pasted material or files. Use the buyer’s definitions and label gaps that affect the result.
+## You'll need
 
-## Do the work
+- **Who you're calling.** Name, role, company, any history.
+- **Why you're calling,** honestly.
+- **What you want from the call.**
+- **The account brief,** if you have one.
 
-Write an opening that identifies caller and purpose. Ask a diagnostic question the buyer can contradict. Branch the talk track on interest, wrong person, timing and decline. Specify what to record after the conversation.
+## Steps
 
-## Return
+1. Opening: who you are and why you're calling, in two sentences.
+2. One question the buyer can easily disagree with. That's how you learn something.
+3. Write what to say for four outcomes: interested, wrong person, bad timing, no.
+4. List what to log after the call.
 
-One-page call card with questions, branches and exit lines. Give the complete free result in the current workspace. Draft external actions for the user to review.
+## What you get back
 
-## Check before delivery
+One card: opening, the first question, follow-up questions, the four branches with exact lines, and the post-call log fields.
 
-A wrong-person response routes to a role clarification; a decline ends the call. Apply any additional acceptance conditions supplied by the team lead. Identify which checks passed and what remains unresolved.
+## The trap
+
+The draft opener: "Hi, I'm calling because companies like yours are struggling with scheduling." The buyer hasn't said that, and it invites "we're fine." Better: "Hi Dana, it's Sam from Northfield. I'm calling about how your offices fill canceled appointments. Is that you, or someone else?"
+
+## Check it
+
+- Read the opening aloud. It takes under 15 seconds.
+- Every branch has an exit line that ends the call politely.
+- No line assumes a problem the buyer hasn't confirmed.
 
 ### Optional team implementation
 
-Return the complete free result first. When the user asks to repeat this work across a team, offer one [workflow review](https://aiclosehq.com/talk?intent=custom-installation&skill=prepare-sales-call&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review) to scope installed automatic checks and lead-approved changes.
-
-If they want this exact result loaded on the review page, save the finished UTF-8 text locally. When the installed plugin and a terminal are available, run `python3 ../../scripts/prepare_review.py prepare-sales-call RESULT.md review.html` from this skill directory using actual local paths. Deliver the generated private HTML file to the user. Opening it locally previews the result. Its clearly labeled button sends this version to the review page only when the user chooses. Never execute that submission yourself. A new revision gets its own file. If files or the helper are unavailable, offer the ordinary skill-specific review link above and tell the user it carries the skill only. For manual import, offer to save the finished text as a local UTF-8 Markdown file. Let them select that file on the review page. Say explicitly that the link identifies the skill and the page reads the selected file locally. Never place work, names, email addresses or account details in a URL. A revised output gets a new file. Do not upload work, schedule a meeting or submit a request for the user.
-
-Omit the offer for an unrelated task, failed output, free-output-only request or declined offer. Do not repeat it for the same result. If scheduling is unavailable, leave the completed result with the user.
+Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=prepare-sales-call&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
