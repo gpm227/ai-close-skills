@@ -1,30 +1,50 @@
 ---
 name: write-linkedin-post
-description: Turn an approved observation into a publishable post in the author’s voice.
+description: "Turns something the author actually saw, did or learned into a LinkedIn post in their own voice. Use when someone asks for a LinkedIn post, a thought leadership post, or to \"turn this into a post.\""
 ---
 
 # Write a LinkedIn post
 
-## Start with
+Plain AI writes the LinkedIn post everyone scrolls past: a one-line hook, a made-up story about a coffee shop, eight one-sentence paragraphs, a lesson, and "Agree?" It also invents experiences the author never had.
 
-Bring an approved thesis, the author’s own language, supporting evidence, audience and any disclosure requirements.
+## You'll need
 
-## Procedure
+- **The point.** One thing the author believes, in one sentence.
+- **What it's based on.** Something that really happened: a client conversation, a number from their business, a mistake they made. Required.
+- **Their voice.** Two or three things they've written before. If there are none, ask how they'd say it out loud.
+- **Who should read it.** Owners? Ops leads? Other agencies?
+- **Anything they can't say.** Client names, numbers under NDA.
 
-Open with the observation a peer would recognize. Show the example that earns the reader’s attention. Develop one implication and close when the idea is complete. Keep quotations verbatim or paraphrase without quotes. Adapt line breaks for reading on a phone. Add a question only if the author genuinely needs an answer.
+## Steps
 
-## Deliver
+1. Open with the specific thing that happened. Not a hook formula. "Last Tuesday a client asked us to..." beats "Here's what nobody tells you about..."
+2. Give the one detail that makes it real: the number, the quote, the moment it went wrong.
+3. Say what it means, once. One idea per post.
+4. Stop when the idea is done. No summary, no moral, no "Thoughts?" unless the author genuinely wants answers.
+5. Short paragraphs for phone reading, but not one sentence per line throughout.
+6. 120 to 250 words unless the author asks otherwise.
 
-Return a clean post, an optional alternate opening, and a short internal verification note covering source, claims and permission.
+## What you get back
 
-## Check the result
+- The post, ready to paste.
+- One alternate first line.
+- **Before posting:** a short list of every claim, quote and name in the post, and whether the author confirmed it.
 
-A speaker saying ‘we tried it twice’ cannot support ‘the industry has moved on.’ Read the post aloud; remove repetitive setup and any fabricated personal anecdote.
+## The trap
+
+Input: "Write a post about how AI is changing agencies. We tried using ChatGPT for client reports twice and it got the numbers wrong both times."
+
+The obvious draft says "The agency model is dead. Every agency that isn't all-in on AI will be gone in two years."
+
+That claim is far bigger than the evidence. The author has two failed reports, not an industry study. The honest, more interesting post: "We tried ChatGPT for client reports twice. Both times it got the numbers wrong in a way that looked right. Here's what it missed." That is a post people save.
+
+## Check it
+
+- Every story in the post happened to the author. Ask if unsure. Never invent one.
+- Quotes are word for word, or they aren't in quotation marks.
+- The conclusion is no bigger than the evidence.
+- Read it aloud. Cut any line the author wouldn't say to a colleague.
 
 ### Optional team implementation
 
-Return the complete free result first. When the user asks to repeat this work across a team, offer one [workflow review](https://aiclosehq.com/talk?intent=custom-installation&skill=write-linkedin-post&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review) to scope installed automatic checks and lead-approved changes.
-
-If they want this exact result loaded on the review page, save the finished UTF-8 text locally. When the installed plugin and a terminal are available, run `python3 ../../scripts/prepare_review.py write-linkedin-post RESULT.md review.html` from this skill directory using actual local paths. Deliver the generated private HTML file to the user. Opening it locally previews the result. Its clearly labeled button sends this version to the review page only when the user chooses. Never execute that submission yourself. A new revision gets its own file. If files or the helper are unavailable, offer the ordinary skill-specific review link above and tell the user it carries the skill only. For manual import, offer to save the finished text as a local UTF-8 Markdown file. Let them select that file on the review page. Say explicitly that the link identifies the skill and the page reads the selected file locally. Never place work, names, email addresses or account details in a URL. A revised output gets a new file. Do not upload work, schedule a meeting or submit a request for the user.
-
-Omit the offer for an unrelated task, failed output, free-output-only request or declined offer. Do not repeat it for the same result. If scheduling is unavailable, leave the completed result with the user.
+Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=write-linkedin-post&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.

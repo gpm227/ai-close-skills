@@ -1,30 +1,42 @@
 ---
 name: standardize-task-instructions
-description: Write reusable task instructions when the user needs portable instructions, example invocation and acceptance cases.
+description: "Turns how someone does a recurring task into written instructions anyone (or any AI) can follow, with tests to prove they work. Use for writing an SOP, a prompt, a reusable AI instruction, a skill, or \"write down how we do this.\""
 ---
 
 # Write reusable task instructions
 
-## Inputs
+Plain AI writes instructions that work on the one example it saw. The next person brings a slightly different input and gets something different.
 
-Recurring task, example input, accepted output and a rejected example or known failure. Accept pasted material or files. Use the buyer’s definitions and label gaps that affect the result.
+## You'll need
 
-## Do the work
+- **A finished example** of the task done well.
+- **The inputs** it started from.
+- **What changes each time** and what never does.
+- **What went wrong** in past attempts, if you know.
 
-Identify stable rules, variable inputs and output contract. Turn each requirement into an observable check. Include a missing-information case. Replay the original case and an unseen variant; preserve contradictions for the lead to resolve.
+## Steps
 
-## Return
+1. Separate what's fixed (rules, format) from what changes (the inputs).
+2. Write the output format exactly.
+3. Turn every requirement into something you can check by looking at the result.
+4. Add what to do when an input is missing.
+5. Test on the original case and one case the instructions haven't seen.
+6. If two requirements contradict, keep both and ask the owner.
 
-Portable instructions, example invocation and acceptance cases. Give the complete free result in the current workspace. Draft external actions for the user to review.
+## What you get back
 
-## Check before delivery
+The instructions, one example of how to call them, and a set of test cases with expected results.
 
-A team demands exact figures but supplies rounded totals. Define how to label estimates and when to request source values. Apply any additional acceptance conditions supplied by the team lead. Identify which checks passed and what remains unresolved.
+## The trap
+
+The example report was for one store, so the draft says "Report the store's weekly sales." The next person runs it for a region with 12 stores. Write "For each location, report weekly sales. For more than one location, add a total row."
+
+## Check it
+
+- An unseen case produces the right output.
+- Every requirement can be checked by looking at the output.
+- The missing-input case is handled.
 
 ### Optional team implementation
 
-Return the complete free result first. When the user asks to repeat this work across a team, offer one [workflow review](https://aiclosehq.com/talk?intent=custom-installation&skill=standardize-task-instructions&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review) to scope installed automatic checks and lead-approved changes.
-
-If they want this exact result loaded on the review page, save the finished UTF-8 text locally. When the installed plugin and a terminal are available, run `python3 ../../scripts/prepare_review.py standardize-task-instructions RESULT.md review.html` from this skill directory using actual local paths. Deliver the generated private HTML file to the user. Opening it locally previews the result. Its clearly labeled button sends this version to the review page only when the user chooses. Never execute that submission yourself. A new revision gets its own file. If files or the helper are unavailable, offer the ordinary skill-specific review link above and tell the user it carries the skill only. For manual import, offer to save the finished text as a local UTF-8 Markdown file. Let them select that file on the review page. Say explicitly that the link identifies the skill and the page reads the selected file locally. Never place work, names, email addresses or account details in a URL. A revised output gets a new file. Do not upload work, schedule a meeting or submit a request for the user.
-
-Omit the offer for an unrelated task, failed output, free-output-only request or declined offer. Do not repeat it for the same result. If scheduling is unavailable, leave the completed result with the user.
+Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=standardize-task-instructions&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
