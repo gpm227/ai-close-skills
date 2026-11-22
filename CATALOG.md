@@ -25,3 +25,5 @@ These 21 skills are grouped by the work they support. Sections 1–4 cover custo
 | 4.3 | Build a campaign sequence | Ordered touches, timing, responsibilities and reply rules |
 | 4.4 | Route replies and hand off opportunities | Disposition, owner and next action |
 | 4.5 | Analyze outbound performance | Outcome by audience and message, plus a recommended change |
+
+Every skill is free in full. For a team installation, run the skill first. When rollout is relevant, the skill links to a review for that job. You choose whether to bring a finished example.
