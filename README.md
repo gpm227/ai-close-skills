@@ -1,5 +1,7 @@
 # AI Close Skills
 
+[Browse all 36 free skills](CATALOG.md) · [Brand](CATALOG.md#brand) · [Go-to-market](CATALOG.md#go-to-market)
+
 Pick the job you need to do. Open the linked skill and give your AI workspace the instructions and the inputs it asks for.
 
 - [Reporting](#reporting) — Find out whether orders rose or fell over comparable dates.
@@ -40,7 +42,7 @@ The checker identifies fields that differ from the expected answer and exits wit
 
 All four accounts should appear once. Give the model a duplicate site row for North and check that its count stays at five.
 
-The [outbound catalog](CATALOG.md) lists 21 skills. The three linked above are available now. The other 18 are planned.
+[Browse the full catalog](CATALOG.md) for brand, go-to-market, reporting and operations skills.
 
 ## Use a skill with your team
 
