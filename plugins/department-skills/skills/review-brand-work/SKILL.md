@@ -3,41 +3,15 @@ name: review-brand-work
 description: "Reviews a draft against your approved brand standard, marks exactly what fails and why, and fixes only that. Use for brand review, copy review against guidelines, \"does this sound like us,\" or checking work before it ships."
 ---
 
-# Review work against the brand standard
+# Review a draft for release
 
-Plain AI reviews copy by rewriting all of it. Good lines get lost, a fact quietly changes, and nobody can tell which edits were required and which were taste.
+Use the supplied draft, placement, approved copy, versioned brand rules, destination, and substantiation. Assign local IDs to rules or source passages that lack IDs. Treat a preference as binding only where the owner approved it. Do the review with the material available. Identify the specific missing decision when it changes what can go live.
 
-## You'll need
-
-- **The standard,** and which version.
-- **The draft,** and where it'll appear.
-- **The facts it relies on.**
-- **Past corrections,** if any.
-
-Keep review material inside the team unless it's cleared.
-
-## Steps
-
-1. Read it as a first-time buyer would.
-2. For each problem, quote the smallest failing piece, name the rule, the consequence, and the smallest fix.
-3. Keep fact and permission problems separate from style.
-4. Leave every passing line alone.
-5. Recheck the fixed draft.
-6. If the same problem keeps showing up because the standard doesn't cover it, write a proposed rule separately. The lead approves rules.
-
-## What you get back
-
-A pass, fail or unknown for each rule, the revised draft, and any proposed rule change on its own.
-
-## The trap
-
-The draft is already approved and meets every rule, but the reviewer prefers different wording. The obvious move is to "improve" it. Return it unchanged and put the preference in a note.
-
-## Check it
-
-- Every edit maps to a named rule.
-- No fact changed between draft and revision.
-- Approved copy that passes comes back untouched.
+1. Inventory each placement, including desktop and mobile variants. Lock exact approved passages. Compare each promise with what the buyer actually receives after the click. Check that the copy describes the buyer outcome at the strength the evidence supports. An internal target or one customer result does not establish a general return.
+2. Quote the smallest failing span. Cite the rule and the supporting or missing evidence. Replace only that span. Preserve qualifiers, numbers, approved language, and all passing text. If a locked passage conflicts with an active rule, preserve it in the working draft and flag the conflict for the owner.
+3. Recheck the clean draft against every applicable rule. Count visible characters including spaces where a limit is supplied. Record individual counts for every variant. Check the stated destination; distinguish a supplied destination from a live click you actually verified.
+4. Return the complete revised draft in placement order, ready to paste. Follow it with a review table: placement, rule ID, original verdict (pass/fail/unknown), exact evidence, edit if any, revised verdict. Mark release **ready**, **hold** (a confirmed failure remains), or **needs verification** (a release-critical fact is unknown). Name the smallest outstanding check and its owner if known. Use a file for the clean copy and a separate review file when the partner asks for handoff files or supplies a document for editing. Preserve its structure.
+5. If the draft passes, return the exact original. If evidence is missing, either narrow the claim to a supported fact or hold that placement. Put any proposed new brand rule after the review for approval.
 
 ### Optional team implementation
 

@@ -9,7 +9,9 @@ def evaluate(expected, actual):
     failures = []
     for field, target in expected.items():
         observed = actual.get(field)
-        if type(target) in (int, float):
+        if field not in actual:
+            matches = False
+        elif type(target) in (int, float):
             matches = type(observed) in (int, float) and math.isclose(
                 observed, target, rel_tol=0, abs_tol=1e-9
             )

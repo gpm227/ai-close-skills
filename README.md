@@ -1,41 +1,23 @@
 # AI Close Skills
 
-Instructions that make ChatGPT and Claude do the job right, starting with the mistakes they make when you just ask.
+Bring an account list, a draft, an approval log or a daily export. Choose a job below and run it with your own rules in ChatGPT.
 
-Every Skill names one job, what to hand the AI, what comes back, the trap plain AI falls into, and how to check the result. Copy one into a chat and go.
+| Job | Download for ChatGPT | Try it with example inputs | What you get |
+| --- | --- | --- | --- |
+| Qualify target accounts | [Download skill](chatgpt/build-target-accounts.zip?raw=true) | [Two CSVs and the territory rule](examples/accounts/) | One decision per account and a separate eligible-only file |
+| Review copy before it ships | [Download skill](chatgpt/review-brand-work.zip?raw=true) | [Draft, approved copy and substantiation](examples/brand/request.md) | Clean copy for the designer, changes tied to rules, and the release decision |
+| Audit control evidence | [Download skill](chatgpt/audit-control-evidence.zip?raw=true) | [Policy and sampled payments](examples/audit/request.md) | A test for every sampled record, source references and an exception register |
+| Compare month-to-date performance | [Download skill](chatgpt/period-report.zip?raw=true) | [Daily orders](proof/a/daily.csv) | Matched periods, both totals and the measured change |
 
-**[All 36 Skills](CATALOG.md)** · [Reporting](CATALOG.md#reporting) · [Sales](CATALOG.md#sales) · [Outbound](CATALOG.md#outbound) · [Marketing](CATALOG.md#marketing) · [Brand](CATALOG.md#brand) · [Operations](CATALOG.md#operations)
+### Use a skill in ChatGPT
 
-## See it work: reporting
+1. Download one skill above. In ChatGPT, open **Plugins → Skills → Create → Upload from your computer** and select the downloaded skill. Complete the scan and install if prompted. Workspace access and upload permissions vary.
+2. Open a new conversation, attach the inputs, and describe the job. For the reporting example, ask “Compare orders through May 18, 2026 with last month.” The supplied example returns 180 orders in each window and 0% change.
+3. To use it with colleagues in the same workspace, open the skill's menu and choose **Share**. Partners in another eligible workspace can download their own copy. If Skills is unavailable, open the source from the catalog and attach the instructions and any scripts to a chat with file analysis; this is a manual run.
 
-Ask ChatGPT how orders are doing on May 18 and it will tell you they fell 40%. They didn't.
+[OpenAI's ChatGPT installation and sharing guide](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) · [Browse all 37 jobs and downloads](CATALOG.md)
 
-It compared 180 orders from May 1 to 18 with all 300 orders in April. Compare April 1 to 18 instead and both months have 180. **Orders are flat through the 18th.**
-
-1. Open [Compare this month with last month](plugins/department-skills/skills/period-report/SKILL.md) and paste it into a fresh chat.
-2. Attach the [daily orders](proof/a/daily.csv) and ask: "How did orders change month over month through May 18, 2026?"
-3. You should get 180 orders in each period and a 0% change.
-
-To check it automatically, save the JSON the model returns as `actual-a.json` and run:
-
-```sh
-python3 proof/check.py a actual-a.json
-```
-
-The checker lists any field that's wrong and exits nonzero on failure. Try the [second export](proof/b/daily.csv) for another case.
-
-## See it work: sales
-
-The rule: 5 to 20 sites in one state, current customers excluded. Give the model these four accounts with [Build a target-account list](plugins/department-skills/skills/build-target-accounts/SKILL.md).
-
-| Account | What's known | Right answer |
-| --- | --- | --- |
-| North | Five verified sites in the state. Not a customer. | Eligible. Five meets the floor. |
-| East | Seven sites total, three in the state. Complete list. | Excluded. Only three count. |
-| West | Seven sites total. Location list incomplete. | Needs evidence. |
-| South | Current customer. Site count unknown. | Excluded. Customer status decides it. |
-
-Every account should appear once. Add a duplicate site row for North and its count should stay at five.
+The four jobs above have example inputs and acceptance checks. The remaining 33 are packaged workflow instructions. Their partner outcomes still need testing.
 
 ## Run it across a team
 

@@ -13,18 +13,19 @@ Plain AI marks an account as a fit when it's probably a fit. An account with an 
 - **Account and location records,** with IDs and the date they were pulled.
 - **Exclusions.** Current customers, open deals, do-not-contact.
 
-## Steps
+## Run the qualification
 
-1. Keep the owner's exact definitions of geography and size.
-2. Match records on stable IDs where you can. Flag any match you're unsure of.
-3. Count distinct eligible sites at the level the rule names. Keep company-wide counts separate from counts inside the territory.
-4. Give every account one decision: **eligible**, **excluded**, or **needs evidence**.
-5. A confirmed exclusion beats an unknown. Missing evidence never makes an account eligible.
-6. Reconcile: every input account appears exactly once. List duplicates and unmatched rows.
+1. Restate the partner's size band, inclusivity, territory and whether the size band applies to all company sites or only in-territory sites. Territory eligibility requires at least one site there. Do not silently use headquarters, contact address or a national total as a substitute. If the two interpretations would change the list, ask which one applies. Use only approved service states and explicit exclusions.
+2. Normalize source headers into two local CSVs, preserving identifiers as text, mapping state names to consistent codes, and recording the original filename, row or join key and extract date. Keep a crosswalk when rows or IDs change. An accounts CSV needs account_id,name,excluded,roster_complete. A sites CSV needs account_id,site_id,state (blank state means unknown). Both flags accept yes/no/unknown. Mark excluded=no only when **all** applicable exclusions were checked against a complete source. A blank customer flag is unknown. A known out-of-profile industry or confirmed suppression can set excluded=yes. Record which rule and source caused it. A missing mandatory industry/fit check stays unresolved.
+3. For these rules, use the bundled Python 3 runner. It assumes inclusive limits and one master row per account. Use normalized placeholders in this command with the partner's actual rule values:
 
-## What you get back
+   ```sh
+   python3 scripts/qualify.py accounts.csv sites.csv --states STATE1,STATE2 --minimum MIN --maximum MAX --scope territory --eligible-file eligible.csv > decisions.csv
+   ```
 
-One row per account: ID, name, eligible-site count if known, decision, reason, evidence reference, and the next research question if any. Then totals per decision.
+   For a company-wide size band, set --scope company. Check the exit status. A nonzero result means there is no usable decisions file. Resolve join or format errors from the source. Never remove an unmatched row just to make the run finish. For other criteria, apply every additional rule explicitly and reconcile the final decisions. If code execution is unavailable, apply the same rule to the supplied rows, disclose the manual run and return the table as CSV.
+4. Return the downloadable account decision file, an eligible-only prospecting file, and a short summary of eligible, excluded and needs-evidence counts, duplicate rows and unresolved joins. Preserve account IDs and include observed company sites, verified territory sites, roster completeness, reason, and original source references. Replace normalized references using the crosswalk and cite the actual exclusion for each suppressed record. Give a concrete research question on each unresolved row. If input errors block reconciliation, return those exceptions, withhold the eligible-only file and explain the missing fix.
+5. Verify one output row per input account ID and exact agreement between the eligible-only file and eligible decisions. Keep account counts separate from contact counts. A list review ends at file delivery unless the partner explicitly requests a CRM or campaign change.
 
 ## The trap
 
