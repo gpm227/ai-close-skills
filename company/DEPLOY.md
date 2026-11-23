@@ -1,108 +1,116 @@
-# Deploy AI Close skills in your company
+# Deploy AI Close skills
 
-Start in ChatGPT. A team member can run a report, qualify accounts, write a brief or review a deliverable there. Bring in Claude Design when the job needs visual production. Bring in Claude Research when the decision depends on outside evidence. For recurring team jobs, keep approved files and findings in a shared ChatGPT project.
+Start with one job in ChatGPT. Pick a result someone needs this week and use an input they recognize. A vendor quote, a CRM export or a customer email is enough for several jobs in the [skills catalog](../CATALOG.md).
 
-| Work | Where to do it | What the next person receives |
+| What you need | Where to work | What to keep |
 | --- | --- | --- |
-| Routine reporting, sales, marketing and operations | ChatGPT with the relevant installed skill | The checked report, account list, draft or decision, with its source and open questions |
-| Brand rules for writers and designers | ChatGPT uses the deck, website or approved material | Editable brand guide, source-backed rules and decisions for the owner |
-| Commissioned design or visual brand kit | ChatGPT prepares the brief → Claude Design produces the requested assets → owner reviews them | Editable design and checked exports for the requested placements |
-| Deep research and competitive analysis | ChatGPT scopes the decision → Claude Research investigates → ChatGPT applies the findings | Dated comparison with claim-level sources, evidence gaps and a recommendation for the decision owner |
+| An everyday sales, marketing, reporting or operations job | ChatGPT with the relevant skill | The usable result, its source and anything the owner still needs to decide |
+| Brand rules from a deck, website or approved writing | ChatGPT | An editable guide a writer or designer can use |
+| A commissioned visual asset or designed brand kit | ChatGPT prepares the brief. Claude Design produces the work. | The editable source, approved export and owner’s decision |
+| Deep research or competitive analysis | ChatGPT defines the decision. Claude Research investigates. | Dated evidence, comparable terms and a recommendation in ChatGPT |
 
-## Try one skill in ChatGPT
+[Try one job](#run-one-job-in-chatgpt) · [Use Claude](#use-claude-for-a-design-or-research-handoff) · [Set up the company repository](#create-the-company-repository) · [Share a release](#share-a-company-release) · [Verify employee installs](#verify-the-employee-experience) · [Update or roll back](#update-or-roll-back)
 
-1. Pick a job in the [public skills catalog](https://github.com/gpm227/ai-close-skills/blob/main/CATALOG.md). Download that skill's ZIP from the reviewed revision. If someone forwarded a GitHub `SKILL.md` link, open the repository name in its breadcrumb, then select **All 37 Skills** in the README. The catalog lists a Download link beside each job. For a quick trial, use the public examples. For company-specific rules, use the private release below.
-2. In the company ChatGPT workspace, open **Plugins → Skills → Create → Upload from your computer**. Select the single skill ZIP. Wait for the scan. If the upload says **Needs Review**, inspect the flagged information. A **Blocked** upload cannot be used. Confirm the approved skill appears under **Installed**. OpenAI lists eligible Business, Enterprise, Healthcare and Edu workspaces. Availability depends on workspace permissions. If uploads are disabled, ask a workspace admin to enable them or share the approved skill. [ChatGPT skills and permissions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
-3. Start a fresh chat. Attach your own material and use the request under **Try it on your work** in the skill instructions or the ZIP's `SETUP.md`. For example, give **Compare vendor proposals** two quotes, expected volume and a mandatory requirement. Ask which offer qualifies and how much cash each requires over the same term.
-4. To check setup against a known answer, install **Compare this month with last month** (`period-report`) and attach `proof/a/daily.csv` from the reviewed repository in a new chat. Ask, “How did orders change month over month through May 18, 2026?” Expect 180 orders in each 18-day period, a 0% change. You can save the returned JSON for the check below.
+## Run one job in ChatGPT
 
-If Skills is unavailable and you want to evaluate a written workflow, supply its `SKILL.md` and referenced inputs in a fresh chat. Record that as a manual trial. A workflow that needs code or rendered files still needs those capabilities before its result can be checked.
+1. **Get the right file.** Use the [catalog in this revision](../CATALOG.md) to download the ZIP beside your job. If your company already distributes a release, use the skill shared by its owner. A forwarded ZIP includes its own instructions, example and supporting files.
+2. **Install it if your workspace supports Skills.** OpenAI lists eligible Business, Enterprise, Healthcare and Edu workspaces. Under **Plugins → Skills**, choose **Create → Upload from your computer** and select the original ZIP. Review the source and wait for the scan. Open any **Needs Review** details. A **Blocked** item requires a corrected file. Check **Installed** before proceeding. If upload is disabled, ask the workspace admin for the approved shared item. [ChatGPT skills and permissions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+3. **Give it your work.** Start a new chat, name the skill, attach the input and copy the request under **Try it on your work** in its instructions. For example, attach two vendor quotes and ask, “Which quote should we take? Compare total cost and payment timing. If the answer depends on our volume, give me the break-even point.” Check the deciding condition against a clause in your own quote.
+4. **If Skills is unavailable**, extract a copy of the ZIP. Attach `SKILL.md` with your own input and ask ChatGPT to follow it. Supply any example, reference or script it needs from the same folder. For a calculation, check that the script actually ran or verify the result yourself. This gives you a manual trial. An installed team release has a separate check below.
 
-## Work with Claude on design and research
+**Try a known answer without company data.** Use the [reporting ZIP](../chatgpt/period-report.zip?raw=true) and [daily orders CSV](../proof/a/daily.csv?raw=true). If somebody sent you only the ZIP, extract a copy and use `period-report/examples/a/daily.csv`. Attach the CSV in a fresh chat and ask, “Use Compare this month with last month. How did orders change month over month through May 18, 2026? Give me the totals, dates and percent change.” Both April 1–18 and May 1–18 have **180 orders**, a **0% change**. A 40% drop means the answer used all of April. This example is an alternative to bringing your own job.
 
-### Make a brand kit from a deck and a website
+## Use Claude for a design or research handoff
 
-For a guide, give ChatGPT the available deck, site URL or capture, the intended reader and any approved assets. Ask for an editable guide a new writer or designer can use today. Check the source behind each material rule and resolve disagreements that change the buyer promise. Deliver the guide and the owner's open decisions. A guide can be the entire job.
+**Brand guide or design.** In ChatGPT, give **Build a brand system** the available deck, website or approved writing, the intended reader and any cleared assets. Ask for the editable rules, their sources and open owner decisions. A guide-only job ends when the next writer or designer can apply a rule correctly. For commissioned design, send Claude Design the approved rules, copy and files, intended placement, audience, action and requested format. Open **Output → Design** or choose a Design template in **Artifacts**. If a shared design system is available, select it. Otherwise attach the cleared materials directly. Bring the editable asset and its export back to the owner. Check the actual delivery size, claims and destination before approving it. [Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) · [Shared design systems](https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design)
 
-When you need a designed asset, tell ChatGPT the placement, audience, buyer action and required format. Give Claude Design the cleared brief, copy, assets and a finished reference the owner trusts. In Claude, select **Output → Design** or open **Artifacts** and choose a Design template. Teams with design-system access can use the approved identity for future pieces. [Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) · [Set up a design system](https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design)
+**Competitive research.** Start in ChatGPT with the decision, buyer, market and date. A usable brief is “Which of these three vendors can support five editors? Compare annual cash outlay, included seats and export rights. Cite each vendor’s current terms and flag terms we must ask sales to confirm.” On a paid Claude plan with web search enabled, choose **+ → Research**. Use web or desktop when the task depends on connected internal sources. Return the comparison, exact source links, dates and open questions to ChatGPT. Open the sources behind the decisive claims. Save the recommendation and the condition that would change it. [Claude Research](https://support.claude.com/en/articles/11088861-use-research-on-claude)
 
-Return the editable file and export to the owner. Check the real placement at delivery size, including legibility, approved claims, asset rights and the destination of the buyer action. Ask for revisions when the work misses an agreed requirement. Save the approved version with its source files.
+## Create the company repository
 
-### Answer a competitive question
+A maintainer does this once when the company wants to own and change the skills. Employees with an existing company release can [go straight to installation](#share-a-company-release). The company owns the repository and admin access. The department lead decides whether outputs are fit for use. One person can hold both roles.
 
-Start with a decision a colleague actually needs to make. For example, “Which alternatives offer an editable brand kit to a five-person marketing team, at what price, and what would it cost us to switch?” In ChatGPT, agree on the competitors, geography, audience, comparison units and as-of date. Give Claude that brief and the approved public sources. In Claude, select **Research** with web access available. Use only the connectors appropriate to this task. [Research in Claude](https://support.claude.com/en/articles/11088861-use-research-on-claude)
-
-Ask for one row per comparable offer with the plan, seats, price, currency, billing term, deliverable, exact source URL and date checked. Mark undisclosed prices and contradictory evidence explicitly. Return the table, source links and unresolved questions to ChatGPT. Open the primary evidence for claims that would change the decision. Then use the relevant skill to write the recommendation and explain which finding would change it. Store the dated evidence beside the decision so a colleague can refresh it.
-
-## Install a company-owned release
-
-The team lead owns what a good output looks like. A workspace admin controls access. A repository maintainer owns versions, release checks and rollback. One person can cover several roles. Keep client files, company rules, decisions and employee run records in company-approved locations. Use cleared or synthetic examples in the public repository.
-
-**Set up shared working context.** When a colleague needs to repeat an accepted job, create a ChatGPT project, add the audience, owner, approved inputs and an example of an acceptable result, and invite the intended participants. Members install the reusable skill through the workspace's Skills directory. [ChatGPT projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
-
-**Prepare the private repository.** Start from a clone of the [public repository](https://github.com/gpm227/ai-close-skills) with Git and Python 3.9 or newer. Check out the reviewed revision first. From that checkout, replace the example company name and choose a new destination outside the clone.
+Use Git and Python 3.9 or newer. On the reviewed **public** guide’s GitHub page, press **Y** to get its permanent link. Copy the full commit SHA between `/blob/` and `/company/`. Start in a working directory where the two example folder names are available. In the commands below, replace `PASTE_REVIEWED_SHA` with that SHA. Pick a lowercase company name and a new destination outside the public checkout. [GitHub permanent links](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)
 
 ```sh
-python3 company/install.py ../example-company-skills --name example-company --ref HEAD
+git clone https://github.com/gpm227/ai-close-skills.git ai-close-skills
+cd ai-close-skills
+reviewed_commit=PASTE_REVIEWED_SHA
+git fetch origin "$reviewed_commit" &&
+  git checkout --detach "$reviewed_commit" &&
+  python3 company/install.py ../example-company-skills --name example-company --ref "$reviewed_commit"
+```
+
+Continue after the installer reports the expected commit. The new private working copy has fresh Git history, a local catalog and one ZIP per skill. `UPSTREAM.json` identifies the public source. Each skill's `RELEASE.json` identifies the private plugin version and content digest. Run the verification and initial commit from the public checkout.
+
+```sh
 cd ../example-company-skills
-python3 company/release.py verify plugins/department-skills
-python3 company/package_chatgpt.py --check
-git add .
-git commit -m "Install reviewed departmental skills"
+python3 company/release.py verify plugins/department-skills &&
+  python3 company/package_chatgpt.py --check &&
+  git add . &&
+  git commit -m "Install reviewed departmental skills"
 ```
 
-The installer starts fresh Git history, records the chosen public commit in `UPSTREAM.json`, generates the company ZIPs in `chatgpt/`, and leaves remote configuration to the maintainer. Each skill's `RELEASE.json` contains its name, plugin version and the SHA-256 digest of the entire plugin's content. The digest identifies the plugin release. The ZIP check verifies that the upload files match their sources.
-
-The company owns the hosting account, billing and recovery access. Create an empty private repository in its organization, set it as `origin` and push `main`. If you use the GitHub CLI, the following creates the private remote and pushes the initial commit. Substitute your organization and repository name first.
+Expect 37 verified skills and 37 matching downloads for this release. If Git asks for author details, configure the maintainer’s identity and retry the commit. To host this copy using an authenticated GitHub CLI, the following command **creates a new private repository and pushes the commit**. Replace `YOUR_ORG` with the company organization. For an existing empty private repository, use its own push instructions.
 
 ```sh
-gh repo create COMPANY/department-skills --private --source=. --remote=origin --push
+gh repo create YOUR_ORG/department-skills --private --source=. --remote=origin --push
 ```
 
-**Distribute in ChatGPT.** From this private release, upload the relevant `chatgpt/<skill-name>.zip`. For the reporting check, use `chatgpt/period-report.zip`. Open the skill's menu and select **Share**, then choose the intended members or group. A recipient opens **Plugins → Skills → Shared with me** (or the workspace's shared list), then selects **Install**. Record the release commit, ZIP filename, upload and sharing status, audience and date. A Git merge still needs a corresponding ChatGPT upload and workspace check. [ChatGPT installation and sharing](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+## Share a company release
 
-**Optional Claude team distribution.** Use this when employees also need the installed skills in Claude. A Team or Enterprise owner enables Cowork and Skills. Under **Organization settings → Plugins & skills → Marketplaces**, select **Sync from GitHub**. Grant the Claude GitHub App access to the company-owned private or internal repository and select the distribution settings available for your audience. For automatic updates, approve the webhook permission and merge a pull request with a plugin version bump. Manual re-sync is available. Record the sync result and workspace plugin version. [Claude organization marketplace settings](https://support.claude.com/en/articles/13837433-manage-plugins-for-your-organization)
+1. In the private checkout, choose the company's ZIP from `chatgpt/`. From a clean, committed release, record the output of `git rev-parse HEAD` and `python3 company/release.py verify plugins/department-skills`. Keep the ZIP name, version and plugin digest beside the upload record.
+2. The publisher uploads that ZIP in the intended ChatGPT workspace. Open the skill menu, choose **Share**, and select the person or group. Save the shared item link, audience and date.
+3. The employee opens **Plugins → Skills → Shared with me** or **Shared by [workspace]**, opens the item menu and selects **Install**. A partner in another workspace installs their own copy of the approved ZIP. [Installation and sharing](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+4. For recurring team work, create a shared ChatGPT project for approved source material, instructions and accepted outputs. Invite the intended participants. Deliver the skill itself through Skills. [ChatGPT projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
 
-## Verify delivery with two employees
+**Optional Claude organization distribution.** On Team or Enterprise, an owner enables Cowork and Skills, gives the Claude GitHub App access to the company’s private or internal repository, then opens **Organization settings → Plugins & skills → Marketplaces → Add plugins → Sync from GitHub**. Set the audience. For automatic sync, authorize the webhook and merge a version-bump PR to the default branch. If sync fails, members keep the last synced version. Fix the error, re-sync, check the version and audience in **Inventory**, and start a fresh employee session. [Claude organization marketplace](https://support.claude.com/en/articles/13837433-manage-plugins-for-your-organization)
 
-Use separate accounts and fresh chats on each surface you intend to support. The two public examples below are known-answer smoke tests. They and their expected answers are included in the upload. From the private repository root run `mkdir -p .local`. Each employee attaches the input, asks the May 18 question, saves the returned JSON under `.local/` and asks the skill for its release receipt. This directory is excluded from Git.
+## Verify the employee experience
 
-| Employee | Input | Expected prior → current orders | Check from company repo root |
+Have two people use separate accounts and fresh chats on each surface you plan to distribute through. The publisher gives each person their input and the May 18 question from above. Ask for **the comparison as JSON, a one-sentence conclusion, and the installed version and plugin_sha256 from RELEASE.json**. Save the JSON object alone in the named file. Save the sentence and observed receipt separately. Create the private evidence directory with `mkdir -p .local` from the company repository root.
+
+| Employee | Input | Expected result | Check the saved answer from the company repository root |
 | --- | --- | --- | --- |
-| A | `proof/a/daily.csv` | 180 → 180, flat | `python3 proof/check.py a .local/actual-a.json` |
-| B | `proof/b/daily.csv` | 180 → 144, down 20% | `python3 proof/check.py b .local/actual-b.json` |
+| A | [Daily orders A](../proof/a/daily.csv?raw=true) | 180 → 180, flat | `python3 proof/check.py a .local/actual-a.json` |
+| B | [Daily orders B](../proof/b/daily.csv?raw=true) | 180 → 144, down 20% | `python3 proof/check.py b .local/actual-b.json` |
 
-Check that the employee’s written conclusion agrees with the numbers. The checker verifies the JSON fields; it cannot read a separately written conclusion. Both reports should compare May 1–18 with April 1–18. Record the surface, observed answers, checker results and receipt. Compare the returned version and digest with the locally verified receipt **and** the admin's upload or sync record. A correct calculation can coexist with an unknown served version. Mark the version unknown when the receipt cannot be read or corroborated. To test independent application, have the lead prepare an unseen export with different dates and totals and calculate the expected answer separately. Give employees only that export and the request. Grade their saved output against the private answer, and record whether anyone used it in a real report. For another workflow, use an unseen job and the owner’s criteria for its deliverable.
+Both comparisons use April 1–18 and May 1–18. The checker grades the JSON. Read the sentence separately. Compare each employee’s returned version and digest with the private receipt and recorded shared item. A matching answer with a missing or mismatched receipt leaves the served version unknown. Check the workspace, shared link, audience and installed copy, then rerun in a fresh chat.
 
-## Update, roll back and capture feedback
+The sample answers ship with the skill. For rollout, also give a colleague an unseen input and keep the lead’s expected result separate. Record what the colleague received, whether it passed, and whether someone used it for a real decision. For other jobs, substitute the department’s own input and criteria.
 
-Edit company rules in a private branch. Retain the failing output and an example that already works. Bump the plugin version in `plugins/department-skills/.claude-plugin/plugin.json`. Run these commands from the private repository root.
+## Update or roll back
+
+On a private branch, keep the failing input and actual output, write down the expected behavior, and identify a case that already works. **Improve a skill** can help prepare the correction. Edit the affected skill, increase the plugin version in `plugins/department-skills/.claude-plugin/plugin.json`, and run the four commands below.
 
 ```sh
-python3 company/release.py stamp plugins/department-skills
-python3 company/release.py verify plugins/department-skills
-python3 company/package_chatgpt.py
-python3 company/package_chatgpt.py --check
+python3 company/release.py stamp plugins/department-skills &&
+  python3 company/release.py verify plugins/department-skills &&
+  python3 company/package_chatgpt.py &&
+  python3 company/package_chatgpt.py --check
 ```
 
-Have the team lead review the changed behavior, a fresh case and the release files. After approval and merge, distribute the new company ZIP in ChatGPT, confirm the intended audience is using it, and repeat the fresh-session check. Re-sync any Claude marketplace that serves this skill. To roll back, restore the known-good instructions, scripts and references from Git on a new branch. Retain the current receipts, assign a newer version, then stamp, package, review and verify the restored behavior through the same path. For an upstream update, compare the proposed public commit with `UPSTREAM.json` before bringing selected changes into private review.
+Run the failing case and the previously good case. Have the lead review the outputs, commit the sources, receipts and ZIPs, and merge the approved release. Upload the changed skill’s ZIP in ChatGPT. Inspect which shared item the recipient can install. If a new item was created, share its link and have the recipient install that item. Verify the receipt and behavior in a fresh chat before retiring the old item. The digest covers the whole plugin. If other ChatGPT uploads still serve the earlier digest, keep them recorded at their actual version or upload and verify them too.
 
-The included feedback example checks the two period-report fixtures. For a manual pilot, capture the employee's actual JSON and the receipt from the identified release. Use a separate run ID for each completed revision. Run these commands from the private repository.
+To roll back one skill, create a new branch from the current company release. Restore the skill from the accepted commit while retaining the current release receipt. For example, in a clean company checkout, replace `PASTE_GOOD_COMPANY_SHA` with the **company** commit that produced the accepted reporting result.
 
 ```sh
-python3 company/feedback.py finish run-a a .local/actual-a.json --input-ref case-a --receipt plugins/department-skills/skills/period-report/RELEASE.json
+git switch -c restore-period-report
+git restore --source=PASTE_GOOD_COMPANY_SHA --worktree -- plugins/department-skills/skills/period-report ':(exclude)plugins/department-skills/skills/period-report/RELEASE.json'
+```
+
+Review the restored files, increase the plugin version again, and repeat the four commands, review, distribution and employee check above. The rollback is complete when the prior behavior works under the new receipt. For an upstream change, compare it with the commit in `UPSTREAM.json` and review what you bring into the private release.
+
+## Record feedback from the reporting pilot
+
+The local feedback tool grades the two included reporting cases. It needs the actual saved JSON, a unique run ID and the receipt matched to that employee’s installed version. Keep a copy of that verified receipt with the run so a later update cannot change its attribution. The following example assumes employee A completed the run above and the checkout still matches their receipt:
+
+```sh
+cp plugins/department-skills/skills/period-report/RELEASE.json .local/run-a-receipt.json
+python3 company/feedback.py finish run-a a .local/actual-a.json --input-ref case-a --receipt .local/run-a-receipt.json
 python3 company/feedback.py summary
-python3 company/feedback.py retry
-python3 company/feedback.py reconcile .local/completed-run-ids.txt
 ```
 
-`finish` saves the artifact before evaluation. Replaying an identical event is safe. A conflicting replay is rejected. A failed check exits 1. `retry` checks interrupted runs. For `reconcile`, supply an independent list of completed run IDs, one per line, for the same group of deliveries. It identifies missing captures separately from pending checks. The local record defaults to `.local/feedback.sqlite3`. Ordinary chat requires manual capture or a separate integration that supplies real completion events and the release used. [Claude plugin capabilities by surface](https://support.claude.com/en/articles/13837440-use-plugins-in-claude)
+`finish` saves the artifact before scoring it. A failed check exits with status 1. An identical retry is safe. Give a revised output its own ID. If evaluation was interrupted, run `python3 company/feedback.py retry`. To find missing captures, put one completed run ID per line from an independent delivery record into `.local/completed-run-ids.txt` and run `python3 company/feedback.py reconcile .local/completed-run-ids.txt`. Read the missing, pending and outside-inventory lists. The database is local to this checkout. Ordinary chat needs manual capture or an integration that records actual completions.
 
-Record a correction and a downstream outcome separately. A report can pass the arithmetic check and still miss context its reader needs.
-
-```sh
-python3 company/feedback.py vote run-a didnt-work --reason "Missing context for the client"
-python3 company/feedback.py outcome run-a used-in-report --evidence report-123
-```
-
-For a repeatable failure, give the evidence to **Improve a skill**. Keep the owner-approved benchmark, actual output and tested correction together. Use `company/run-record.json` for optional measured cost, private prompt references and observed business outcomes. Other skills need a check suited to their work before you can count their results as verified.
+Log feedback only when it happens. For a reported problem, use `python3 company/feedback.py vote run-a didnt-work --reason "Missing client context"`. If an employee used the result, use `python3 company/feedback.py outcome run-a used-in-report --evidence report-123` with the actual report reference. A passed check, employee feedback and business use answer different questions. For other jobs, the [run record](run-record.json) can hold the outcome, evidence, cost when measured and the release used.

@@ -1,6 +1,7 @@
 """Exercise the company deployment and feedback path using synthetic data."""
 import importlib.util
 import json
+import re
 import sqlite3
 import subprocess
 import sys
@@ -8,6 +9,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from urllib.parse import urlsplit
 from zipfile import ZipFile
 
 SOURCE = Path(__file__).resolve().parents[1]
@@ -56,6 +58,24 @@ class DeploymentTest(unittest.TestCase):
         self.run_command(sys.executable, "company/package_chatgpt.py", "--check")
         self.run_command(*self.install, status=1)
         self.run_command(sys.executable, "company/release.py", "verify", str(self.plugin))
+
+    def test_company_readme_and_catalog_lead_to_installed_files(self):
+        readme = self.company / "README.md"
+        catalog = self.company / "CATALOG.md"
+        guide = self.company / "company/DEPLOY.md"
+        self.assertIn("](CATALOG.md)", readme.read_text())
+        self.assertIn("](chatgpt/)", readme.read_text())
+        self.assertNotEqual(readme.read_bytes(), guide.read_bytes())
+        if "## Share a company release" in guide.read_text().splitlines():
+            self.assertIn("](company/DEPLOY.md#share-a-company-release)", readme.read_text())
+        downloads = re.findall(r"\]\(chatgpt/([\w-]+)\.zip\?raw=true\)", catalog.read_text())
+        self.assertEqual(sorted(downloads), sorted(p.stem for p in (self.company / "chatgpt").glob("*.zip")))
+        for source in (readme, catalog, guide, *(self.company / "proof").rglob("*.md")):
+            for target in re.findall(r"\]\(([^ )]+)\)", source.read_text()):
+                link = urlsplit(target)
+                if not link.scheme and link.path:
+                    with self.subTest(source=source.relative_to(self.company), target=target):
+                        self.assertTrue((source.parent / link.path).exists())
 
     def test_change_and_rollback(self):
         skill = self.receipt.with_name("SKILL.md")

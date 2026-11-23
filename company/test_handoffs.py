@@ -24,8 +24,18 @@ class PublisherNeutralTests(unittest.TestCase):
                     with self.subTest(download=path.name, entry=name):
                         content = archive.read(name)
                         if Path(name).name == "SETUP.md":
-                            for page in ("CATALOG.md", "company/DEPLOY.md"):
-                                source_link = f"https://github.com/gpm227/ai-close-skills/blob/main/{page}".encode()
-                                self.assertEqual(content.count(source_link), 1)
-                                content = content.replace(source_link, b"")
+                            links = re.findall(
+                                rb"https://github\.com/gpm227/ai-close-skills/blob/([a-f0-9]{40})/"
+                                rb"(CATALOG\.md|company/DEPLOY\.md)(?=\))", content)
+                            if links:
+                                self.assertCountEqual([page for _, page in links],
+                                                      [b"CATALOG.md", b"company/DEPLOY.md"])
+                                self.assertEqual(len({revision for revision, _ in links}), 1)
+                                for revision, page in links:
+                                    source_link = b"https://github.com/gpm227/ai-close-skills/blob/" + revision + b"/" + page
+                                    content = content.replace(source_link, b"")
+                            else:
+                                edition = b"https://github.com/gpm227/ai-close-skills/pull/5)"
+                                self.assertEqual(content.count(edition), 1)
+                                content = content.replace(edition, b")")
                         self.assertIsNone(PUBLISHER.search(content))

@@ -24,9 +24,12 @@ def setup_note(skill):
     if example:
         first_run += f"To try the skill with sample material, open [{example}]({example}).\n\n"
     opening = (
-        "# Install this skill in ChatGPT\n\n"
-        "Open Plugins → Skills → Create → Upload from your computer and select the original ZIP. "
-        "After the upload scan, start a fresh chat. "
+        "# Use this skill in ChatGPT\n\n"
+        "In a workspace with Skills enabled, open **Plugins → Skills → Create → Upload from your computer**. "
+        "Select the original ZIP. After the scan, confirm the skill is installed and start a fresh chat. "
+        "Use the request below with your own material. You can unzip a copy to read the bundled examples.\n\n"
+        "For a manual trial when Skills is unavailable, attach `SKILL.md` and the inputs or supporting files "
+        "it calls for in a fresh chat. A task that uses a script needs a chat that can run code. "
         "[Workspace permissions and upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)\n\n"
     )
     opening += first_run
@@ -34,8 +37,9 @@ def setup_note(skill):
         return opening + ("Your company owns this release. Read `company/DEPLOY.md` in the private repository "
                           "for team setup, updates and rollback. Use the included `RELEASE.json` to identify the version.\n")
     return opening + (
-        "[Find this download in the catalog](https://github.com/gpm227/ai-close-skills/blob/main/CATALOG.md) · "
-        "[Read the deployment guide](https://github.com/gpm227/ai-close-skills/blob/main/company/DEPLOY.md)\n"
+        "For other downloads or team setup, open the "
+        "[public edition notes](https://github.com/gpm227/ai-close-skills/pull/5). "
+        "Its description links to the catalog and deployment guide (`company/DEPLOY.md`).\n"
     )
 
 
