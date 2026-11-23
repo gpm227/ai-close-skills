@@ -81,9 +81,16 @@ def render(data, folder):
         require(re.fullmatch(r"[Mm][MmZzLlHhVvCcSsQqTtAa0-9Ee.,+\s-]+", path), "Choose a supported icon or valid path")
         require(path not in icons, "Choose a distinct icon for each job")
         icons.add(path)
-        words.extend([string(card, "label"), string(card, "text")])
+        label = string(card, "label")
+        detail = card.get("text", "")
+        require(isinstance(detail, str), "Use text for optional card detail")
+        detail = detail.strip()
+        require(not detail or label.casefold().rstrip(".!?") != detail.casefold().rstrip(".!?"),
+                "Omit the supporting line when it repeats the label")
+        words.extend([label, detail])
+        paragraph = f"<p>{esc(detail)}</p>" if detail else ""
         panels.append(f'<article><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="{icon_color}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="{esc(path)}"/></svg>'
-                      f'<h2>{tag(card,"label")}</h2><p>{tag(card,"text")}</p></article>')
+                      f'<h2>{esc(label)}</h2>{paragraph}</article>')
     count = len(" ".join(words).split())
     if "copy_limit" in data:
         limit = data["copy_limit"]
@@ -169,7 +176,9 @@ def render(data, folder):
             design.extend(["## " + heading, string(production, key)])
     design.extend(["## Working copy", string(sheet, "intro")])
     for card in cards:
-        design.append(f"- {string(card, 'label')} — {string(card, 'text')}")
+        detail = card.get("text", "").strip()
+        label = string(card, "label")
+        design.append(f"- {label} — {detail}" if detail else f"- {label}")
     design.extend(["## Next action", string(sheet, "cta"), url or "Destination pending",
                    "## Deliver and review", "Return the editable design and a rendered export. Review the first composition against the owner's benchmark. Revise it and inspect the second export for buyer meaning, brand fidelity and production details. Keep both reviews and identify anything awaiting approval."])
     return {"guide.html":page("Brand guide","".join(guide)), "one-sheet.html":sample, "design-brief.md":"\n\n".join(design)+"\n",

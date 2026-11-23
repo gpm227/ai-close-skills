@@ -41,14 +41,24 @@ class BrandPilot(unittest.TestCase):
         self.assertIn("Practice brief, deck page 2",(output/"guide.html").read_text())
         self.assertIn("Send a photo of the break.",(output/"voice-brief.md").read_text())
 
+    def test_label_can_stand_alone_in_handoff_and_proof(self):
+        card = self.data["sheet"]["cards"][0]
+        del card["text"]
+        result = self.run_job()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        proof = (self.work / "output/one-sheet.html").read_text()
+        self.assertIn(f"<h2>{card['label']}</h2></article>", proof)
+        self.assertIn(f"- {card['label']}\n", (self.work/"output/design-brief.md").read_text())
+
     def test_failures_do_not_create_a_handoff(self):
-        for field in ("uncleared", "missing_source", "duplicate_icons", "dense", "contrast", "cta"):
+        for field in ("uncleared", "missing_source", "duplicate_icons", "dense", "contrast", "cta", "echo"):
             with self.subTest(field=field):
                 self.data = json.loads((self.work / "build-brand-system/examples/example.json").read_text())
                 cards = self.data["sheet"]["cards"]
                 if field=="uncleared": cards[0]["refs"]=["D"]
                 if field=="missing_source": cards[0]["refs"]=["unseen"]
                 if field=="duplicate_icons": cards[0]["icon"]=cards[1]["icon"]
+                if field=="echo": cards[0]["text"]=cards[0]["label"]+"."
                 if field=="dense": self.data["copy_limit"]=6
                 if field=="contrast": self.data["color"]["ink"]=self.data["color"]["paper"]
                 if field=="cta": self.data["sheet"]["destination"]="data:text/html,Hi"

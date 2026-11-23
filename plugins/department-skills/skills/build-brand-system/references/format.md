@@ -13,7 +13,7 @@ Write UTF-8 JSON. Each reference in refs is a source ID. Every source has an id,
 | font_stack, heading_font_stack | Optional local CSS font stacks. Use source-appropriate fallbacks. |
 | color | Primary applied text and background as ink and paper (six-digit hex colors). Add action for CTA and icon ink when the identity supplies a distinct action color. Document the origin of color choices in visual. |
 | sheet | headline, intro, cards, cta, destination and refs. Use a specific https URL for a supplied next step, or an empty destination with an explicitly unresolved decision. |
-| sheet.cards | Two to four objects: icon, label, text and refs. Pick a distinct concept per card. |
+| sheet.cards | Two to four objects: icon, label, refs and optional text. Omit text when the label fully explains the job. Pick a distinct concept per card. |
 | production | For a new brief supply direction, relationship, assets and acceptance as specific text. Older files without this section produce a handoff flagged for completion. Keep the owner’s private reference in its authorized location. |
 | copy_limit | Optional positive integer. Count the sample headline, intro, labels, body and CTA only when the brief supplies a budget. |
 | logo | Optional filename of an approved local PNG or JPEG next to brand.json, e.g. logo.png. The renderer embeds it and preserves aspect ratio. Without an asset it displays company text. Document any outstanding logo file request under visual. |
