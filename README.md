@@ -14,6 +14,10 @@ In an eligible ChatGPT workspace, open **Plugins → Skills → Create → Uploa
 
 **[All 37 Skills](CATALOG.md)** · [Reporting](CATALOG.md#reporting) · [Sales](CATALOG.md#sales) · [Outbound](CATALOG.md#outbound) · [Marketing](CATALOG.md#marketing) · [Brand](CATALOG.md#brand) · [Operations](CATALOG.md#operations)
 
+## Landing-page build reference
+
+[Empyreal Team: from an approved brand system to a working service enquiry](examples/landing-page/build-reference.md).
+
 ## See it work: reporting
 
 Ask ChatGPT how orders are doing on May 18 and it will tell you they fell 40%. They didn't.
