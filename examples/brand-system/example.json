@@ -1,0 +1,36 @@
+{
+  "company": "Rivet Bench",
+  "audience": "A stage manager with a damaged set piece.",
+  "positioning": "A repair shop that lets the stage manager see the plan before approving work.",
+  "status": "draft",
+  "decision": "Review the proposed type and palette. Supply the original logo for external release.",
+  "layout": "sequence",
+  "copy_limit": 55,
+  "color": {"ink": "#29251E", "paper": "#FFFCF3", "action": "#574526"},
+  "font_stack": "Georgia, serif",
+  "sources": [
+    {"id":"S","locator":"Practice brief, Repairs website capture","excerpt":"A photo starts the job. The shop inspects the joint and sends a plan for approval.","clearance":"public"},
+    {"id":"D","locator":"Practice brief, deck page 2","excerpt":"Turnaround figures are internal and apply to one tour. Dates require inspection.","clearance":"internal"}
+  ],
+  "voice": [
+    {"rule":"Name the part or action a stage manager recognizes.","before":"Initiate an asset restoration request.","after":"Send a photo of the break.","refs":["S"]},
+    {"rule":"Describe the next decision. Give a completion date only after inspection.","before":"Get your set back in two days.","after":"Review the repair plan before work starts.","refs":["D","S"]}
+  ],
+  "visual": [
+    {"rule":"Keep the site's dark ink on a warm paper field.","status":"observed","refs":["S"]},
+    {"rule":"Use the company name in type until an approved logo arrives. Trial Georgia with #29251E on #FFFCF3. The exact font and colors are proposed.","status":"proposed","refs":[]},
+    {"rule":"Stack the three steps in order with matching line icons, a short label and one sentence each. Stay under the owner's 55-word limit.","status":"proposed","refs":["S"]}
+  ],
+  "sheet": {
+    "headline":"Show us the break.",
+    "intro":"Start a set repair with a photo.",
+    "cta":"Send a repair photo",
+    "destination":"https://example.org/repair",
+    "refs":["S"],
+    "cards":[
+      {"icon":"custom","svg_path":"M2 7h5l2-3h6l2 3h5v13H2zM16 13a4 4 0 1 1-8 0 4 4 0 1 1 8 0","label":"Send a photo","text":"Show the damaged part.","refs":["S"]},
+      {"icon":"inspect","label":"Inspect the joint","text":"Our shop checks the break.","refs":["S"]},
+      {"icon":"record","label":"Review the plan","text":"You approve the repair before work starts.","refs":["S"]}
+    ]
+  }
+}

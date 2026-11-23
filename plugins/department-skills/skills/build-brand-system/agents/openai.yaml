@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Brand System"
+  short_description: "Turn a client deck and website into a guide and one-sheet"
+  default_prompt: "Use $build-brand-system with this company overview and website to deliver our brand guide, copy voice and an icon-led one-sheet."

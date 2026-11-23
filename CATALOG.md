@@ -1,6 +1,6 @@
 # All Skills
 
-36 jobs. Each one names what to hand the AI, what comes back, the mistake plain AI makes, and how to check the result.
+37 jobs. Each one names what to hand the AI, what comes back, the mistake plain AI makes, and how to check the result.
 
 ## Reporting
 
@@ -38,6 +38,8 @@
 - [Develop a point of view](plugins/department-skills/skills/develop-thought-leadership/SKILL.md) · An argument that survives a smart reader
 
 ## Brand
+
+- [Build a brand system](plugins/department-skills/skills/build-brand-system/SKILL.md) · From overview and website to an editable guide, voice brief and applied one-sheet. [Download for ChatGPT](chatgpt/build-brand-system.zip?raw=true)
 
 - [Define the brand](plugins/department-skills/skills/define-brand-positioning/SKILL.md) · What you sell, who picks it, and why
 - [Define brand voice](plugins/department-skills/skills/define-brand-voice/SKILL.md) · Rules built from real edits

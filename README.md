@@ -4,7 +4,15 @@ Instructions that make ChatGPT and Claude do the job right, starting with the mi
 
 Every Skill names one job, what to hand the AI, what comes back, the trap plain AI falls into, and how to check the result. Copy one into a chat and go.
 
-**[All 36 Skills](CATALOG.md)** · [Reporting](CATALOG.md#reporting) · [Sales](CATALOG.md#sales) · [Outbound](CATALOG.md#outbound) · [Marketing](CATALOG.md#marketing) · [Brand](CATALOG.md#brand) · [Operations](CATALOG.md#operations)
+## Build a brand system in ChatGPT
+
+Give ChatGPT a company overview PDF and the company website. Get an editable brand guide, a voice brief and a one-sheet that shows how the brand works in practice. The workflow keeps the first draft and completes two successive reviews against your brief before handoff.
+
+**[Download Build a Brand System](chatgpt/build-brand-system.zip?raw=true)** · [Inspect the skill](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Try the worked example](examples/brand-system/brief.md)
+
+In an eligible ChatGPT workspace, open **Plugins → Skills → Create → Upload from your computer**. Select the single skill download. Open a new chat, attach the overview, paste the website URL and ask: “Build our brand system. Show me how it applies to a one-sheet a customer could use.” A partner in another eligible workspace can upload their own copy. [OpenAI's installation and sharing instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+
+**[All 37 Skills](CATALOG.md)** · [Reporting](CATALOG.md#reporting) · [Sales](CATALOG.md#sales) · [Outbound](CATALOG.md#outbound) · [Marketing](CATALOG.md#marketing) · [Brand](CATALOG.md#brand) · [Operations](CATALOG.md#operations)
 
 ## See it work: reporting
 
