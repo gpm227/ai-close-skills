@@ -6,7 +6,7 @@ Every Skill names one job, what to hand the AI, what comes back, the trap plain 
 
 ## Build a brand system in ChatGPT
 
-Give ChatGPT a company overview PDF and the company website. Get an editable brand guide, a voice brief and a one-sheet that shows how the brand works in practice. The workflow keeps the first draft and completes two successive reviews against your brief before handoff.
+Give ChatGPT a company overview PDF and the company website. Get an editable brand guide, a voice brief, a copy proof and a production brief for your chosen design tool, including Claude Design. Bring the rendered versions back to ChatGPT for two successive visual reviews against your approved reference.
 
 **[Download Build a Brand System](chatgpt/build-brand-system.zip?raw=true)** · [Inspect the skill](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Try the worked example](examples/brand-system/brief.md)
 

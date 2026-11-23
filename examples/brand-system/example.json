@@ -5,6 +5,12 @@
   "status": "draft",
   "decision": "Review the proposed type and palette. Supply the original logo for external release.",
   "layout": "sequence",
+  "production": {
+    "direction": "Lead with the damaged part. Place the three repair decisions alongside the sequence and end at the photo intake.",
+    "relationship": "The stage manager sends the photo, the shop assesses the break, and the stage manager authorizes the repair. Make that change of hands visible.",
+    "assets": "Request a cleared close-up of the damaged joint. Use a labelled drawing while the photo or original logo is pending.",
+    "acceptance": "On a first scan a stage manager can identify who approves the repair and what to send. Keep the turnaround estimate out of the published piece."
+  },
   "copy_limit": 55,
   "color": {"ink": "#29251E", "paper": "#FFFCF3", "action": "#574526"},
   "font_stack": "Georgia, serif",

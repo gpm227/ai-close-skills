@@ -30,6 +30,10 @@ class BrandPilot(unittest.TestCase):
         result = self.run_job()
         self.assertEqual(result.returncode,0,result.stderr)
         output = self.work / "output"
+        handoff = (output / "design-brief.md").read_text()
+        self.assertIn(self.data["production"]["relationship"], handoff)
+        self.assertIn("visual review pending", handoff)
+        self.assertNotIn("Last season 18 pieces", handoff)
         sheet = (output / "one-sheet.html").read_text()
         self.assertEqual(sheet.count('<svg aria-hidden="true"'),3)
         self.assertIn("Show us the break.",sheet)

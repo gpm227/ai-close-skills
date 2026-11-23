@@ -14,7 +14,8 @@ Write UTF-8 JSON. Each reference in refs is a source ID. Every source has an id,
 | color | Primary applied text and background as ink and paper (six-digit hex colors). Add action for CTA and icon ink when the identity supplies a distinct action color. Document the origin of color choices in visual. |
 | sheet | headline, intro, cards, cta, destination and refs. Use a specific https URL for a supplied next step, or an empty destination with an explicitly unresolved decision. |
 | sheet.cards | Two to four objects: icon, label, text and refs. Pick a distinct concept per card. |
-| copy_limit | Optional positive integer. Default 95 words in the sample headline, intro, card labels/bodies and CTA combined. Explain overrides in visual. |
+| production | For a new brief supply direction, relationship, assets and acceptance as specific text. Older files without this section produce a handoff flagged for completion. Keep the owner’s private reference in its authorized location. |
+| copy_limit | Optional positive integer. Count the sample headline, intro, labels, body and CTA only when the brief supplies a budget. |
 | logo | Optional filename of an approved local PNG or JPEG next to brand.json, e.g. logo.png. The renderer embeds it and preserves aspect ratio. Without an asset it displays company text. Document any outstanding logo file request under visual. |
 
 Icons available: route (movement/handoff), inspect (inspection/search), record (written record), protect (protection), time (timing), people (people/team), signal (measurement or signal), package (physical goods), payment (transaction), place (location), calendar (schedule), tools (maintenance). Choose by meaning. For a missing concept, set the card's icon to custom and supply an svg_path containing a simple valid SVG path in a 24×24 viewBox. Use a consistent unfilled two-unit stroke; give each custom icon a distinct path. Check visual meaning in the rendered page.

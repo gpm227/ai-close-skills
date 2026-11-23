@@ -85,8 +85,9 @@ def render(data, folder):
         panels.append(f'<article><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="{icon_color}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="{esc(path)}"/></svg>'
                       f'<h2>{tag(card,"label")}</h2><p>{tag(card,"text")}</p></article>')
     count = len(" ".join(words).split())
-    limit = data.get("copy_limit", 95)
-    require(type(limit) is int and limit > 0 and count <= limit, f"Sample uses {count} words; budget is {limit}")
+    if "copy_limit" in data:
+        limit = data["copy_limit"]
+        require(type(limit) is int and limit > 0 and count <= limit, f"Sample uses {count} words; budget is {limit}")
     ink, paper = data["color"]["ink"], data["color"]["paper"]
     a, b = sorted(map(color_lightness, [ink, paper]))
     require((b + 0.05) / (a + 0.05) >= 4.5, "Applied body text pair falls below 4.5:1")
@@ -136,7 +137,7 @@ def render(data, folder):
     url = sheet["destination"]
     require(isinstance(url, str) and (not url or (urlsplit(url).scheme == "https" and urlsplit(url).hostname)), "Invalid CTA destination")
     cta = f'<a class="cta" href="{esc(url)}">{tag(sheet,"cta")}</a>' if url else f'<p>{tag(sheet,"cta")}</p>'
-    sample = page("One-sheet", f'<h1>{tag(sheet,"headline")}</h1><p class="intro">{tag(sheet,"intro")}</p>'
+    sample = page("One-sheet copy proof", f'<h1>{tag(sheet,"headline")}</h1><p class="intro">{tag(sheet,"intro")}</p>'
                                f'<section class="cards">{"".join(panels)}</section>{cta}')
     guide = [f'<h1>Brand guide</h1><p>{tag(data,"positioning")}</p><p><b>Audience</b> · {tag(data,"audience")}</p>'
              f'<p><b>{tag(data,"status")}</b> · {tag(data,"decision")}</p><section><h2>Writing in our voice</h2>']
@@ -157,7 +158,21 @@ def render(data, folder):
     for label, item in [(sheet["headline"],sheet)]+[(c["label"],c) for c in cards]:
         guide.append(f'<li>{esc(label)} · {refs(item,public=True)}</li>')
     guide.append(f'</ul><p>{count} words · {len(cards)} distinct icons</p></section>')
-    return {"guide.html":page("Brand guide","".join(guide)), "one-sheet.html":sample,
+    production = data.get("production")
+    design = [f"# Design brief · {string(data, 'company')}", "Working copy proof. Design export and visual review pending.",
+              "## Audience", string(data, "audience"), "## Buyer promise", string(sheet, "headline")]
+    if production is None:
+        design.append("Confirm the intended composition, buyer relationship, authorized assets and visual benchmark before commissioning design.")
+    else:
+        for key, heading in (("direction", "Composition and reading order"), ("relationship", "What the visual explains"),
+                             ("assets", "Assets and permissions"), ("acceptance", "Visual acceptance criteria")):
+            design.extend(["## " + heading, string(production, key)])
+    design.extend(["## Working copy", string(sheet, "intro")])
+    for card in cards:
+        design.append(f"- {string(card, 'label')} — {string(card, 'text')}")
+    design.extend(["## Next action", string(sheet, "cta"), url or "Destination pending",
+                   "## Deliver and review", "Return the editable design and a rendered export. Review the first composition against the owner's benchmark. Revise it and inspect the second export for buyer meaning, brand fidelity and production details. Keep both reviews and identify anything awaiting approval."])
+    return {"guide.html":page("Brand guide","".join(guide)), "one-sheet.html":sample, "design-brief.md":"\n\n".join(design)+"\n",
             "voice-brief.md":"\n\n".join(brief)+"\n"}
 
 
