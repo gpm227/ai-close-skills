@@ -3,53 +3,23 @@ name: review-crm-duplicates
 description: "Finds duplicate contacts or companies in a CRM export and proposes which record to keep, field by field. Use for dedupe, merge planning, CRM cleanup, or \"we have the same company in here three times.\""
 ---
 
-# Find and merge CRM duplicates
+# Review CRM duplicate candidates
 
-Plain AI matches on name and email and merges anything that looks close. That deletes real people (two employees sharing billing@), merges different companies (franchises, a parent and its subsidiary), and throws away the newer phone number.
+Produce a proposed merge plan from a contact or company export. Preserve original identifiers and values. Ask for stable record IDs if absent. Obtain the entity grain, authoritative fields, survivor policy, protected records and relationship exports. If the CRM or evidence cannot support safe application, deliver a review queue.
 
-## You'll need
+## Resolve identity before choosing fields
 
-- **The export.** CSV or pasted rows, with each record's ID. No IDs means no merge plan. Ask for them.
-- **Contacts or companies?** Say which.
-- **Which record wins ties.** Default: most recently updated. Ask if the team has a rule (oldest record, record owned by sales, record with an open deal).
-- **Anything that must never merge.** Do-not-contact flags, open deals, records synced from billing.
+1. Compare normalized copies of names, email, domains and phone numbers. Keep the raw values, record IDs and source references. Compare like entities: parent versus subsidiary, corporate versus branch and person versus shared mailbox are distinct identity questions.
+2. Generate candidates from corroborating identifiers, then inspect each pair. A verified unique upstream ID is strong evidence. A shared queue, switchboard, franchise domain or similar name supplies a clue only. State why records refer to the same person or entity, a distinct one, or an unresolved match.
+3. Assign **merge proposal**, **review** or **keep apart**. Place conflicting identity evidence, protected records, consent flags, material field conflicts or competing open-deal ownership in review. Keep any suppression effective. Matching A/B and B/C does not establish a single A/B/C entity: verify agreement across every member before proposing a cluster.
+4. For a merge proposal, select the survivor under the team's rule, otherwise prefer the most recently updated record when dates are comparable and identity is clear. Pick fields independently from entity identity. Use authoritative/recent nonempty data; distinguish a row's modification date from a field's verification date. Keep current nonempty values when the alternative is empty. Preserve original display values, activity links, deals and external IDs or flag any association that requires reconciliation.
 
-## Steps
+## Deliver a reversible proposal
 
-1. Normalize copies of the fields for matching only: lowercase emails, strip "Inc." and "LLC," strip `www.` and `https://`, standardize phone formats. Keep the originals untouched.
-2. Find candidate pairs. Strong match: same normalized email, or same domain plus same normalized company name. Weak match: similar name only.
-3. Sort each pair into one of three buckets:
-   - **Merge.** Strong match, no conflicts.
-   - **Review.** Strong match but a conflict (different phone, different owner, an open deal on both).
-   - **Keep apart.** Looks similar, isn't the same entity.
-4. For every Merge, pick a survivor and choose field by field: newest non-empty value wins unless the team rule says otherwise. Never overwrite a filled field with an empty one.
-5. Never merge a record with a do-not-contact flag into one without it. Flag it for review.
+Give one row per candidate pair or validated cluster, candidate IDs, evidence, disposition, reason, survivor and proposed retired IDs. Provide a field map with previous value, proposed value, source and why for each changed field. List protected relationships and exact unresolved conflicts. Report unique surviving/retiring IDs separately from candidate-pair counts. Each retired ID can appear in only one proposal.
 
-## What you get back
+Document the CRM's verified recovery method if known. Otherwise flag recovery as unknown and specify the raw records, relationship snapshots and field crosswalk to retain before any application. Record IDs alone cannot recreate lost history. List assessment never authorizes applying a merge.
 
-A table:
+[Practice a three-pair review with a shared mailbox and a suppression conflict](examples/practice.md).
 
-| Pair | Record A (ID) | Record B (ID) | Bucket | Why | Survivor | Fields taken from loser |
-| --- | --- | --- | --- | --- | --- | --- |
-
-Then totals per bucket, and a one-line undo note: the loser IDs, so the merge can be reversed.
-
-## The trap
-
-| ID | Name | Email | Company |
-| --- | --- | --- | --- |
-| 101 | Pat Lee | accounts@harborhvac.com | Harbor HVAC |
-| 102 | Sam Ortiz | accounts@harborhvac.com | Harbor HVAC LLC |
-| 201 | Northwoods Movers (Madison) | madison@northwoodsmovers.com | Northwoods Movers |
-| 202 | Northwoods Movers (Green Bay) | greenbay@northwoodsmovers.com | Northwoods Movers |
-
-The obvious answer merges both pairs. Both are wrong.
-
-101 and 102 are two people using a shared inbox: **Keep apart.** 201 and 202 are separate franchise locations: **Keep apart** unless the team sells to corporate, in which case **Review**.
-
-## Check it
-
-- Every Keep-apart pair has a stated reason.
-- No survivor field is empty where the loser had a value.
-- Every do-not-contact record appears only in Review or Keep apart.
-- The loser ID list matches the Merge count.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

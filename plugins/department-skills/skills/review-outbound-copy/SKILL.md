@@ -5,32 +5,15 @@ description: "Reviews cold emails or outbound messages, marks what hurts the rep
 
 # Review outbound copy
 
-Plain AI rewrites the whole email in its own voice and shortens it by cutting the one qualifier that made a claim true.
+Use when the writer has a draft and wants editorial judgment. Request the exact draft, recipient, required or locked text, intended action and evidence for claims. Preserve the original for comparison. If evidence is missing, the review can proceed; label the specific claim held or remove it from clean copy.
 
-## You'll need
+## Edit with a record of what changed
 
-- **The draft** or sequence.
-- **Who it's going to.**
-- **Your rules,** if you have them.
-- **The proof** behind any claim.
+1. Read one touch at a time as the recipient. Identify the reason for contact, meaningful ask, facts about the buyer, proof, qualifications and any implied promises. Count all requested actions, including “or forward this,” whether or not they end in question marks.
+2. Give each material issue a location and exact original passage. Prioritize false or unsupported claims, changed permissions or an action the seller cannot fulfill before style edits. If a claim has proof, compare its population, sample, timeframe, unit and permission word for word where required.
+3. Preserve sound lines, sender voice and locked wording. Cut the fewest words that repair the problem. A locked unsupported passage stays visibly on hold. Supply an optional replacement separately for the owner. If adding a necessary qualifier makes an otherwise unusable draft longer, state that trade-off and try cutting elsewhere.
+4. Return an annotated draft or original-to-edit table, clean copy per touch and any unresolved evidence. Mark ready for owner review, revise, or hold, with a reason. Read the clean copy on its own. Verify action count and each surviving claim and its qualifiers. If the original passes, return it verbatim and say what you checked.
 
-## Steps
+[Practice a two-ask edit that keeps an approved claim intact](examples/practice.md).
 
-1. Mark each passage that breaks a rule, makes a claim you can't back, or competes with the ask.
-2. Rank them by how much they hurt understanding or trust.
-3. Make the smallest edit that fixes each one.
-4. After shortening, recheck every claim still has its qualifier.
-
-## What you get back
-
-The draft with notes on each issue, a clean revision, and a list of claims that still need checking.
-
-## The trap
-
-"Our clients typically see a 20% lift in qualified leads within the first quarter, depending on list quality." Shortened, it becomes "Clients see a 20% lift in leads." That dropped "typically," "qualified," the time frame and the condition. Each word carried weight. Cut somewhere else.
-
-## Check it
-
-- Every claim in the revision has the same support as the original.
-- Each email has one ask.
-- The revision is shorter or the same length.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

@@ -5,7 +5,7 @@ description: "Finds the right logo, icon, image or font for a specific use from 
 
 # Find the approved brand asset
 
-Plain AI hands you a logo file path it made up, or the white logo for a white page.
+Find the existing approved asset for the requested placement, down to its particular variant and usage rights. Creating a new logo or rebuilding a missing master is a different job.
 
 ## You'll need
 
@@ -22,6 +22,12 @@ Plain AI hands you a logo file path it made up, or the white logo for a white pa
 4. If it carries information, write alt text. If it's decorative, say so.
 5. If two versions conflict, show the difference and ask the owner.
 
+## Rank candidates by permitted use
+
+Filter by owner approval, publication rights, territory and term where applicable, channel, colorway and background, format, target dimensions and effective resolution. Compare versions using the released manifest or owner decision. A newer filename or more recent download does not establish approval. Verify that an SVG is a true vector at the needed placement or discloses embedded rasters. A slide font installed locally does not establish embedding or redistribution rights.
+
+Return one selected master or an explicit “no approved match.” Record the exact supplied path or link, asset ID/release if available, rights evidence and locator, actual checks, and reason for eliminating the closest alternative. Separate files opened and rendered from manifest-only candidates. If access fails, give the exact file or permission required and a labeled temporary fallback appropriate to the channel. Never recolor, invent or redistribute a substitute as the approved original.
+
 ## What you get back
 
 A short list: exact file path or link, version, where it's for, any usage limits, and a fallback.
@@ -35,3 +41,7 @@ The request is "logo for the one-sheet." The obvious pick is `logo-white.svg` be
 - Every path points to a file that exists.
 - The asset is visible on the target background.
 - Nothing internal-only goes into a public piece.
+
+Check a print-use request against [the manifest-only booth-sign case](examples/practice.md).
+
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

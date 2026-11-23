@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friday review at two depots</title>
+<style>
+@page { size: 12in 6.75in; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e8edf0; color: #142c3b; font: 16px/1.4 Arial, Helvetica, sans-serif; }
+main { max-width: 1050px; margin: auto; padding: 1rem; }
+article { padding: 4.2% 5%; margin: 1rem 0; background: #fff; border-top: 8px solid #164663; min-height: 450px; }
+h1,h2,h3,p,figure,dd,dl { margin: 0; }
+h1,h2 { font-size: clamp(2rem,4.7vw,3.2rem); line-height: 1.08; letter-spacing: -.045em; max-width: 21em; }
+h3 { font-size: 1.35em; }
+.lede { margin: .6em 0 1.05em; font-size: 1.25em; }
+.docket { border: 2px solid #164663; margin-top: 1.3em; }
+.docket figcaption { padding: .36em .8em; background: #164663; color: #fff; font-weight: bold; }
+.row { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; padding: .6em .8em; border-top: 1px solid #a8b5bc; }
+.day { font-size: 1.55em; font-weight: bold; font-family: "Courier New", monospace; }
+.mark { border-left: 8px solid #a04608; }
+.scope { margin-top: .9em; }
+.tally { display: grid; grid-template-columns: 3fr 1fr; margin: 1.2em 0 .5em; border: 2px solid #164663; }
+.tally div { padding: .7em .9em; }
+.tally div:first-child { background: #164663; color: white; }
+.tally strong { display: block; font: bold 3em/1 "Courier New", monospace; }
+.limit { max-width: 40em; font-size: 1.2em; }
+.price { font: bold 2em/1 "Courier New", monospace; display: inline-block; }
+.compare { width: 100%; border-collapse: collapse; margin: 1em 0; }
+th,td { padding: .45em .5em; border-bottom: 1px solid #a8b5bc; text-align: left; vertical-align: top; }
+th { color: #164663; }
+.steps { padding: 0; list-style: none; margin: 1.1em 0; }
+.steps li { border-top: 1px solid #a8b5bc; padding: .55em 0; }
+.steps strong { display: inline-block; min-width: 7em; }
+.source { margin-top: 1em; font-size: .88em; color: #394d5a; }
+details { padding: .55em .9em; margin: -.7em 0 1.7em; }
+summary { cursor: pointer; font-weight: bold; }
+details p { margin: .5em 0; }
+@media (max-width: 500px) { article { min-height: 0; } .tally { grid-template-columns: 2fr 1fr; } .row { grid-template-columns: 1fr 1fr; } }
+@media print {
+ body { background: white; font-size: 17pt; }
+ main { padding: 0; max-width: none; }
+ article { width: 12in; height: 6.75in; min-height: 0; padding: .45in .65in; border-top-width: .09in; margin: 0; break-after: page; }
+ article:last-of-type { break-after: auto; }
+ h1,h2 { font-size: 35pt; }
+ details { display: none; }
+ .source { font-size: 13pt; }
+ .docket figcaption,.tally div:first-child { print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<main>
+<article>
+<h1>Should two depots test a Friday review?</h1>
+<p class="lede">The proposed change moves the review day at two depots for four weeks.</p>
+<figure class="docket">
+<figcaption>Review schedule during the proposed test</figcaption>
+<div class="row"><strong>Remaining depots</strong><span class="day">Wednesday</span></div>
+<div class="row mark"><strong>Two pilot depots</strong><span class="day">Friday</span></div>
+</figure>
+<p class="source">Buyer meeting note D1 · Approved pilot offer D3</p>
+</article>
+<details><summary>Speaker notes · Opening decision</summary>
+<p><strong>Say:</strong> The current review is Wednesday. The sponsor has asked whether a small group can move without disturbing the rest of the network.</p>
+<p><strong>Question:</strong> Must all sites switch? <strong>Answer:</strong> No. D1 and D3 keep the remaining depots on Wednesday.</p>
+<p><strong>Transition:</strong> What do we know about exceptions in the two selected depots?</p>
+</details>
+<article>
+<h2>Three of four sampled depot-weeks contained an exception.</h2>
+<figure class="tally" aria-label="Four nonrandom historical depot-weeks in aggregate. Three with an exception; one without.">
+<div><strong>3</strong>With an exception</div><div><strong>1</strong>Without</div>
+</figure>
+<p class="limit">Four historical depot-weeks across two selected depots. Nonrandom sample. Network-wide frequency and cost are unknown.</p>
+<p class="source">Approved aggregate sample D2 · Disclosure limits D4</p>
+</article>
+<details><summary>Speaker notes · Strength of the evidence</summary>
+<p><strong>Say:</strong> The records count depot-weeks containing an exception. A week could contain several exceptions. We do not know their cost.</p>
+<p><strong>Question:</strong> Does the sample show Friday performs better? <strong>Answer:</strong> It contains no comparison of review days.</p>
+<p><strong>Transition:</strong> Compare the actual offer with keeping the existing schedule.</p>
+</details>
+<article>
+<h2>The four-week test costs $1,600 and leaves other sites on Wednesday.</h2>
+<table class="compare">
+<thead><tr><th scope="col">Decision</th><th scope="col">Keep current process</th><th scope="col">Run the test</th></tr></thead>
+<tbody>
+<tr><th scope="row">Review day</th><td>Wednesday</td><td>Friday for two depots</td></tr>
+<tr><th scope="row">Scope</th><td>Existing process</td><td>Setup and weekly check-ins</td></tr>
+<tr><th scope="row">Fee</th><td>No pilot purchased</td><td><strong>$1,600 fixed</strong></td></tr>
+</tbody></table>
+<p>Success criteria still need agreement.</p>
+<p class="source">Approved pilot offer D3 · Current process D1</p>
+</article>
+<details><summary>Speaker notes · Terms</summary>
+<p><strong>Say:</strong> The fee covers the bounded test. Existing operating costs have not been estimated.</p>
+<p><strong>Question:</strong> What saving would pay for it? <strong>Answer:</strong> The historical sample does not establish savings. Agree on a measure before kickoff.</p>
+<p><strong>Transition:</strong> The director can appoint the person who will settle those criteria.</p>
+</details>
+<article>
+<h2>Choose a pilot owner by 20 July.</h2>
+<ul class="steps"><li><strong>Director</strong> Name the person responsible for the two-depot test.</li>
+<li><strong>Pilot owner</strong> Agree on the success criteria before kickoff.</li></ul>
+<p class="scope">One proposed measure to discuss is the count of depot-weeks with an exception. The team still needs a comparable baseline and an agreed decision rule.</p>
+<p class="source">Director decision and timing D3 · Measure proposed for discussion</p>
+</article>
+<details><summary>Speaker notes · Decision</summary>
+<p><strong>Say:</strong> The only decision requested today is the pilot owner. Bring the draft criterion to the owner before any test starts.</p>
+<p><strong>Question:</strong> Has the criterion been approved? <strong>Answer:</strong> D3 explicitly leaves it open.</p>
+<p><strong>Close:</strong> Who should own the test by 20 July?</p>
+</details>
+</main>
+</body>
+</html>

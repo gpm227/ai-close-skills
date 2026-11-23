@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python -m unittest discover -s company
-      - run: python company/package_brand_skill.py --check
+      - run: python company/package_chatgpt.py --check

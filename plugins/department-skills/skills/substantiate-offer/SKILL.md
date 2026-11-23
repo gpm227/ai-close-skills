@@ -3,34 +3,19 @@ name: substantiate-offer
 description: "Builds an offer from what you can actually deliver and prove, and flags every claim that isn't backed. Use for writing an offer, packaging a service, a value proposition, or \"what should we promise.\""
 ---
 
-# Build an offer from evidence
+# Substantiate an offer
 
-Plain AI writes the offer you wish you had: guaranteed results, fast turnaround, unlimited revisions. Then sales has to deliver it.
+Use when sales or marketing needs an offer the delivery team can fulfill. Gather the intended buyer, scope, limits, prerequisites, capacity, pricing basis, historical outcomes and who approved each source for this use. A buyer outcome, a seller-controlled deliverable and a contractual commitment need different evidence.
 
-## You'll need
+## Decide what belongs in the offer
 
-- **What you deliver,** to whom, and under what conditions.
-- **Results** you've measured, with dates and scope.
-- **Limits.** What you don't do, how many, how fast.
+- Break the proposed sentence into atomic claims. For each, record exact supporting language, source location/date, owner, eligible customer, timing start, exclusions and permission to publish. Mark it usable as written, usable within named limits, or held.
+- Confirm that a delivery commitment is authorized for this scope. Measured elapsed time across past jobs is evidence of history; the owner must establish any forward deadline or guarantee. State what the customer supplies and when the clock starts. When price or turnaround has no source, omit the figure or name the actual quoting process supplied.
+- Match outcomes to the observed population and metric. Three customers sharing a result can justify a scoped observation if the evidence and usage rights support it. “Most clients” needs an appropriate denominator. A pilot without a comparison cannot establish a causal uplift.
+- When sources conflict, surface both exact conditions and narrow to an uncontested statement only where that is supportable. Do not resolve crossed pricing or terms by picking the more attractive one.
 
-## Steps
+Return buyer-ready offer copy with fulfillment conditions next to the promise. Follow with an internal claim table and withheld list. For each held claim, name the smallest missing decision or record that would change its status. Do not expose private evidence in public copy. Recheck price, capacity and rights if the owner changes scope or channel.
 
-1. List what you can deliver and the conditions.
-2. Connect each one to a result the buyer cares about.
-3. Trace every number or comparison to its evidence. Keep the limits.
-4. Write the offer around a deliverable your team can fulfill every time.
-5. List the claims you'd like to make but can't yet, and the evidence each one needs.
+[Practice separating a delivery deadline from a customer outcome](examples/practice.md).
 
-## What you get back
-
-The offer statement, a table of each claim and its source, and a list of unsupported claims to review.
-
-## The trap
-
-The team wants "Results in 30 days, guaranteed." The evidence is three clients who saw a change within 45 days. The offer you can stand behind is "A working setup in 30 days. Most clients see results within two months." Then go get more evidence.
-
-## Check it
-
-- Every claim in the offer has a source.
-- The deliverable is something the team controls.
-- The unsupported list is honest.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

@@ -1,45 +1,20 @@
 ---
 name: period-report
-description: "Compares a partial month with the same days of the prior month from daily totals and returns a number you can defend. Use for month-to-date reporting, month-over-month comparisons, \"how are we tracking this month,\" or sales, orders or revenue versus last month."
+description: "Compare month-to-date orders, revenue or other additive daily totals to the same elapsed dates in the previous calendar month. Use for an in-progress monthly report or month-over-month trend through a cutoff."
 ---
 
 # Compare this month with last month
 
-Ask plain AI how orders are doing on May 18 and it compares 18 days of May with all of April, then tells you orders fell 40%. They didn't.
+Get the daily export, named metric, local reporting cutoff and unit. Confirm that both extracts use the same timezone, entity scope and business definition. A cumulative month-to-date field, a daily average, distinct users across days and an additive daily total answer different questions. If the input is cumulative, ask for daily totals or reconcile resets before converting it. Never sum already-cumulative values.
 
-## You'll need
+1. Include the first day of the current month through the cutoff. Use the first day through the same day number in the preceding calendar month, capped at its last day. Explain unequal calendar coverage explicitly. Use complete reporting days; identify a partially loaded cutoff day and offer the latest complete common cutoff.
+2. Require one finite, same-unit daily total per covered day. Distinguish a recorded zero from a missing row. If the CSV contains stores, currencies or repeated events, aggregate verified compatible records by local date first and retain the source mapping. Hold the finding on missing or duplicate daily totals.
+3. From the skill directory run `python3 scripts/compare.py daily.csv --metric orders --cutoff 2026-05-18` with the actual inputs. When a unit field applies, add `--unit-column currency` (or its actual header) to reject mixed or blank units. The script uses Python's standard library. If code execution is unavailable, build the dated ledger and perform the same checks; identify the method used. The caller should receive the result without having to run code.
+4. Sum both windows. Percent change is 100 × (current − prior) ÷ prior, rounded only at the end to two decimal places. When prior is zero, return `null` and state the absolute change. If prior is negative, state both totals and the absolute difference so the sign of the formula cannot be mistaken for business direction.
+5. Give one sentence naming the metric, unit, source, dates and result, followed by JSON containing exactly `current_start`, `current_end`, `prior_start`, `prior_end`, `current_total`, `prior_total`, `change_pct`. Use ISO dates and JSON numbers or null. Keep definitions, missing data or coverage qualifications in prose.
 
-- **Daily totals** for both months.
-- **The cutoff date.**
-- **The metric** (orders, revenue, signups).
+Check a second time that the prior total uses only covered days and that the sentence agrees with the JSON. A partial month versus the previous **whole** month is a separate comparison. For weekly, year-over-year or cohort comparisons, confirm the requested window before using these rules.
 
-Ask if the cutoff or metric is unclear. Treat dates as local reporting dates.
+[Run two complete exports and a zero-base case](examples/practice.md).
 
-## Steps
-
-1. Current window: day 1 through the cutoff, inclusive.
-2. Prior window: day 1 through the same day number of the prior month, capped at that month's last day. Explain any difference in covered days.
-3. Never compare a partial month with a full one.
-4. Use exactly one daily total for every covered day. Flag missing dates, duplicate dates, mixed units and gaps before going further. A recorded zero is a real value.
-5. Sum each window. Percent change = 100 × (current − prior) ÷ prior. If prior is zero, the percent change is undefined.
-6. Round the final percentage to at most two decimals.
-
-## What you get back
-
-One sentence with the finding, then this JSON:
-
-```json
-{"current_start": "YYYY-MM-DD", "current_end": "YYYY-MM-DD", "prior_start": "YYYY-MM-DD", "prior_end": "YYYY-MM-DD", "current_total": 0, "prior_total": 0, "change_pct": 0}
-```
-
-`change_pct` is a number or `null`. Name the metric and the source file in the sentence. If any data is missing, say so before giving a direction.
-
-## The trap
-
-May 18. May 1 to 18: 180 orders. All of April: 300. "Orders fell 40%" is wrong. April 1 to 18: 180. The answer is **orders are flat through the 18th, 0% change.**
-
-## Check it
-
-- Both windows cover the same number of days, or the difference is explained.
-- Every covered day has exactly one total.
-- The JSON matches the sentence.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

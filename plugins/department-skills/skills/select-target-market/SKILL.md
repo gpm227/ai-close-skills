@@ -5,31 +5,22 @@ description: "Compares market segments and picks one to go after, with a clear r
 
 # Select a target market
 
-Plain AI picks the biggest market and calls it a strategy. "Healthcare" isn't a segment. It's a thousand segments with different buyers.
+Recommend a bounded segment for the stated offer, sales horizon and objective. Distinguish this decision from applying an already approved customer profile to individual accounts.
 
-## You'll need
+## Compare options on the owner's terms
 
-- **Your offer** and what you can deliver.
-- **Candidate segments.**
-- **Evidence.** Wins, losses, conversations, data.
+Get the candidate segments, offer, delivery limits and evidence of buying behavior. Confirm the deciding objective only when different plausible objectives would change the choice. If segment data is thin, make a provisional choice or give the shortest comparison that could resolve a tie.
 
-## Steps
+- Name the actual workflow, buyer population and boundary used to identify each segment. A broad industry label alone makes a weak selection rule.
+- Apply serviceability gates first. Separate a technical requirement that blocks a trial from a buyer preference. Mark unverified gates **unknown**.
+- Compare viable segments on buyer-confirmed urgency, observed means of reaching a decision-maker, ability to deliver, and the owner's priority. Cite interviews by account, dated offers or pilot records with locators. Identify who operates, pays and approves using those sources. One observed role does not establish a universal title.
+- Use weights only if the owner gives them or accepts the assumptions. Keep unknowns visible. Avoid adding scores that imply precision the inputs cannot support. State which new fact would reverse the recommendation.
+- Write an entry rule a rep can test from a named source, then apply it to one candidate and one borderline account. If a condition requires discovery, label the record for research and provide the qualifying question.
 
-1. Separate must-haves (you can serve them at all) from priorities (you'd rather serve them).
-2. For each segment, identify who pays, who uses it, and who approves, from evidence. A job title alone is a lead to check.
-3. Compare segments on a problem the buyer measures and a threshold you can observe from outside.
-4. Write a rule that decides who's in, so anyone on the team gets the same answer.
-5. List the edge cases the owner needs to decide.
+## Deliver a decision memo
 
-## What you get back
+Give the chosen segment, confidence and next test. Include a table with candidate, decisive gate, buying evidence and date, disposition and reversal condition. Define the observed buyer roles and a reproducible in/out/research rule. When all candidates fail or lack the deciding evidence, return the smallest time-bounded validation step with what the owner should observe before choosing.
 
-A segment comparison table, the chosen segment with buyer roles, the in-or-out rule, and open decisions.
+[Practice selecting among three dispatch markets](examples/practice.md).
 
-## The trap
-
-"Dental practices" looks like one market. A solo dentist and a 40-office group have different buyers, budgets and timelines. The rule needs a size line you can check: "dental groups with 5 or more offices, per their website location list."
-
-## Check it
-
-- Two people apply the rule to the same company and get the same answer.
-- Every buyer role traces to evidence.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

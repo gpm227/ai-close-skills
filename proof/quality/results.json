@@ -1,0 +1,328 @@
+[
+  {
+    "skill": "assemble-prospect-list",
+    "verdict": "pass",
+    "expected": "Include Bright Ferry and Pia with D1/S1 locators, leave personal email blank, record generic address only as generic if included. Preserve Wale as uncertain pending ownership and keep Harbor Nine out with customer reason. Do not promote Eli or infer an address; trace both accounts and people as separate linked records.",
+    "output_evidence": "Three distinct companies yield one eligible, one held and one excluded.",
+    "reviewer_assessment": "Account and person rows join on F01, personal email is blank, old listing is held, customer is excluded and the unknown owner is flagged.",
+    "output_sha256": "d7a708b50bfaaf70d303bc3b9c19cf7265e4506969f475a265ee2f248e1afea0",
+    "output_file": "outputs/assemble-prospect-list.md"
+  },
+  {
+    "skill": "brief-an-account",
+    "verdict": "pass",
+    "expected": "Cite B7/S4 dates, distinguish study from build and Saturday schedule from doubling, reject unsupported aggregator, avoid claiming maintenance trouble or existing connection. Produce one non-leading question that can disconfirm an implication, with missing evidence and reasonable next step.",
+    "output_evidence": "Since the line began running Saturdays, how, if at all, has that affected when you schedule equipment service?",
+    "reviewer_assessment": "Dated primary information, disconfirming questions, current study versus approved construction, and absence of maintenance records are all explicit.",
+    "output_sha256": "6cbb3b93d969347218639b0be07ae36e89859932ed75de7818ce84645362610f",
+    "output_file": "outputs/brief-an-account.md"
+  },
+  {
+    "skill": "build-marketing-one-sheet",
+    "verdict": "pass",
+    "expected": "Usable one-page artifact/portable editable source or concrete usable plain format in text-only setting. Names buyer, numbered tags, borrower and return day in checkout sheet, honest sample LIST on request via email (not physical pack, download or purchase); link trace, no private claim/phony image. Source/clearance notes separate from customer copy.",
+    "output_evidence": "The page walks a volunteer coordinator through tagging a garment, recording the borrower and planned return day, and looking up a loan.",
+    "reviewer_assessment": "Opened the editable self-contained HTML and rendered Letter PDF; verified one readable page including the illustrative checkout row, correct printed request URL and coordinator email response. Neither page includes the uncleared performance claim or unlicensed imagery.",
+    "output_sha256": "e32fd3500f1d95da94bbb1d44ca41e4e2f283ca3c84051bb241ddf7a6a6c1078",
+    "output_file": "outputs/build-marketing-one-sheet.md"
+  },
+  {
+    "skill": "build-proof-library",
+    "verdict": "pass",
+    "expected": "Public observation 20% lower median on one route/12 visits with qualifiers, no training causality/generalization. Preserve exact L2, restricted to private proposals and expiry; not public. Withhold L3, source locators/status/refresh/owner needed; no invented approval authorities.",
+    "output_evidence": "relative decrease = (60 − 48) ÷ 60 = 20%",
+    "reviewer_assessment": "L1 is scoped and noncausal, exact L2 quote kept private-proposal only through expiry, L3 unsupported with explicit evidence needed.",
+    "output_sha256": "9b469bbe9ea5c07cb788e4a59a8d5f16a69fa5cadcbdadb99de28b4f7c7fc4a6",
+    "output_file": "outputs/build-proof-library.md"
+  },
+  {
+    "skill": "build-sales-deck",
+    "verdict": "pass",
+    "expected": "Exactly four slide-ready frames with clear buyer decision, mechanism, owner/criteria and two-week one-bay scope; distinguish pilot success measures from proven performance (e.g. count unresolved checkouts prospectively). Exclude protected testimonial in buyer slides/speaker notes, no invented evidence/numbers as performance. Notes with sources separately, ask for bay/lead rather than spend.",
+    "output_evidence": "This vote authorizes no purchase. If approved, the co-op names the bay and appoints its shift lead.",
+    "reviewer_assessment": "Inspected native PPTX XML: four editable slides and four populated speaker-note records. Trial scope, mechanism, named lead, planning conditions and prospective metrics clear; no private testimonial or unearned efficacy claim in slides or notes.",
+    "output_sha256": "8e38016395cfd8a2440c2e966c6f8fa54a47489201f09dd7b5a67f1ddce249d8",
+    "output_file": "outputs/build-sales-deck.md"
+  },
+  {
+    "skill": "build-target-accounts",
+    "verdict": "pass",
+    "expected": "Fiddlepost excluded customer (venues not sites), Red Staff fails current footprint, True Alto fails independence, Fir Bow hold for ownership. Count zero confirmed targets. Cite rows/statuses; avoid widening qualification to fill list.",
+    "output_evidence": "The directory supplies account-level Oregon school counts without as-of dates or individual site records.",
+    "reviewer_assessment": "Correct three exclusions, one hold and zero eligible. Rechecked the actual CSV: one row per original account; published count, scope and source locator are retained, individual site data and duplicate checks are explicitly unavailable, and no site IDs were created. Independent repeat of the original keyed input.",
+    "output_sha256": "54a83a9de9b920682b29f474143faf37586fdefb8e9d805780e14f772e1483d7",
+    "trial": "corrected-replay",
+    "output_file": "replay/build-target-accounts.md"
+  },
+  {
+    "skill": "compare-vendor-proposals",
+    "verdict": "pass",
+    "expected": "Alder 18×(280+5×18)+500=$7,160. Birch two annual terms=$7,200, includes 6 extra unused months. Alder lower by $40 under stated terms; exactly $40 reduction ties, more than $40 makes Birch cheaper (or second 6 months prorated makes Birch $5,400). Avoid $5,400 base assumption or $3,600 single-term mistake.",
+    "output_evidence": "With cent pricing, a $40.01 discount wins by one cent ($7,159.99)",
+    "reviewer_assessment": "Arithmetic and required 24-month cash outlay are correct, including the exact tie/flip and alternative prorating.",
+    "output_sha256": "02a09829efc47e9a4ef56fdf4ffe627e37552c3b95e17a12bf137ae2d332a12d",
+    "output_file": "outputs/compare-vendor-proposals.md"
+  },
+  {
+    "skill": "define-brand-positioning",
+    "verdict": "pass",
+    "expected": "Target ferry branch/dispatch, buying moment dock changes vague on whiteboard, alternative whiteboard/general tracking, mechanism timestamped shared record. Treat support as isolated and GPS as different job; no real-time vessel tracking, delay promises or leadership. Three usable formats and source open questions.",
+    "output_evidence": "Two of three win calls support the reason to choose it in this small sample.",
+    "reviewer_assessment": "Category, shared timestamped changes, whiteboard alternative, distinct need for GPS, restrained evidence and usable spoken/short versions all present.",
+    "output_sha256": "d34151884004b8fab90c765ccd1ee3e623bbd423e3ae9e19c3d31ccab9c540f9",
+    "output_file": "outputs/define-brand-positioning.md"
+  },
+  {
+    "skill": "define-brand-voice",
+    "verdict": "pass",
+    "expected": "Rules reflect concrete verb, object, timing/condition, reader action; no prohibition of all technical language or changing product policy. Use V1–V3 when deriving, then apply to V4 and label any remaining comparison, original before/after examples. Never infer unconditional instant access; unseen input and author evidence distinct.",
+    "output_evidence": "It cannot recover the card or the key from V4's draft.",
+    "reviewer_assessment": "Derivation uses V1–V3, flags narrow evidence and presents an honest retrospective V4 check with non-invented service facts.",
+    "output_sha256": "6369230955a4f74069bbaab7842f8596b41b577426024c82d37d43a69dd31672",
+    "output_file": "outputs/define-brand-voice.md"
+  },
+  {
+    "skill": "define-icp",
+    "verdict": "pass",
+    "expected": "Separate two binding criteria from observational room counts and churn hypothesis. P qualifies under known hard rules (room count cannot exclude); Q needs a named receiving technician and Friday confirmation. No claims about marketwide optimal size, validate routing/evidence.",
+    "output_evidence": "Both verified passes yield **eligible**. Otherwise record **needs evidence**",
+    "reviewer_assessment": "Both actual gates and inclusive 40-mile boundary are applied; room count is evidence only, P qualifies, Q requires confirmation.",
+    "output_sha256": "25e73e352ef002f414380644c6c7abdfa155e3f634a84733539e32f447138a2a",
+    "output_file": "outputs/define-icp.md"
+  },
+  {
+    "skill": "define-visual-standards",
+    "verdict": "pass",
+    "expected": "Use r7 codes/roles, family assignments, spacing; P2 cap-height keepout; ignore undocumented pixel and unapproved pink as authority. CMYK unknown (request print spec/proof) not assumed. Label source/status; give useful sample application/recipe and verification without invented asset links.",
+    "output_evidence": "The web hex values do not define press values.",
+    "reviewer_assessment": "Source roles, CSS values, type, one cap-height P2 clearance, unresolved print specs and labeled proposals retained. Recomputed the three stated contrast ratios, all match.",
+    "output_sha256": "cba90d0cb64849dfd895226dab6c8b3c3b6f7b94414f690171c78946218fa5b4",
+    "output_file": "outputs/define-visual-standards.md"
+  },
+  {
+    "skill": "design-workflow-automation",
+    "verdict": "pass",
+    "expected": "Use multi-field logical key depot/work_order/line, revision as version not new item. Reject/quarantine missing key, skip duplicate or older revision, compare-and-write atomically or equivalent, avoid reordering races. Map fields, log per-row results, staged recovery, explicit normal/duplicate/stale/malformed expected tests. No invented messaging/deploy.",
+    "output_evidence": "Plain upsert followed by a log entry still permits a stale overwrite.",
+    "reviewer_assessment": "Stable object identity across revisions, secondary effect identity, atomic version policy, malformed-row quarantine, race and replay tests, and verification scope are explicit.",
+    "output_sha256": "92fa8086ecdd7127a0b0ca24494d58caaa15030e4799b035eb30c79515fe93cf",
+    "output_file": "outputs/design-workflow-automation.md"
+  },
+  {
+    "skill": "develop-thought-leadership",
+    "verdict": "pass",
+    "expected": "Usable author-voiced thesis grounded in one day/3 of 5, no broad statistics/time or identifying locations. Handle narrow-aisle objection (hanging labels or alternative), recommend a concrete check/decision, distinguish observed from proposed. No false quotes or claims of a controlled experiment.",
+    "output_evidence": "On one intake day, three of the five crates had labels facing the wall.",
+    "reviewer_assessment": "Narrow firsthand observation, avoids identifying sites or making time savings claims, documents the narrow-aisle objection, gives a field test with a disconfirming outcome.",
+    "output_sha256": "06f96765eeca5dc4e39363afa56ac82954f1e73c3202e12dd95331001513ca45",
+    "output_file": "outputs/develop-thought-leadership.md"
+  },
+  {
+    "skill": "diagnose-campaign-results",
+    "verdict": "pass",
+    "expected": "Delivery 90/100=90%; bounces 10/100=10%; human replies 9/90=10% (includes opt-out if explicitly categorized); positives 2/90≈2.22%; automatic 3/90 separately if used. Missing appointments not zero; confounded sender comparison, no causal claim. One test with denominator, horizon and success criterion.",
+    "output_evidence": "Warmth and sender are inseparable in this pilot.",
+    "reviewer_assessment": "Correct denominators, automatic replies, interest and opt-out treatment; unmeasured appointments, conditional end date and primary positive-reply experiment specified.",
+    "output_sha256": "ba5a9e2ca75050cbe0b5bda18131b70624b08b1908ec75e8bb9d775ccc964302",
+    "output_file": "outputs/diagnose-campaign-results.md"
+  },
+  {
+    "skill": "diagnose-workflow-failure",
+    "verdict": "pass",
+    "expected": "Root issue includes checkpoint plus unstable Y key. X leave intact, Y verify duplicate AY/AZ then propose approved compensation not another replay; Z reconcile receipt by stable source ID before retry/hold uncertain. Minimal stable idempotent write/checkpoint fix and regression on retry; never announce reversal or write.",
+    "output_evidence": "An empty preliminary search cannot authorize a repost.",
+    "reviewer_assessment": "AX preserved; AY/AZ reviewed for approved compensation only; Z reconciled before a per-ID retry; no live changes claimed and stable identity regression included.",
+    "output_sha256": "aabd4bc8ec137788cb1cb9c700f18a3d7ceb53e416b0c70df2325b3db91d40ab",
+    "output_file": "outputs/diagnose-workflow-failure.md"
+  },
+  {
+    "skill": "draft-linkedin-outreach",
+    "verdict": "pass",
+    "expected": "Do not claim to have watched or quote advice. Connection note usable pre-acceptance; wait for acceptance and stop/reroute after engagement or decline. Use worksheet honestly, natural distinct next messages with one relevant ask, no simultaneous or completed sends.",
+    "output_evidence": "A second DM is omitted because the worksheet is the only supplied resource and repeating the offer adds nothing.",
+    "reviewer_assessment": "Grounded invitation, conditional DM and stop logic; omission explained, no invented attendance or send. The final invitation length is correct and within its editorial budget.",
+    "output_sha256": "91a6ce05775ea51e0ed4a8351226316838ff6119407dcc35a57f35985607905d",
+    "output_file": "outputs/draft-linkedin-outreach.md"
+  },
+  {
+    "skill": "draft-outbound-email",
+    "verdict": "pass",
+    "expected": "Copy can cite inventory bulletin with truthful wording, must not convert inventory into a move, claim prior interest or results. Ask one low-friction question or offer sample; follow-ups add relevant substance, clear stop on reply/decline. No links/invented references/sent mail.",
+    "output_evidence": "If anything needs to move temporarily, I can email you a sample of the paper labels we offer for shelf moves.",
+    "reviewer_assessment": "Two distinct touches, source and timing restrictions, stops and no calendar invented; plainly conditional prospective need.",
+    "output_sha256": "22a1307bd1c6a4c1073d2f3411e9c51a609fa3b9b19d2665a93df4bfcaa27ddf",
+    "output_file": "outputs/draft-outbound-email.md"
+  },
+  {
+    "skill": "extract-buyer-insights",
+    "verdict": "pass",
+    "expected": "Attribute quotations, identify Mae's access constraint versus speed (explicitly rejected), do not assign tablet shortage to Liv/T3. Distinguish observations from hypothesis, count evidence by separate buyer/session, preserve differences and propose neutral verification question.",
+    "output_evidence": "Only Mae attributed the choice to shared access.",
+    "reviewer_assessment": "Speaker/session separation, rejected speed explanation, no invented account consensus and distinct neutral follow-up questions are explicit.",
+    "output_sha256": "a4cb2577cedb03236a2988c162a22cb41a014c99c3e101ee1f73426a35a926ab",
+    "output_file": "outputs/extract-buyer-insights.md"
+  },
+  {
+    "skill": "extract-site-data",
+    "verdict": "pass",
+    "expected": "Two unique rows 17/23, canonical per-row URLs, preserve missing data; no press address for Cedar, no invented opening times. Account for four listed links, one alias, one failure; distinguish attempted endpoints from accessible unique detail records; never assert live verification.",
+    "output_evidence": "Only 2 canonical detail pages supplied independent record data.",
+    "reviewer_assessment": "Canonical IDs and sources in actual CSV, appropriate blanks, Fern 503 and redirect reconciled; no substituted footer email or live inspection claimed.",
+    "output_sha256": "0ed25bc2e4b4b6ec45b01ba19104b581792afb5887b7eed030646fbbb29ce2c1",
+    "output_file": "outputs/extract-site-data.md"
+  },
+  {
+    "skill": "improve-skill",
+    "verdict": "pass",
+    "expected": "Change OR to AND incl handling absent/unknown as not ready, map issue to skill vs source. Preserve actual observed O17, expected O18 ready, O19 not ready; test both missing sides, maintain known correct; distinguish logical/manual replay from executed independent run, candidate vs release and owner decision. No claim shipped.",
+    "output_evidence": "The static comparison verifies the proposed wording’s logical agreement on all three inputs.",
+    "reviewer_assessment": "Smallest OR-to-AND diff, O17 real baseline, O18 preservation, O19 false readiness withheld; clearly labels expected versus observed outcome, no release.",
+    "output_sha256": "a11e9e5f3c6a8299f1d8f1db141e41f071ed1f539a7c41952dcb636444ff0911",
+    "output_file": "outputs/improve-skill.md"
+  },
+  {
+    "skill": "period-report",
+    "verdict": "pass",
+    "expected": "March 1–3=12, February 1–3=0; absolute increase 12, percentage undefined and JSON null. Name files/metric, dates normalized in 2026, do not compare with full-month 90 or report 100% growth.",
+    "output_evidence": "\"change_pct\": null",
+    "reviewer_assessment": "Same-day windows, numeric totals 12 and 0, absolute change, filenames and undefined percentage all match.",
+    "output_sha256": "0d57bdefbe8335d554996527ff9efffb35ffd66e554ce531148e1c2543b4bb5b",
+    "output_file": "outputs/period-report.md"
+  },
+  {
+    "skill": "plan-outbound-test",
+    "verdict": "pass",
+    "expected": "Randomize/store-split by account, prevent cross-exposure, balance territories, keep audience/channel/cadence/CTA constant. Define primary metric with delivered eligible account denominator and seven-day window, separate automatic replies, handle suppressions, prestate stopping/decision and inconclusive small counts. No promised lift or send.",
+    "output_evidence": "Use verified delivery records for the second row and mark it unavailable if delivery is unknown.",
+    "reviewer_assessment": "Same blocked account-randomized design and suppression protections. Both primary assigned-account and secondary delivered-account positive-response rates included; checked illustrative numerators/denominators and verified that they reverse the apparent ordering, with scarce information and no claimed winner. No send.",
+    "output_sha256": "287532ea4a9341df4dec63a96f9b3ffde6185ab9e64b35b40de4ccb0754d2a07",
+    "trial": "corrected-replay",
+    "output_file": "replay/plan-outbound-test.md"
+  },
+  {
+    "skill": "prepare-sales-call",
+    "verdict": "pass",
+    "expected": "Open around map labeling, avoid assigning spend/decision to Ren, ask about workflow and route floor-plan question to facilities, offer actual sample only. Handle no project without pressure. Proposed follow-up and blank outcome log, no invented budget, date or booked next action.",
+    "output_evidence": "Facilities owns the floor plan. Ren's message establishes interest in labeling only.",
+    "reviewer_assessment": "Call card branches for facilities and no project, defers labor/lead time, uses one available sample, leaves blank fields in call log.",
+    "output_sha256": "92363d67b0d156d4d54efdb67c4bdf38f5af0c5521a836221ae10867a7bd7960",
+    "output_file": "outputs/prepare-sales-call.md"
+  },
+  {
+    "skill": "retrieve-brand-assets",
+    "verdict": "pass",
+    "expected": "Exact A1 file as current, match light treatment/dark surface; reject A2 draft and A3 paid/date conflicts; hold A4 pending rights. Provide reasonable no-photo fallback and preflight/verification; don't imply files were opened, downloaded, packaged, or visually checked; no invented authorized asset.",
+    "output_evidence": "All four entries are supplied references. No file was opened, delivered or rendered",
+    "reviewer_assessment": "Selected approved A1 with exact path, excludes draft A2, expired organic-only A3 and unknown-rights A4; valid fallback and targeted preflight.",
+    "output_sha256": "37bfd2e06cbd070164e92840170af653e0fe399dfbd5d064d7929580d8be5a19",
+    "output_file": "outputs/retrieve-brand-assets.md"
+  },
+  {
+    "skill": "review-brand-work",
+    "verdict": "pass",
+    "expected": "R1 pass quote, R2 fail match D1 and fix button to requesting label proof with appropriate follow-up, R3 unknown absent layout/style. Keep passing lines verbatim and keep editor preference outside required correction. Deliver corrected block, no invented typography evidence.",
+    "output_evidence": "Pasted plain text cannot establish the rendered typeface.",
+    "reviewer_assessment": "Applies R1 pass, R2 fail and corrected request, R3 unknown. Keeps first two lines intact, separates personal preference.",
+    "output_sha256": "2277eb1290faf20fb3a95fc9555c6bcaf3ea999576ffceb7269095c213e6fe68",
+    "output_file": "outputs/review-brand-work.md"
+  },
+  {
+    "skill": "review-crm-duplicates",
+    "verdict": "pass",
+    "expected": "71/72 review and preserve stricter DNC and ticket, no auto merge. 80/81 keep apart despite shared email. 90/91 propose survivor 90, keep B5, use 91 corrected mobile. Record IDs, field and link backups, uncertainty of reversal. Totals reconcile; no writes.",
+    "output_evidence": "Recovery from this export alone is unverified.",
+    "reviewer_assessment": "Stricter contact suppression and ticket retained, shared office contacts kept apart, Edie survivor 90 takes 91's mobile while preserving B5; crosswalk alone is correctly insufficient.",
+    "output_sha256": "2f4d36381854e86cfd29f84fb8b268f04694e8da1546b38d252a8d5efd79c3f9",
+    "output_file": "outputs/review-crm-duplicates.md"
+  },
+  {
+    "skill": "review-outbound-copy",
+    "verdict": "pass",
+    "expected": "Replace unconfirmed opening, universal quantified result, immediate free audit and score with truthful scope; no conversion of 2/5 self-reports to a guaranteed numeric reduction. Deliver annotated issues and clean concise ready-to-send draft with realistic next action, trace claims; no send.",
+    "output_evidence": "Two of five pilot galleries reported fewer errors.",
+    "reviewer_assessment": "Revision addresses speculative timing, universal quantified claim and misleading audit/score promise while preserving mechanism, short style and correct coordinator-led next step.",
+    "output_sha256": "cbcc6fb697c66c35398242b4b82ad5cf8b61dec92a2815979f51bee42d87fa2b",
+    "output_file": "outputs/review-outbound-copy.md"
+  },
+  {
+    "skill": "review-sales-pipeline",
+    "verdict": "pass",
+    "expected": "Opening 230 + new 80 + expansion 20 − contraction 30 − won 60 − lost 40 = closing 200 ($000). Closing stages Proposal 70/1, Demo 50/1, Qualify 80/1. D's stage move is not extra value; flag D and don't infer no activity for others. Do not claim weighted forecast/coverage or confuse B win with loss.",
+    "output_evidence": "Value reconciles as 230 + 80 − 60 − 40 − 30 + 20 = 200, leaving zero residual.",
+    "reviewer_assessment": "Correct deal and stage bridge, flags D with its specific missing action, no fabricated quota, unknown fields differentiated.",
+    "output_sha256": "21db62a068916a6b0980b88d9494b9ff861d436466ef055109053bb433089799",
+    "output_file": "outputs/review-sales-pipeline.md"
+  },
+  {
+    "skill": "select-target-market",
+    "verdict": "pass",
+    "expected": "Prioritize independent nurseries under no-integration constraint, distinguish 2 volunteers from payers, interview sample from market size, other segments and reasons. Define pilot inclusion and failure/switch criterion, e.g. observed handoff use/commercial commitment. No invented economics.",
+    "output_evidence": "Neither a paid pilot nor overlap between the two volunteers and the three nurseries reporting errors is established.",
+    "reviewer_assessment": "One nursery under no-integration constraint, clear decision rule, limitations, disconfirming evidence and commitment plan.",
+    "output_sha256": "5fb89f8f5a74768e5b5d2c1f7a3660e792340ccaf3d019ac66090ee80523e13f",
+    "output_file": "outputs/select-target-market.md"
+  },
+  {
+    "skill": "standardize-task-instructions",
+    "verdict": "pass",
+    "expected": "Procedure requires ticket, both seal values and positive match before release, named role return clerk not Noel; no color restriction. Branch missing/mismatch, avoid inventing authority for overrides, expected outputs for normal/missing/mismatch cases and explicit test/example. Match optional handling of blank seals when comparison is impossible.",
+    "output_evidence": "Only when the ticket is present and both seals match does the return clerk sign the receipt.",
+    "reviewer_assessment": "Missing and mismatched cases stay unopened. Color/name treated as incidental. Tests distinguish desk application from actual signed receipt or independent clerk execution.",
+    "output_sha256": "82b81e2484d586057727868b62982ec49e630a27bc9978d85e9150ea07b21f77",
+    "output_file": "outputs/standardize-task-instructions.md"
+  },
+  {
+    "skill": "substantiate-offer",
+    "verdict": "pass",
+    "expected": "Promise only shelf-map draft within ten business days conditional on complete floor plans; no move/reshelving, guaranteed no loss, or invented price. Withhold P2 outcomes from buyer copy, separate internal evidence and support status, usable actual next step without unsupported action promise.",
+    "output_evidence": "Within ten business days of receiving them, we’ll deliver a draft shelf map for your archive.",
+    "reviewer_assessment": "Scope, start condition and excluded physical services intact, unapproved promise/price and internal pilot kept off buyer copy, source decisions clear.",
+    "output_sha256": "712557f36a895e1c6522eb31d0427ec158b7a49192663029f65bf15accde05b7",
+    "output_file": "outputs/substantiate-offer.md"
+  },
+  {
+    "skill": "triage-sales-replies",
+    "verdict": "pass",
+    "expected": "R1 suppression/remove; no sales reply or follow-up. R2 automated/away; no marketing to urgent contact/no implied referral. R3 respond to question by checking East, no claim of coverage/deck; R4 defer with condition/uncertain timing, no invented date. Match IDs, distinguish drafted versus done.",
+    "output_evidence": "No sales referral, contact authorization or sales interest.",
+    "reviewer_assessment": "Each reply has a distinct disposition. R1 suppression request remains unexecuted; urgent contact excluded; East coverage held without deck; unknown May date preserved.",
+    "output_sha256": "eb9cac19b2d5f8a5dbbbfe9b46dba31ad708195fe8e6dc1a01ba192282b6833e",
+    "output_file": "outputs/triage-sales-replies.md"
+  },
+  {
+    "skill": "write-brand-copy",
+    "verdict": "pass",
+    "expected": "Deliver accurately word-budgeted two labeled versions, ideally count, tangible tag/tool/bay value. Avoid beta feature, barcode, superlative, zero-loss assertion; cite P1 in separate note including any exclusions. Do not sacrifice what product is to fit length.",
+    "output_evidence": "Old Spur pairs tool names and bay numbers on writable bin tags.",
+    "reviewer_assessment": "About and directory entries are ready to use within declared budgets. Both name the product, former states audience, latter the mechanism; commercial/in-development claims excluded.",
+    "output_sha256": "8626ebfab68c494ba4fa578bc07aab13c7a350f41bbeb9ec3fcf5968d38309a1",
+    "output_file": "outputs/write-brand-copy.md"
+  },
+  {
+    "skill": "write-channel-copy-guide",
+    "verdict": "pass",
+    "expected": "Homepage describes requesting an hour, app marks request received/pending staff confirmation (no premature reservation); email can confirm Room 2 Fri 10 a.m. Consistent event/promise/voice, channel-specific action or reasonable absence of CTA; no invented cancellation rules or proof of booking before confirmation.",
+    "output_evidence": "We saved your preferred time. Staff still need to confirm your room.",
+    "reviewer_assessment": "All three distinct states and actions correctly expressed, verified hour/room in service email, proposed channel checks and no unsupported policy.",
+    "output_sha256": "657227b8de42f52278bfcd7a8a92cb9cd326e3af750c1c82445dbb33f8f6f0e2",
+    "output_file": "outputs/write-channel-copy-guide.md"
+  },
+  {
+    "skill": "write-conversion-copy",
+    "verdict": "pass",
+    "expected": "Usable public sections demonstrate who/what/one crew and checklist; CTA request/coverage matches actual form and next response; no instant booking, certification, testing or quantified outcome. Separate S2/form evidence and withheld private note, no invented form submission.",
+    "output_evidence": "A coordinator checks whether your postcode is in the service area before replying.",
+    "reviewer_assessment": "Covers actual one-crew service, checklist and exclusions, flatly avoids performance and certifications, truthful request CTA and subsequent check, editor ledger separated.",
+    "output_sha256": "a0f0b323ca914e6f0bcacd04347de2e0e4b19bb508ec0be88fbca764c2bb705e",
+    "output_file": "outputs/write-conversion-copy.md"
+  },
+  {
+    "skill": "write-linkedin-post",
+    "verdict": "pass",
+    "expected": "Use first-person actual observations: eight bins, two confused, bay numbers by door, retest pending. Do not turn observation into generalized prevalence or invent impact/zero errors. Distinct alternate lead, editor verification outside post, no identifying names/assumed posting.",
+    "output_evidence": "We haven’t tested that change yet.",
+    "reviewer_assessment": "Original counts/time, setting and unresolved result included; no identifying names, invented result or generalization. Distinct opening and editorial claims check.",
+    "output_sha256": "c338ab71c581ac03e8afb67d53d7d9f46b4bbbdebbe4d0080c3c9339b0e078b9",
+    "output_file": "outputs/write-linkedin-post.md"
+  }
+]

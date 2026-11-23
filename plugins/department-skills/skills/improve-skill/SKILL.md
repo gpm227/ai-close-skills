@@ -1,41 +1,18 @@
 ---
 name: improve-skill
-description: "Investigates a mistake a skill made, finds the cause, and prepares a tested fix for the team lead to approve. Use when a skill got something wrong, an automatic check failed, or someone reports \"it did X again.\""
+description: "Investigate an actual failed skill output, reproduce the miss on a known release, and prepare the smallest tested change for the skill owner. Use for a reported regression or failed output check; use standardize-task-instructions for a new workflow."
 ---
 
 # Improve a skill
 
-Plain AI fixes the one example in front of it. The fix is so specific it never fires again, or so broad it breaks three things that used to work.
+Obtain the input and output as originally used, run ID and skill release, applicable owner standard, evaluator verdict (if any), and the observed problem with evidence. Keep user satisfaction, technical checks, delivery and business outcome separate. Retain sensitive source material in its authorized location; use cleared reproductions for wider review.
 
-## You'll need
+1. Attribute the artifact to its producing release. If attribution is unknown, say so and reproduce privately on a known version before proposing an edit. Preserve the original output and freeze the owner-approved criteria with stable identifiers before writing the fix. If comparison depends on missing evidence, name precisely what would resolve it.
+2. Inspect the smallest relevant artifact and contract. Reproduce the task on the old version with the original inputs, tool access and a comparable configuration. If a failure is intermittent, record attempts and reproduction frequency. Classify the cause as source input, context/tool, check, ambiguous standard or skill instructions. A failed evaluator may be wrong; verify its claim against the owner's benchmark. Only change the responsible component.
+3. For a skill gap, propose the smallest general rule whose scope matches the failure. Keep the failing input as a future regression. Reserve a different input and a case that previously passed. Keep expected answers out of worker instructions. Where feasible, exercise the candidate in isolation on the same input as the old version and have an independent worker run the held-out case. Cite the actual output or location per criterion. Mark missing evidence unknown.
+4. Prepare a private change request with exact diff, old and proposed behavior side by side, release IDs, regression, held-out and preservation results, unresolved risks, proposed version and owner. If only the checker failed, propose its correction and tests instead. Do not mark the skill fixed based on a hand-written example or a test plan.
+5. The owner decides release. After approval and release, have a second person verify the served version in a fresh session, run the check, record actual behavior and separately record any later business outcome. Use a forward release restoring the last good rule if a regression warrants rollback under the team's release procedure.
 
-- **The run.** Run ID, skill version, the input, and the output.
-- **What it should have done,** with the source that proves it.
-- **The check result and any comments,** kept separate. No comment doesn't mean it passed.
+[Distinguish a broken evaluator from a broken skill](examples/practice.md).
 
-If something is missing, ask the person who reported it for the one missing item.
-
-## Steps
-
-1. Rerun the original input on the released version. Confirm the mistake happens.
-2. Find the cause: bad input, an unclear standard, a gap in the instructions, or a wrong check.
-3. If the standard itself is unclear, ask the lead to decide. Don't decide for them.
-4. Make the smallest change that fixes the general case, not just this example.
-5. Add this case as a regression test.
-6. Keep one unseen test case aside. Don't use it while writing the fix.
-
-## What you get back
-
-A change request: old behavior, new behavior, the exact rule changed, regression results, risks, and the proposed version number. The lead decides whether it ships.
-
-After approval, a second person runs the unseen case in a fresh session. Record the version and result.
-
-## The trap
-
-Period Report compared May 1 to 18 with all of April. The narrow fix is "when the cutoff is the 18th, use 18 days." The real fix is "compare the same number of elapsed days in both months, capped at the shorter month's end." Test it on the 31st.
-
-## Check it
-
-- The original failing case now passes.
-- Every earlier regression still passes.
-- The unseen case was not used during the fix.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

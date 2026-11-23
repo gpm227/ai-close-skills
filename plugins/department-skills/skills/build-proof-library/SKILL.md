@@ -5,34 +5,17 @@ description: "Turns case studies, customer quotes and results into a list of cla
 
 # Build a proof library
 
-Plain AI turns one good result into a company-wide promise. A pilot with eight jobs becomes "cuts time by 30%" on the homepage.
+Use for a reusable claim register from approved marketing material, case studies, quotes and internal measurements. Obtain source versions, dated evidence locators, measurement scope, permissions by channel and any expiry or review condition. Preserve paraphrases and exact approved quotes as different entries.
 
-## You'll need
+## Adjudicate each claim
 
-- **Your evidence.** Case studies, results, customer emails, reviews, internal measurements. Redacted is fine.
-- **Dates** and who the evidence is about.
-- **Permission.** Which customers have agreed to be named or quoted.
-- **The claims people want to make.**
+1. Split compound claims into atomic statements and assign stable IDs. Classify each as capability, measured outcome, quote or illustrative example. Keep repeated mentions tied to one underlying observation; do not count them as independent studies.
+2. Store exact wording, source excerpt and location, measurement unit, sample/denominator, method, period and customer scope when applicable. If calculating a percentage, preserve both original values and direction. Distinguish relative change from percentage-point difference. A description of a metric cannot stand in for its denominator.
+3. Record public-use permission independently of truth: permitted name or anonymity, channel, wording constraints, expiry, approver and where permission was granted. Removing a client name does not widen a channel-limited grant. Unknown permission keeps the relevant claim internal.
+4. If newer evidence, a withdrawn approval or conflicting measurements undermine a row, retain its ID and history, withdraw affected language and identify the downstream placements to review. Two independently valid segments may support two narrower claims. Record unresolved discrepancies explicitly.
 
-## Steps
+Return an editable table or CSV, usable claims first. Include status, approved audience/channel, recheck date or event and one actionable reason for each withheld item. Put exact evidence and restricted materials in the owner's private register; share only approved wording and limitations with downstream writers.
 
-1. Split every compound claim into single claims.
-2. For each claim record: exact wording, exact support, date, scope (who and how many), permission, and when it should be rechecked.
-3. Sort into four kinds: what the product does, measured results, customer quotes, illustrative examples.
-4. Write the narrowest wording the evidence actually supports.
-5. If sources conflict, show both and hold the claim.
-6. If you don't know whether a customer approved a public quote, mark it internal only.
+[Practice with a scoped pilot and an expiring quotation](examples/practice.md).
 
-## What you get back
-
-A claim list. Each row: ID, approved or proposed wording, where the evidence lives, who can see it, status, recheck date. Usable claims first. Every withheld claim has one reason.
-
-## The trap
-
-A pilot of eight jobs went from 10 minutes to 7. The obvious claim is "Cuts job time by 30%." The supported claim is "In an eight-job pilot, average time fell from 10 minutes to 7." Keep the denominator.
-
-## Check it
-
-- Every number shows how many and over what period.
-- No customer is named without recorded permission.
-- No claim is broader than its evidence.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

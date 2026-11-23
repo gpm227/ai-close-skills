@@ -3,44 +3,22 @@ name: write-linkedin-post
 description: "Turns something the author actually saw, did or learned into a LinkedIn post in their own voice. Use when someone asks for a LinkedIn post, a thought leadership post, or to \"turn this into a post.\""
 ---
 
-# Write a LinkedIn post
+# Write a post in the author's voice
 
-Plain AI writes the LinkedIn post everyone scrolls past: a one-line hook, a made-up story about a coffee shop, eight one-sentence paragraphs, a lesson, and "Agree?" It also invents experiences the author never had.
+Use for a publishable LinkedIn draft drawn from something the author knows firsthand. A request for an original industry thesis without a settled argument needs an evidence and counterargument pass first. Ask for one point, the audience, a concrete observation, two recent writing samples or an oral phrasing, and limits on names, quotes or figures. A draft never publishes itself.
 
-## You'll need
+## Prepare the account
 
-- **The point.** One thing the author believes, in one sentence.
-- **What it's based on.** Something that really happened: a client conversation, a number from their business, a mistake they made. Required.
-- **Their voice.** Two or three things they've written before. If there are none, ask how they'd say it out loud.
-- **Who should read it.** Owners? Ops leads? Other agencies?
-- **Anything they can't say.** Client names, numbers under NDA.
+Break the notes into what the author witnessed, what someone reported, and the author's interpretation. Record who can attest to each. If the author only heard a colleague's story, use accurate attribution with clearance, frame it as an explicitly hypothetical example if appropriate, or ask for the author's own observation. Never recast a borrowed account in first person. Treat an unapproved client detail or a reconstructable description as private.
 
-## Steps
+Read the samples for two distinctive, transferable writing choices such as sentence rhythm, verbs or the way the author admits uncertainty. Write down what to keep from each example. Use the supplied samples for voice only; their unrelated events and claims do not become facts in the post. With no sample, request a short spoken take or return a provisional draft with a named voice assumption.
 
-1. Open with the specific thing that happened. Not a hook formula. "Last Tuesday a client asked us to..." beats "Here's what nobody tells you about..."
-2. Give the one detail that makes it real: the number, the quote, the moment it went wrong.
-3. Say what it means, once. One idea per post.
-4. Stop when the idea is done. No summary, no moral, no "Thoughts?" unless the author genuinely wants answers.
-5. Short paragraphs for phone reading, but not one sentence per line throughout.
-6. 120 to 250 words unless the author asks otherwise.
+## Draft and verify
 
-## What you get back
+Start where the evidence is strongest. Develop one point, in ordinary paragraphs that read naturally on a phone. Make the conclusion no broader than the observation. An invitation to reply belongs only when the author wants an answer. Aim for 120–250 words unless the brief sets a different limit. Keep direct quotes verbatim and approved, otherwise paraphrase honestly.
 
-- The post, ready to paste.
-- One alternate first line.
-- **Before posting:** a short list of every claim, quote and name in the post, and whether the author confirmed it.
+Return paste-ready text and one alternate first line. Separately, map material facts, first-person experiences, names and exact quotes to a source and clearance status. Read the draft against the samples and identify one intentional voice choice. Flag any confirmation the owner needs before posting.
 
-## The trap
+[Practice with an author's real observation and a private anecdote](examples/practice.md).
 
-Input: "Write a post about how AI is changing agencies. We tried using ChatGPT for client reports twice and it got the numbers wrong both times."
-
-The obvious draft says "The agency model is dead. Every agency that isn't all-in on AI will be gone in two years."
-
-That claim is far bigger than the evidence. The author has two failed reports, not an industry study. The honest, more interesting post: "We tried ChatGPT for client reports twice. Both times it got the numbers wrong in a way that looked right. Here's what it missed." That is a post people save.
-
-## Check it
-
-- Every story in the post happened to the author. Ask if unsure. Never invent one.
-- Quotes are word for word, or they aren't in quotation marks.
-- The conclusion is no bigger than the evidence.
-- Read it aloud. Cut any line the author wouldn't say to a colleague.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

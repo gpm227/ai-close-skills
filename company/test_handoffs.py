@@ -22,4 +22,10 @@ class PublisherNeutralTests(unittest.TestCase):
             with ZipFile(path) as archive:
                 for name in archive.namelist():
                     with self.subTest(download=path.name, entry=name):
-                        self.assertIsNone(PUBLISHER.search(archive.read(name)))
+                        content = archive.read(name)
+                        if Path(name).name == "SETUP.md":
+                            for page in ("CATALOG.md", "company/DEPLOY.md"):
+                                source_link = f"https://github.com/gpm227/ai-close-skills/blob/main/{page}".encode()
+                                self.assertEqual(content.count(source_link), 1)
+                                content = content.replace(source_link, b"")
+                        self.assertIsNone(PUBLISHER.search(content))

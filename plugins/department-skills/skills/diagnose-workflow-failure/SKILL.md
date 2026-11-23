@@ -1,36 +1,18 @@
 ---
 name: diagnose-workflow-failure
-description: "Finds why a sales or marketing automation failed, proposes the smallest fix, and plans a safe replay. Use when a Zapier, n8n, Make or CRM automation broke, skipped records, or did the wrong thing."
+description: "Find the first evidenced divergence in a failed CRM or marketing automation and produce a bounded replay plan that preserves completed side effects. Use for missing records, wrong mappings, skipped tasks or ambiguous timeouts."
 ---
 
 # Diagnose a failed GTM automation
 
-Plain AI guesses at the cause and tells you to rerun it. The rerun sends the same email to 300 people a second time.
+Obtain the expected step contract, affected event IDs, deployed version and redacted traces for a failing and known-good case if possible. Ask for downstream receipts and the time range. Preserve the original trace. If a flow continues to repeat incorrect writes, recommend pausing the affected route with its owner.
 
-## You'll need
+1. Trace one logical event across all attempts, using stable source, object and effect IDs. Compare each step's actual inputs and outputs with its expected output on that deployed version. The first *observed* divergence anchors the diagnosis. If an upstream trace is missing, state the causal uncertainty and identify what would distinguish hypotheses.
+2. Build an effect ledger for every affected event: step, destination key, expected effect, observed receipt, status (confirmed applied / confirmed absent / unknown), action. A timeout, missing local log or HTTP error is insufficient proof a destination rejected a request. Reconcile downstream records under a stable key and check for duplicate or partial writes.
+3. Propose the smallest correction with versioned evidence: mapping, input, credentials, dependency or timing. Separate recovery of the existing backlog from prevention for future inputs. Do not change the skill or system when the evidence shows the issue is a bad input or incomplete trace.
+4. Design a replay at the earliest safe boundary for each event. Skip confirmed completed effects, retry confirmed missing effects with stable keys and quarantine ambiguous non-idempotent effects. Name the operator, scope, stop condition and expected counts. An approved operator should try one appropriate case first and verify the destination before expanding. A request for diagnosis yields a plan; record execution only when it actually occurs.
+5. Deliver the causal timeline with trace references, effect ledger, candidate fix, replay sequence and a post-check that reconciles expected versus actual effects and detects duplicates. If cause is unknown, offer the smallest read-only observation that would settle it.
 
-- **The run log or execution trace.**
-- **What should have happened.**
-- **A record that failed,** and one that worked if you have it.
+[Diagnose a timeout with three different recovery states](examples/practice.md).
 
-## Steps
-
-1. Find the first step where the output differs from what it should have been.
-2. Compare that step's input and output to a run that worked.
-3. Name the cause: bad data, wrong field mapping, expired login, or a temporary outage.
-4. Propose the smallest fix.
-5. Before any replay, list what already happened downstream (emails sent, records created) so the replay doesn't do it twice.
-
-## What you get back
-
-What failed and why, the fix, and a replay checklist: which records, in what order, and what to check before and after.
-
-## The trap
-
-Error at step 5: "Contact not found." The obvious fix is step 5. The real problem is step 2, which mapped `Email` to `email_address` after someone renamed the form field. Step 5 just inherited a blank.
-
-## Check it
-
-- The diagnosis names the first bad step, not the step that threw the error.
-- The replay plan says which records already got emails or updates.
-- The fix is tested on one record before the batch.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

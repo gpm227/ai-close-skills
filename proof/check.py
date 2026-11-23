@@ -7,7 +7,12 @@ from pathlib import Path
 
 def evaluate(expected, actual):
     failures = []
+    for field in sorted(actual.keys() - expected.keys()):
+        failures.append({"field": field, "error": "Unexpected field"})
     for field, target in expected.items():
+        if field not in actual:
+            failures.append({"field": field, "error": "Missing required field"})
+            continue
         observed = actual.get(field)
         if type(target) in (int, float):
             matches = type(observed) in (int, float) and math.isclose(
@@ -34,7 +39,7 @@ def main():
         failures = evaluate(expected, actual)
     except (OSError, ValueError) as error:
         failures = [{"error": str(error)}]
-    print(json.dumps({"case": args.case, "benchmark": "0.1.0",
+    print(json.dumps({"case": args.case, "benchmark": "0.2.0",
                       "verdict": "fail" if failures else "pass",
                       "evidence": failures}, indent=2))
     return int(bool(failures))

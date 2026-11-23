@@ -1,12 +1,12 @@
-# Department skills
+# AI Close skills
 
-Start with the downloadable brand-system pilot. It includes the workflow, a working example and the code that generates the files. The remaining catalog entries are instructions at different stages of development.
+Choose a job from the [catalog](CATALOG.md), download its ZIP and try the practice case in a fresh ChatGPT chat. For team deployment, start with the [deployment guide](company/DEPLOY.md). It covers ChatGPT for everyday work, Claude Design for design and brand kits, and Claude Research for competitive analysis.
 
 ## Build a brand system in ChatGPT
 
 Give ChatGPT a company overview PDF and the company website. Get an editable brand guide, a voice brief, a copy proof and a production brief for your chosen design tool, including Claude Design. Bring the rendered versions back to ChatGPT for two successive visual reviews against your approved reference.
 
-**[Download Build a Brand System](chatgpt/build-brand-system.zip?raw=true)** · [Inspect the skill](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Try the worked example](plugins/department-skills/skills/build-brand-system/examples/brief.md)
+**[Download Build a Brand System](chatgpt/build-brand-system.zip?raw=true)** · [Inspect the skill](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Try the stage-repair brief](plugins/department-skills/skills/build-brand-system/examples/brief.md) · [View the artwork supplied with the brief](plugins/department-skills/skills/build-brand-system/examples/rivet-intake-plate.png)
 
 In an eligible ChatGPT workspace, open **Plugins → Skills → Create → Upload from your computer**. Select the single skill download. Open a new chat, attach the overview, paste the website URL and ask: “Build our brand system. Show me how it applies to a one-sheet a customer could use.” A partner in another eligible workspace can upload their own copy. [OpenAI's installation and sharing instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 
@@ -18,11 +18,11 @@ In an eligible ChatGPT workspace, open **Plugins → Skills → Create → Uploa
 
 ## See it work: reporting
 
-Ask ChatGPT how orders are doing on May 18 and it will tell you they fell 40%. They didn't.
+The May 18 sample can produce a misleading 40% drop if an analyst compares a partial month with all of April.
 
-It compared 180 orders from May 1 to 18 with all 300 orders in April. Compare April 1 to 18 instead and both months have 180. **Orders are flat through the 18th.**
+That calculation compares 180 orders from May 1 to 18 with all 300 orders in April. Compare April 1 to 18 instead and both months have 180. **Orders are flat through the 18th.**
 
-1. Open [Compare this month with last month](plugins/department-skills/skills/period-report/SKILL.md) and paste it into a fresh chat.
+1. Install [Compare this month with last month](chatgpt/period-report.zip?raw=true) and open a fresh chat.
 2. Attach the [daily orders](proof/a/daily.csv) and ask: "How did orders change month over month through May 18, 2026?"
 3. You should get 180 orders in each period and a 0% change.
 
@@ -49,10 +49,14 @@ Every account should appear once. Add a duplicate site row for North and its cou
 
 ## Run it across a team
 
-A free Skill gets one person to a good answer. To get the whole team there:
+Start with one employee and a known result. When another employee needs to repeat the job, use the same version and check their result against the [skill acceptance standard](QUALITY.md).
 
 - [Improve a skill](plugins/department-skills/skills/improve-skill/SKILL.md) turns one caught mistake into a tested fix.
 - The [deployment guide](company/DEPLOY.md) puts the Skills in your company's own repository, with an installer, release checks, rollback and a feedback log.
+
+## What has been tested
+
+The [trial record](proof/quality/README.md) contains the actual outputs from 36 unseen catalog jobs and a separate brand-system test using a deck and a website capture. Two initial misses and their corrected runs are included. The [quality standard](QUALITY.md) explains how to score another case.
 
 ## Contribute
 

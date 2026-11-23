@@ -1,0 +1,21 @@
+{
+  "fields": {"id": "text", "name": "text", "phone": "text"},
+  "key": ["id"],
+  "pages": [
+    {
+      "url": "https://directory.example/p1", "observed_date": "2026-06-12", "status": "read",
+      "rows": [
+        {"id": "B1", "name": "Oak Yard", "phone": "555-0101"},
+        {"id": "B2", "name": "=North Annex", "phone": null}
+      ]
+    },
+    {
+      "url": "https://directory.example/p2", "observed_date": "2026-06-12", "status": "read",
+      "rows": [
+        {"id": "B1", "name": "Oak Yard", "phone": "555-0101"},
+        {"id": "B3", "name": "South Studio", "phone": "555-0103"}
+      ]
+    },
+    {"url": "https://directory.example/p3", "status": "failed", "reason": "Page unavailable"}
+  ]
+}

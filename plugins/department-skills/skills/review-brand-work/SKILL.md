@@ -1,40 +1,18 @@
 ---
 name: review-brand-work
-description: "Reviews a draft against your approved brand standard, marks exactly what fails and why, and fixes only that. Use for brand review, copy review against guidelines, \"does this sound like us,\" or checking work before it ships."
+description: "Review an existing draft, design or placement against its approved brand standard. Quote each failing span, preserve locked language, trace the real destination, and give an explicit release decision. Use for brand QA, preflight, and checking whether work sounds or looks like the company."
 ---
 
 # Review work against the brand standard
 
-Plain AI reviews copy by rewriting all of it. Good lines get lost, a fact quietly changes, and nobody can tell which edits were required and which were taste.
+Start with the draft and format, approved standard and version, supporting source or claims evidence, exact approved language, destinations and hard size limits. Identify which placements have distinct copy or layout. For creation of a missing brand standard, use the corresponding brand-definition workflow.
 
-## You'll need
+1. Inventory the actual artifact by placement. Include desktop/mobile buttons and print variants where applicable. Assign local IDs to unnumbered rules. Mark exact locks, discretionary preferences and evidence-dependent claims. A preference becomes binding only with owner approval.
+2. Read each placement as a buyer. Compare the CTA's immediate consequence with the supplied or inspected destination. Distinguish a verified click from a screenshot or a supplied URL. Trace each material claim, including its qualifier, to current evidence for that channel. In a visual review, locate the issue in the rendered version (page, component, screen size, or region). If only text is supplied, leave visual checks unknown.
+3. Quote the smallest failing span. Name the rule, why the mismatch matters, and the smallest edit. Preserve every passing line. Keep a locked claim verbatim in the working draft when it conflicts with the rules, flag the collision and hold that placement. Never “fix” formal approval by silently changing the approved sentence.
+4. Recheck clean copy in placement order. At explicit limits count final visible characters/words using the owner's units and include punctuation and spaces in character counts. Inspect the revised layout if one exists. Record unknowns honestly.
+5. Deliver the complete paste-ready version followed by a separate review table: placement, rule/claim ID, before verdict (pass/fail/unknown), exact evidence or missing source, correction, after verdict. Mark each placement **ready**, **hold**, or **needs verification** with its particular release condition. An established disqualifying problem takes precedence over missing evidence. Keep proposed rules and personal preferences separate from edits. When everything passes, return the original verbatim.
 
-- **The standard,** and which version.
-- **The draft,** and where it'll appear.
-- **The facts it relies on.**
-- **Past corrections,** if any.
+Practice on [the locked print headline and two web buttons](examples/practice.md). A passing desktop placement does not approve a conflicting mobile or print variant.
 
-Keep review material inside the team unless it's cleared.
-
-## Steps
-
-1. Read it as a first-time buyer would.
-2. For each problem, quote the smallest failing piece, name the rule, the consequence, and the smallest fix.
-3. Keep fact and permission problems separate from style.
-4. Leave every passing line alone.
-5. Recheck the fixed draft.
-6. If the same problem keeps showing up because the standard doesn't cover it, write a proposed rule separately. The lead approves rules.
-
-## What you get back
-
-A pass, fail or unknown for each rule, the revised draft, and any proposed rule change on its own.
-
-## The trap
-
-The draft is already approved and meets every rule, but the reviewer prefers different wording. The obvious move is to "improve" it. Return it unchanged and put the preference in a note.
-
-## Check it
-
-- Every edit maps to a named rule.
-- No fact changed between draft and revision.
-- Approved copy that passes comes back untouched.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

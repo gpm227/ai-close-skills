@@ -5,33 +5,20 @@ description: "Sorts replies to outbound emails (interested, not now, wrong perso
 
 # Triage sales replies
 
-Plain AI reads "not right now, but maybe next quarter, and please take Kim off your list" as interested and sends Kim a follow-up.
+Turn inbound replies into an accountable action queue. Read the latest authored message and its thread, identifying sender, recipients, dates, quoted history and automated text. Use the team's routing taxonomy, approved answers and suppression scope when supplied. Preserve original message IDs.
 
-## You'll need
+## Route each intent
 
-- **The reply** and the thread before it.
-- **Your categories** and who handles each one.
-- **Your opt-out process.**
+1. Separate the newest speaker's words from quoted or forwarded text. Detect auto-replies and delivery failures before classifying human intent. An out-of-office contact for emergencies is not a sales referral.
+2. Record a primary category and all material secondary intents: removal, referral, timing, question, objection or interest. For a multi-person or company-wide removal, identify the target and stop the affected follow-up while the owner verifies scope. A quoted previous removal still belongs to the original requester.
+3. Route removal to the designated owner **before** any sales action. Keep requested, queued and confirmed states distinct. Call suppression completed only when there is authorized system evidence. No draft goes to a person who requested removal. A referral does not supply permission, an endorsement, a verified role or contact information.
+4. For a timing request record the stated date, window and timezone when available. Leave an ambiguous window in the buyer's words. For a question use approved facts or assign the precise question for verification. Do not manufacture an answer to keep a conversation moving.
+5. Draft only when a response is warranted. Separate draft from send. A triage request alone ends at the queue; the output must never imply that contact, scheduling or CRM action already occurred.
 
-## Steps
+## Deliver the queue
 
-1. Read the latest reply in the context of the thread.
-2. Sort it: unsubscribe, referral, timing, question, objection, interest.
-3. If there's more than one intent, handle each one.
-4. An unsubscribe comes before anything else. Honor it before any sales follow-up.
-5. Draft a response only when one is warranted.
-6. Assign who does what next.
+For each message give the thread or reply ID, sender, precise intent, target person or account, owner, action, timing, disposition, supporting phrase and draft if appropriate. If a source is missing, flag the narrow verification needed. Verify one primary row per inbound ID and all additional actions for multi-intent replies. Return removal requests first so the operator can act before a sales follow-up.
 
-## What you get back
+[Practice with mixed intent, an absence message and an account-wide removal](examples/practice.md).
 
-For each reply: category, draft response if any, owner, and what happens next.
-
-## The trap
-
-"Not a fit for me. Try Kim in operations, but please remove me." Three intents. Remove the sender. Log the referral. Contact Kim fresh, without implying the sender endorsed it.
-
-## Check it
-
-- Every unsubscribe is processed before any other action.
-- Replies with more than one intent have more than one action.
-- No draft goes to someone who asked to stop.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

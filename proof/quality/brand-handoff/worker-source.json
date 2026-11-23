@@ -1,0 +1,298 @@
+{
+  "company": "ASTER QUIRE",
+  "audience": "Public library collections manager planning a branch move of an open-shelf collection.",
+  "positioning": "Aster Quire gives the collections manager a route-sheet record of the first and last call numbers of each shelf run, so the team can compare those endpoints after shelving.",
+  "status": "draft",
+  "decision": "The source is a fictional saved page. Its published wording and displayed request link support a partner copy proof. A working destination, finished design and owner template approval are pending.",
+  "sources": [
+    {
+      "id": "D1",
+      "locator": "aster-quire-overview.pdf · 8 October 2026 · slide 1, cover and working convention",
+      "excerpt": "“Say what the team checks. Leave room for the exceptions they find.” Visual observation: dark, large left-aligned title followed by short body lines. At thumbnail the title and open lower area survive; the header and footer recede. PDF text resources identify Times-Bold 33 pt for the title and Helvetica 14 pt for the first body line.",
+      "clearance": "internal"
+    },
+    {
+      "id": "D2",
+      "locator": "aster-quire-overview.pdf · 8 October 2026 · slide 2, 01 BEFORE PACKING and 02 AFTER SHELVING",
+      "excerpt": "“Write both on the route sheet. The route sheet travels with the move crew.” Visual observation: two vertically ordered text groups share a left edge; warm small uppercase labels and generous space distinguish the stages at full size. The two groups still separate at thumbnail.",
+      "clearance": "internal"
+    },
+    {
+      "id": "D3",
+      "locator": "aster-quire-overview.pdf · 8 October 2026 · slide 3, From the pilot notes",
+      "excerpt": "“Internal only. The branch has not cleared its name or figures for publication.” The named branch, the count checked and the period are restricted.",
+      "clearance": "internal"
+    },
+    {
+      "id": "D4",
+      "locator": "aster-quire-overview.pdf · 8 October 2026 · slide 3, RETIRED HANDOUT",
+      "excerpt": "“Download the route sheet now.” “Do not circulate that edition.” Visual observation: this is a quotation in a text block, not a current action button. No deck slide supplies a current clickable request.",
+      "clearance": "internal"
+    },
+    {
+      "id": "O1",
+      "locator": "request.md · partner permissions and requested job",
+      "excerpt": "“The design partner can use our published identity and any material already on the website.” No logo master, reference composition or finished design was supplied.",
+      "clearance": "internal"
+    },
+    {
+      "id": "W1",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · header, hero, opening paragraph",
+      "excerpt": "“Keep the shelf run readable.” “Move an open-shelf collection with a record the collections manager can check at the other end.”",
+      "clearance": "public"
+    },
+    {
+      "id": "W2",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · #method, 01 / RECORD",
+      "excerpt": "“Before packing, write the first and last call number of each shelf run on the route sheet.”",
+      "clearance": "public"
+    },
+    {
+      "id": "W3",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · #method, 02 / READ BACK",
+      "excerpt": "“After shelving, compare those two call numbers with the route sheet. Flag a mismatch for the collections manager before the run reopens.”",
+      "clearance": "public"
+    },
+    {
+      "id": "W4",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · #method, qualification below two endpoint checks",
+      "excerpt": "“The check covers the endpoints. It does not certify the order of every book.”",
+      "clearance": "public"
+    },
+    {
+      "id": "W5",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · #request, next-action paragraph",
+      "excerpt": "“Send an enquiry. A coordinator replies by email with a route-sheet sample and can discuss the move. The form does not issue an immediate download.”",
+      "clearance": "public"
+    },
+    {
+      "id": "W6",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · #request, anchor text and href",
+      "excerpt": "“Request a route-sheet sample” → https://asterquire.example/moves/route-sheet-request. A link is present in the offline service page. The destination content was not supplied.",
+      "clearance": "public"
+    },
+    {
+      "id": "W7",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · head/style, :root, body, a, .num, header and footer",
+      "excerpt": "CSS observation: ink #142F38, paper #FAF6E9 and action #864018. Links have action fill and paper lettering. Stage numerals and horizontal rules use action.",
+      "clearance": "public"
+    },
+    {
+      "id": "W8",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · head/style, body, h1, h2, section and .route",
+      "excerpt": "CSS observation: Arial, Helvetica, sans-serif body at 1rem/1.55; Georgia, “Times New Roman”, serif headings at 1.1 line height. H1 maximum 14ch; sections use 2.5rem vertical spacing. The two numbered blocks use a responsive grid with a 2rem gap.",
+      "clearance": "public"
+    },
+    {
+      "id": "W9",
+      "locator": "website-capture.html · https://asterquire.example/services/collection-moves · saved 16 November 2026 · header and footer",
+      "excerpt": "“ASTER QUIRE” in live bold text. Footer: “No reusable logo artwork is included in this capture.”",
+      "clearance": "public"
+    }
+  ],
+  "inputs": {
+    "deck": {
+      "state": "inspected",
+      "detail": "All three PDF pages read as text and inspected as full slides and a thumbnail strip. The deck is team material. Public copy below uses independent website clearance.",
+      "refs": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "O1"
+      ]
+    },
+    "website": {
+      "state": "snapshot",
+      "detail": "Read the saved source, rendered its content offline and checked the method, action text, CSS and href. No destination capture or submission receipt was supplied.",
+      "refs": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8",
+        "W9"
+      ]
+    }
+  },
+  "conflicts": [
+    {
+      "issue": "Instant download in the retired handout versus enquiry and email reply on the saved public page.",
+      "state": "resolved",
+      "decision": "Use the newer public service-page wording: the manager sends an enquiry and a coordinator emails a sample. No response time or immediate download. A working form was not independently established.",
+      "refs": [
+        "D4",
+        "W5",
+        "W6"
+      ]
+    },
+    {
+      "issue": "A restricted pilot contains a named branch and throughput figures; the partner may use the published identity and public page.",
+      "state": "resolved",
+      "decision": "Keep the branch, all counts and the pilot notes inside the team. Make no speed or throughput claim. Use the public endpoint limit.",
+      "refs": [
+        "D3",
+        "O1",
+        "W4"
+      ]
+    }
+  ],
+  "voice": [
+    {
+      "rule": "Use a specific floor action. The site says “Record both ends.” Name the unit, numbers and record.",
+      "before": "We safeguard your collection throughout.",
+      "after": "Before packing, we record the first and last call numbers of each shelf run on the route sheet.",
+      "refs": [
+        "W2"
+      ]
+    },
+    {
+      "rule": "Keep the sequence and recipient intact. “After shelving” starts the comparison; a mismatch has a named audience and a time.",
+      "before": "Our quality check catches issues at delivery.",
+      "after": "After shelving, we compare those two numbers with the sheet. We flag a mismatch for the collections manager before the run reopens.",
+      "refs": [
+        "W3"
+      ]
+    },
+    {
+      "rule": "State the boundary near the method. The service page limits the check to endpoints.",
+      "before": "Every volume lands in the right place.",
+      "after": "We check the two endpoints of each shelf run.",
+      "refs": [
+        "W4"
+      ]
+    },
+    {
+      "rule": "Write the exchange in order. Say “enquiry” for the manager’s action and “replies by email” for the coordinator’s.",
+      "before": "Get a route sheet instantly.",
+      "after": "Send an enquiry. A coordinator will email a route-sheet sample.",
+      "refs": [
+        "W5",
+        "W6"
+      ]
+    }
+  ],
+  "visual": [
+    {
+      "status": "observed",
+      "rule": "Use ink #142F38 for copy, paper #FAF6E9 for the page and action #864018 for the CTA fill, small process labels and thin rules. Set CTA text in paper.",
+      "refs": [
+        "W7"
+      ]
+    },
+    {
+      "status": "observed",
+      "rule": "Use Georgia, \"Times New Roman\", serif for the headline and headings, with Arial, Helvetica, sans-serif for body and the request. The public hero is large, left aligned and limited to 14ch. The page body uses 1.55 line height.",
+      "refs": [
+        "W8"
+      ]
+    },
+    {
+      "status": "observed",
+      "rule": "The website header sets ASTER QUIRE in bold uppercase live text. Use that wording in a single line, uncondensed and unrotated; it is a temporary wordmark. There is no approved artwork, intrinsic logo ratio or official clear-space rule on file.",
+      "refs": [
+        "W9"
+      ]
+    },
+    {
+      "status": "observed",
+      "rule": "The page assigns 01 / RECORD and 02 / READ BACK to different actions and separates them with whitespace. Its last section has one filled request link below the explanation.",
+      "refs": [
+        "W2",
+        "W3",
+        "W5",
+        "W6",
+        "W7",
+        "W8"
+      ]
+    },
+    {
+      "status": "observed",
+      "rule": "The deck cover uses a single 33 pt Times-Bold title. Each body slide has a thin header rule, a compact identifier and large empty areas. The slide 2 stage labels remain spatially distinct in miniature. The deck’s retired CTA appears only as quoted copy.",
+      "refs": [
+        "D1",
+        "D2",
+        "D4"
+      ]
+    },
+    {
+      "status": "proposed",
+      "rule": "For Letter print, allow 0.65 in outer margins; start with a 34–40 pt headline, 18–22 pt stage headings, 11–13 pt body, and at least 10 pt for the printed URL. Put a line of clear space above and below the live-text wordmark. Allow one or two body lines per stage; wrap for legibility.",
+      "refs": [
+        "W7",
+        "W8",
+        "W9"
+      ]
+    },
+    {
+      "status": "proposed",
+      "rule": "Use two distinct 24 × 24 unfilled, round-ended line icons, approximately 1.7–2 units wide. A sheet with lines means record; a magnifier means compare. Keep the numbered labels with them. The icons are new editorial illustrations, not logo assets.",
+      "refs": [
+        "W2",
+        "W3",
+        "W7"
+      ]
+    },
+    {
+      "status": "proposed",
+      "rule": "Read down one column: promise, scope, record, read back, enquiry. Align the two actions on a slim vertical rule so a reader sees one route sheet checked twice. Use the same first/last pair in both stages if shown. No invented call numbers or client examples are necessary.",
+      "refs": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ]
+    }
+  ],
+  "layout": "sequence",
+  "font_stack": "Arial, Helvetica, sans-serif",
+  "heading_font_stack": "Georgia, 'Times New Roman', serif",
+  "color": {
+    "ink": "#142F38",
+    "paper": "#FAF6E9",
+    "action": "#864018"
+  },
+  "sheet": {
+    "headline": "Keep the shelf run readable.",
+    "intro": "Planning a branch move? Our check covers only the two endpoints of each open-shelf run.",
+    "cards": [
+      {
+        "label": "01 / Record both ends",
+        "icon": "record",
+        "text": "Before packing, we write the first and last call numbers of each shelf run on the route sheet.",
+        "refs": [
+          "W2"
+        ]
+      },
+      {
+        "label": "02 / Read both ends back",
+        "icon": "inspect",
+        "text": "After shelving, we compare both numbers with the sheet. We flag a mismatch for the collections manager before the run reopens.",
+        "refs": [
+          "W3"
+        ]
+      }
+    ],
+    "cta": "Request a route-sheet sample",
+    "action_note": "Send an enquiry. A coordinator replies by email with the sample.",
+    "destination": "https://asterquire.example/moves/route-sheet-request",
+    "refs": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5",
+      "W6"
+    ]
+  },
+  "production": {
+    "direction": "Make an editable US Letter portrait one-sheet, 8.5 × 11 in, plus a single-page print PDF. This is a proposed format. Start with the live-text wordmark and one serif headline. Follow with the scope, two vertically ordered actions, then a single request and a printable destination. No finished reference was supplied.",
+    "relationship": "The team records one pair of endpoints before packing and compares the same pair after shelving. Show those actions in one vertical sequence, using a record-sheet icon for the first stage and a comparison magnifier for the second. Keep exception handling with the second action.",
+    "assets": "Use the approved website wording, colors and local type stacks supplied here. Use the live-text name and new simple line icons as editable shapes. No master logo, licensed font files, photos or reference composition were supplied. Keep the name in its natural proportions.",
+    "acceptance": "V1: at reading size the check is limited to endpoints, the mismatch reaches the collections manager before reopening, and the sample follows an enquiry and email reply. V2: at thumbnail size the headline leads, 01 and 02 form a visible sequence with different icon silhouettes, and a single CTA follows. V3: hide both stage paragraphs; the two labels, symbols and CTA should still identify record, read back and request. Restore the copy and verify all qualifications and a legible printed URL."
+  }
+}

@@ -3,40 +3,208 @@
   "audience": "A stage manager with a damaged set piece.",
   "positioning": "A repair shop that lets the stage manager see the plan before approving work.",
   "status": "draft",
-  "decision": "Review the proposed type and palette. Supply the original logo for external release.",
-  "layout": "sequence",
+  "decision": "Owner to assess RB-2 using the scenic-flat intake proof. Supply an original logo before external release.",
+  "layout": "specimen",
   "production": {
-    "direction": "Lead with the damaged part. Place the three repair decisions alongside the sequence and end at the photo intake.",
-    "relationship": "The stage manager sends the photo, the shop assesses the break, and the stage manager authorizes the repair. Make that change of hands visible.",
-    "assets": "Request a cleared close-up of the damaged joint. Use a labelled drawing while the photo or original logo is pending.",
-    "acceptance": "On a first scan a stage manager can identify who approves the repair and what to send. Keep the turnaround estimate out of the published piece."
+    "direction": "Make the actual damaged scenic flat the dominant image. Set the short instruction against a clean field and keep the photo-intake action legible without reading the procedure. At phone size, preserve the link between the marked joint in context and its enlarged detail.",
+    "relationship": "The stage manager submits context and detail of the same split joint. The shop inspects it, then the stage manager approves the repair plan.",
+    "assets": "Use the cleared editable rivet-intake-plate.svg and its PNG export. The supplied drawing is evidence about this shop's actual intake method. Use the shop name in type until an original logo is supplied.",
+    "acceptance": "At first scan point to the split joint in the full flat and in the detail. A stage manager should know the two photos to take and who approves a repair. Inspect the rendered page at mobile and print sizes. Keep the turnaround estimate out of published copy."
   },
   "copy_limit": 55,
-  "color": {"ink": "#29251E", "paper": "#FFFCF3", "action": "#574526"},
-  "font_stack": "Georgia, serif",
+  "color": {
+    "ink": "#242620",
+    "paper": "#FFFFFF",
+    "action": "#9F3528"
+  },
+  "font_stack": "Arial, sans-serif",
   "sources": [
-    {"id":"S","locator":"Practice brief, Repairs website capture","excerpt":"A photo starts the job. The shop inspects the joint and sends a plan for approval.","clearance":"public"},
-    {"id":"D","locator":"Practice brief, deck page 2","excerpt":"Turnaround figures are internal and apply to one tour. Dates require inspection.","clearance":"internal"}
+    {
+      "id": "S",
+      "locator": "Practice brief, Repairs website capture, intake and action",
+      "excerpt": "The shop accepts a photo, inspects the joint and sends a repair plan before the stage manager approves the work.",
+      "clearance": "public"
+    },
+    {
+      "id": "V",
+      "locator": "rivet-intake-plate.svg, base field, inspection marker and callout paths",
+      "excerpt": "Visual observation: the rear framing and the close view show the same open joint. The colored mark locates the break in both views.",
+      "clearance": "public"
+    },
+    {
+      "id": "D",
+      "locator": "Practice brief, deck page 2",
+      "excerpt": "Never promise a completion date before inspection.",
+      "clearance": "internal"
+    },
+    {
+      "id": "B",
+      "locator": "Practice brief, design standard RB-2",
+      "excerpt": "An earlier generic serif sheet on a warm paper field was rejected.",
+      "clearance": "public"
+    }
   ],
   "voice": [
-    {"rule":"Name the part or action a stage manager recognizes.","before":"Initiate an asset restoration request.","after":"Send a photo of the break.","refs":["S"]},
-    {"rule":"Describe the next decision. Give a completion date only after inspection.","before":"Get your set back in two days.","after":"Review the repair plan before work starts.","refs":["D","S"]}
+    {
+      "rule": "Name the part or action a stage manager recognizes.",
+      "before": "Initiate an asset restoration request.",
+      "after": "Send a photo of the break.",
+      "refs": [
+        "S"
+      ]
+    },
+    {
+      "rule": "Describe the next decision. Give a completion date only after inspection.",
+      "before": "Get your set back in two days.",
+      "after": "Review the repair plan before work starts.",
+      "refs": [
+        "D",
+        "S"
+      ],
+      "portable": {
+        "rule": "Name the stage manager's next decision.",
+        "before": "The repair process will be initiated.",
+        "after": "Review the plan before we start the repair.",
+        "refs": [
+          "S"
+        ]
+      }
+    }
   ],
   "visual": [
-    {"rule":"Keep the site's dark ink on a warm paper field.","status":"observed","refs":["S"]},
-    {"rule":"Use the company name in type until an approved logo arrives. Trial Georgia with #29251E on #FFFCF3. The exact font and colors are proposed.","status":"proposed","refs":[]},
-    {"rule":"Stack the three steps in order with matching line icons, a short label and one sentence each. Stay under the owner's 55-word limit.","status":"proposed","refs":["S"]}
+    {
+      "rule": "Show the rear of the scenic flat and enlarge the same opened joint. The marked location links the photographs the shop needs.",
+      "status": "observed",
+      "refs": [
+        "V"
+      ]
+    },
+    {
+      "rule": "The original logo and company-wide type specification are unavailable. Use a text wordmark for the proof.",
+      "status": "proposed",
+      "refs": []
+    },
+    {
+      "rule": "Keep context and close-up together and make the photo intake easy to find on the first scan. Give each of the three process labels a different job.",
+      "status": "proposed",
+      "refs": [
+        "S",
+        "V",
+        "B"
+      ]
+    }
   ],
   "sheet": {
-    "headline":"Show us the break.",
-    "intro":"Start a set repair with a photo.",
-    "cta":"Send a repair photo",
-    "destination":"https://example.org/repair",
-    "refs":["S"],
-    "cards":[
-      {"icon":"custom","svg_path":"M2 7h5l2-3h6l2 3h5v13H2zM16 13a4 4 0 1 1-8 0 4 4 0 1 1 8 0","label":"Send a photo","text":"Show the damaged part.","refs":["S"]},
-      {"icon":"inspect","label":"Inspect the joint","text":"Our shop checks the break.","refs":["S"]},
-      {"icon":"record","label":"Review the plan","text":"You approve the repair before work starts.","refs":["S"]}
+    "headline": "Show us the break.",
+    "intro": "Two repair photos.",
+    "cta": "Send repair photos",
+    "destination": "https://example.org/repair",
+    "refs": [
+      "S",
+      "V"
+    ],
+    "cards": [
+      {
+        "icon": "custom",
+        "svg_path": "M2 7h5l2-3h6l2 3h5v13H2zM16 13a4 4 0 1 1-8 0 4 4 0 1 1 8 0",
+        "label": "You send both photos",
+        "refs": [
+          "S"
+        ]
+      },
+      {
+        "icon": "inspect",
+        "label": "Our shop inspects",
+        "refs": [
+          "S"
+        ]
+      },
+      {
+        "icon": "record",
+        "label": "You approve the plan",
+        "refs": [
+          "S"
+        ]
+      }
+    ],
+    "device": {
+      "file": "rivet-intake-plate.png",
+      "alt": "Back of a stage flat with a split at the middle rail and right upright. The enlarged joint includes two screw heads on each side of the break.",
+      "finding": "Photograph the same break twice.",
+      "visible_words": "Stage flat. Show all four back corners. Move in on the split. Keep both rows of screws in view.",
+      "meaning": "A wide view locates a break in the scenic frame; a close-up of the same joint gives the bench details the wide shot cannot show.",
+      "refs": [
+        "V"
+      ],
+      "mobile_file": "rivet-intake-plate-mobile.png"
+    },
+    "action_note": "You receive a plan before work starts."
+  },
+  "inputs": {
+    "deck": {
+      "state": "snapshot",
+      "detail": "Only the supplied page 2 excerpt is available.",
+      "refs": [
+        "D"
+      ]
+    },
+    "website": {
+      "state": "snapshot",
+      "detail": "Repairs text and intake link, captured offline. No live submission.",
+      "refs": [
+        "S"
+      ]
+    }
+  },
+  "conflicts": [],
+  "heading_font_stack": "Arial, sans-serif",
+  "identity_basis": {
+    "ink": {
+      "status": "verified",
+      "value": "#242620",
+      "basis": "Specified as annotation ink in the cleared flat drawing; applies to this repair-intake piece only.",
+      "refs": [
+        "V"
+      ]
+    },
+    "paper": {
+      "status": "verified",
+      "value": "#FFFFFF",
+      "basis": "The drawing is specified on a white working surface. A company-wide canvas color is unknown.",
+      "refs": [
+        "V"
+      ]
+    },
+    "action": {
+      "status": "production choice",
+      "basis": "Repeat the drawing's inspection marker for the photo action. Its use on buttons is a new application awaiting review.",
+      "refs": [
+        "V"
+      ]
+    },
+    "font_stack": {
+      "status": "production choice",
+      "basis": "Use an available sans for the instructions. The shop supplied no company-wide face; do not treat the proof font as policy.",
+      "refs": []
+    },
+    "heading_font_stack": {
+      "status": "production choice",
+      "basis": "Use weight and scale to distinguish the instruction from captions. The drawing's condensed labels are local to that drawing.",
+      "refs": [
+        "V"
+      ]
+    }
+  },
+  "design_spec": {
+    "version": "RB-2 · 2026-11-23",
+    "substitution_test": "Cover the shop name. A reviewer must still identify the rear of a scenic flat and point to the corresponding split joint in both views. A bicycle-shop intake would require a new image and new callouts.",
+    "owner_rejections": [
+      {
+        "instruction": "The former generic serif and warm paper treatment was rejected for this piece. Preserve the technical intake drawing as the focal point.",
+        "refs": [
+          "B"
+        ]
+      }
     ]
   }
 }

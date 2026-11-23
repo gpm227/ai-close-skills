@@ -5,34 +5,21 @@ description: "Builds a sales presentation organized around the decision the buye
 
 # Build a sales presentation
 
-Plain AI builds the deck in your order: about us, our services, our clients, our process, contact us. The buyer sits through ten slides before hearing anything about their problem.
+Build a presentation around one real decision. Ask for the decision-maker, meeting time, acceptable next step, offer, permitted claims and available visual or brand assets. A missing template allows a simple editable layout. A missing decision-maker or disputed commercial claim calls for a visible assumption or a narrower decision.
 
-## You'll need
+## Build the decision argument
 
-- **Who's in the room** and what they need to decide.
-- **The offer,** pricing approach, and what's included.
-- **Proof** you can stand behind.
-- **What you want to happen next.**
-- **A template,** if you have one.
+- Write the buyer's question and next milestone in one line. Decide what a buyer must understand to choose, including the option of keeping the current process. Select the number of slides to fit the available time.
+- Inspect the buyer's reference piece, decision record or product artifact. Choose a first-slide visual a sponsor can read to answer a real question. Name the source and the relationship to show, for example which depots move to Friday and which stay on Wednesday. In the practice deck a review docket and weekday schedule carry that answer. A cleared photo is appropriate when its subject demonstrates the work or physical constraint. When artwork is missing, describe what is unavailable and diagram only a supported relationship. Preserve the language the owner already approved.
+- Sequence claim-led titles from the buyer's situation through options and evidence to the action. Use a different slide for a genuinely different claim. Put source, unit, denominator, date and qualifications where the claim appears. When cost or business impact is unknown, state how the pilot would measure it. Preserve restrictions on names, logos and internal figures.
+- Compare cost, scope, burden and unresolved conditions on the same basis. Distinguish an offered pilot, an approved price, an illustrative result and a measured outcome. Use a table when buyers need exact values, and a diagram only to explain an actual relationship.
+- Write speaker notes for each slide: what to say beyond the headline, the likely buyer question, the supported answer or follow-up owner, and a transition. End with one action, its owner and a supported time or an explicit proposal.
+- If an authorized design tool or template is available, build an editable deck and render every slide. Read the title sequence as thumbnails, then inspect each slide at presentation size for wrap, clipping, contrast and legible qualifiers. Hide the title on slide one. Ask a reviewer to use the graphic to explain the decision. If the same graphics would work after swapping in any other company or offer, replace them with material from the buyer's evidence. For a design handoff, include cleared copy, source assets, a visual job for each slide and those checks. Deliver an editable outline when production is unavailable. Identify the actual rendered format, and test a native presentation export separately when required.
 
-## Steps
+## Deliver
 
-1. Order the slides around the buyer's decision: their situation, what it's costing them, the options, why this one, what happens next.
-2. One claim per slide. Put the evidence on the same slide.
-3. Put caveats next to the numbers they qualify, not in a footnote at the end.
-4. Write speaker notes for every slide: what to say, and what question to expect.
-5. If you can render the deck, check every slide for cut-off text and charts nobody can read.
+Provide the editable deck or slide-by-slide content, notes and a source list keyed to slides. Review the titles alone as the buyer's argument. Cross-check every numerical and comparative claim against its source and permitted audience. Inspect the final slide for a specific decision the people in the room can make.
 
-## What you get back
+[Practice building a four-week pilot decision deck](examples/practice.md).
 
-An editable deck if your tools support it, otherwise slide-by-slide content with speaker notes, plus a source list for every claim.
-
-## The trap
-
-The draft has a slide titled "Why choose us?" with five adjectives. A buyer who skims that slide learns nothing. Retitle it with the claim ("We start the same week you sign") and show the proof under it.
-
-## Check it
-
-- Read only the slide titles in order. They tell the whole argument.
-- Every number has a source.
-- The last slide names one next step and when.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

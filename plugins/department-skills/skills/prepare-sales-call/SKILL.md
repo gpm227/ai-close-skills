@@ -5,32 +5,19 @@ description: "Prepares a one-page call card: how to open, what to ask, what to s
 
 # Prepare a sales call
 
-Plain AI writes a call script that's a speech. The rep reads a 40-second pitch, the buyer says "not interested," and there's no line for that.
+Make a one-page card the rep can use while listening. Establish the call type (cold, requested or follow-up), participants, evidence of prior agreement, intended outcome and available time. If the goal or buyer evidence is missing, use a provisional verification question. Do not invent familiarity, authority or a promised next step.
 
-## You'll need
+## Write the conversation
 
-- **Who you're calling.** Name, role, company, any history.
-- **Why you're calling,** honestly.
-- **What you want from the call.**
-- **The account brief,** if you have one.
+1. Open in at most two sentences. Reflect the actual reason for contact and who requested it. Time it aloud; aim for under 15 seconds. For a booked call, pick up the buyer's stated agenda. For a cold call, ask whether the person owns the relevant job or can spare a moment.
+2. Give the rep one question the buyer can disagree with and a short follow-up sequence. Each follow-up should depend on what the buyer says. Probe their current process, evidence of a problem and its owner before proposing the product.
+3. Provide four exact lines with a decision and exit: **interested** (agree one concrete step, owner and timing), **wrong person** (ask for a role or permitted introduction), **bad timing** (ask whether and when to revisit), **no** (close without pushing). If the buyer requests no further contact, end the call and route the request through the team's suppression process. Mark it pending until confirmed.
+4. When a question falls outside the offer, give the exact holding line the rep can use and assign verification. Keep any price, savings or timeline within its source conditions.
 
-## Steps
+## Deliver a card and a blank log
 
-1. Opening: who you are and why you're calling, in two sentences.
-2. One question the buyer can easily disagree with. That's how you learn something.
-3. Write what to say for four outcomes: interested, wrong person, bad timing, no.
-4. List what to log after the call.
+Put the opening and first question at the top. Add short branches with lines that can actually be spoken, one fallback and a blank post-call log for disposition, buyer's own words, open questions, agreed next action, owner and date. Record facts after the call; keep future agreements unfilled in the preparation card. Check that all exits make sense even if the buyer declines to supply any further information.
 
-## What you get back
+[Rehearse a requested form-review call and convert it to a cold opening](examples/practice.md).
 
-One card: opening, the first question, follow-up questions, the four branches with exact lines, and the post-call log fields.
-
-## The trap
-
-The draft opener: "Hi, I'm calling because companies like yours are struggling with scheduling." The buyer hasn't said that, and it invites "we're fine." Better: "Hi Dana, it's Sam from Northfield. I'm calling about how your offices fill canceled appointments. Is that you, or someone else?"
-
-## Check it
-
-- Read the opening aloud. It takes under 15 seconds.
-- Every branch has an exit line that ends the call politely.
-- No line assumes a problem the buyer hasn't confirmed.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

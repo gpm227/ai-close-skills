@@ -8,6 +8,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from zipfile import ZipFile
 
 SOURCE = Path(__file__).resolve().parents[1]
 
@@ -45,6 +46,14 @@ class DeploymentTest(unittest.TestCase):
         self.assertEqual(self.run_command("git", "remote").strip(), "")
         published = len(list(Path(SOURCE, "plugins/department-skills/skills").glob("*/SKILL.md")))
         self.assertEqual(len(list(self.plugin.glob("skills/*/RELEASE.json"))), published)
+        archives = sorted((self.company / "chatgpt").glob("*.zip"))
+        self.assertEqual(len(archives), published)
+        for archive in archives:
+            with self.subTest(skill=archive.stem), ZipFile(archive) as installed:
+                base = self.plugin / "skills" / archive.stem
+                for rel in ("RELEASE.json", "SKILL.md"):
+                    self.assertEqual(installed.read(f"{archive.stem}/{rel}"), (base / rel).read_bytes())
+        self.run_command(sys.executable, "company/package_chatgpt.py", "--check")
         self.run_command(*self.install, status=1)
         self.run_command(sys.executable, "company/release.py", "verify", str(self.plugin))
 
@@ -96,6 +105,14 @@ class DeploymentTest(unittest.TestCase):
         report = json.loads(self.feedback("reconcile", str(inventory), status=1))
         self.assertEqual(report["missing_capture"], ["missing"])
         self.assertEqual(report["checked"], 2)
+
+    def test_report_rejects_extra_fields(self):
+        artifact = self.company / "extra.json"
+        values = json.loads(self.expected.read_text())
+        values["headline"] = "Orders fell 40%."
+        artifact.write_text(json.dumps(values))
+        result = self.run_command(sys.executable, "proof/check.py", "a", artifact, status=1)
+        self.assertEqual(json.loads(result)["evidence"], [{"field": "headline", "error": "Unexpected field"}])
 
     def test_capture_survives_checker_interruption(self):
         spec = importlib.util.spec_from_file_location("installed_feedback", self.company / "company/feedback.py")

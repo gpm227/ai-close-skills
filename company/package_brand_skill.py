@@ -1,8 +1,7 @@
 """Produce the standalone ChatGPT upload for the partner pilot."""
 import argparse
-import io
 from pathlib import Path
-from zipfile import ZipFile, ZipInfo
+from package_chatgpt import bundle
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "plugins/department-skills/skills/build-brand-system"
@@ -10,17 +9,7 @@ ZIP = ROOT / "chatgpt/build-brand-system.zip"
 
 
 def build():
-    content = io.BytesIO()
-    with ZipFile(content, "w") as archive:
-        files = {name: SKILL / name for name in (
-            "SKILL.md", "agents/openai.yaml", "references/format.md", "scripts/render.py",
-            "examples/brief.md", "examples/example.json")}
-        for name, path in files.items():
-            entry = ZipInfo(f"{SKILL.name}/{name}")
-            entry.create_system = 3
-            entry.external_attr = 0o100644 << 16
-            archive.writestr(entry, path.read_bytes())
-    return content.getvalue()
+    return bundle(SKILL)
 
 
 if __name__ == "__main__":

@@ -3,59 +3,23 @@ name: draft-outbound-email
 description: "Writes a cold email sequence (first touch plus follow-ups) to one buyer. Use when someone asks for cold emails, outbound sequences, prospecting emails, or follow-ups to a prospect who hasn't replied."
 ---
 
-# Write a cold email sequence
+# Draft a cold email sequence
 
-Plain AI writes cold email that sounds like cold email: a compliment, a pitch, three bullet points and "worth a quick chat?" Then every follow-up says "just bumping this." Buyers delete both.
+Use for a first contact or unanswered outbound sequence. A reply to a live conversation needs the thread and the buyer's question. Drafts stay out of a sending queue until the owner decides to send.
 
-## You'll need
+## Decide whether there is an email to write
 
-- **Who it's to.** Name, title, company. If you only have a title, say so.
-- **Why them, why now.** One real, specific reason: a job post, a new location, a press release, a mutual customer. No reason means no email. Ask for one.
-- **The offer.** What you sell, in one sentence, and the proof you can actually point to (a customer, a number, a demo).
-- **The ask.** What you want them to do. Reply, take a call, forward to someone.
-- **How many touches.** Default to three.
+Identify the recipient or role, a specific reason for contacting them now, the offer and usable proof, the desired reply and the number of touches (three by default). Keep a source locator for the reason and each offer or result claim. Distinguish a posted vacancy from a measured operational problem. Confirm the proof is cleared for this channel. A real demo or an available example can support what the product does without any customer statistic.
 
-If the user can't give a reason for contact or any proof, stop and say so. A sequence with neither is spam.
+If a trigger or proof is missing, name the smallest item that would resolve it. Return a labeled outline with any placeholders outside of send-ready copy. If the contact is suppressed or declined, close the sequence. Treat an existing reply as the next conversation to answer.
 
-## Steps
+## Build and review the sequence
 
-1. Write the first email around their problem, not your product. Lead with the reason for contact in the first sentence.
-2. Match the level of the reader:
-   - Someone who does the work: the annoying task.
-   - Someone who manages the work: their team's results.
-   - Someone who owns the budget: the decision and its cost.
-3. One ask per email. Never "a call, or point me to the right person."
-4. Every follow-up brings something new: a different proof point, a useful resource, a short answer to the question they're probably asking. Never "following up" or "bumping this."
-5. The last touch closes the loop politely and gives them an easy no.
-6. Under 120 words per email. Subject lines under six words, lowercase is fine, no clickbait.
+- Lead with a traceable fact and explain why the offer relates to it. Use the operator's task, the manager's team decision or the budget owner's constraint as appropriate. Phrase an unknown recipient practice as a question only if it serves the one intended ask.
+- Give each touch one independent, recipient-sized action. Count invitations and imperatives as well as questions. “Reply if useful and pick a time here” is two actions with no question mark. A later message offers different evidence, a usable excerpt or an answer to a plausible objection. If no new basis exists, omit that touch and explain the gap.
+- Keep each body under 120 words and subject under six words. Carry qualifications into the message itself. The final touch closes courteously. Stop planned follow-ups on a reply, opt-out or hard bounce.
+- For each draft give day or trigger, subject, body, purpose and ask. Below the drafts, map exact recipient details, product assertions and any proof to a dated page, source excerpt or owner brief. Distinguish a proposed cadence from a verified fact.
 
-## What you get back
+[Practice on a documented expansion with private proof](examples/practice.md).
 
-For each touch:
-
-```
-Touch 1 · Day 0
-Subject: ...
-Body: ...
-Purpose: [one line]
-Ask: [one line]
-```
-
-Then a short **Notes** list: every factual claim in the sequence and where it came from. Mark anything the user needs to verify before sending.
-
-## The trap
-
-Input: "Write a sequence to Dana Ruiz, Ops Director at Lakeshore Dental (14 offices). We sell scheduling software. We work with a lot of dental groups."
-
-The obvious draft opens with "I noticed Lakeshore Dental is growing fast!" and claims "We help dental groups like yours cut no-shows by 30%."
-
-Both are invented. Nothing in the input says Lakeshore is growing, and no 30% figure was given. "A lot of dental groups" is not proof.
-
-The right move: write the sequence with placeholders (`[reason for contact]`, `[named dental customer]`) and tell the user exactly which two facts they need before this can go out.
-
-## Check it
-
-- Point to the source of every fact about the recipient. If you can't, it's invented.
-- Count the asks in each email. More than one fails.
-- Read follow-up two without follow-up one. If it makes no sense alone, rewrite it.
-- Search for "just following up," "bumping," "circling back," "I hope this finds you well." Zero allowed.
+**Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).
