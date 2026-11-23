@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from zipfile import ZipFile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -45,6 +46,9 @@ class DeploymentTest(unittest.TestCase):
         self.assertEqual(self.run_command("git", "remote").strip(), "")
         published = len(list(Path(SOURCE, "plugins/department-skills/skills").glob("*/SKILL.md")))
         self.assertEqual(len(list(self.plugin.glob("skills/*/RELEASE.json"))), published)
+        self.run_command(sys.executable, "company/package_chatgpt.py", "--check")
+        with ZipFile(self.company / "chatgpt/period-report.zip") as bundle:
+            self.assertEqual(bundle.read("period-report/RELEASE.json"), self.receipt.read_bytes())
         self.run_command(*self.install, status=1)
         self.run_command(sys.executable, "company/release.py", "verify", str(self.plugin))
 

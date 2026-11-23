@@ -1,0 +1,7 @@
+account_id,name,excluded,roster_complete
+A,Alpine,no,yes
+B,Birch,no,yes
+C,Cedar,unknown,yes
+D,Dune,yes,unknown
+E,Elm,no,no
+F,Fern,no,yes

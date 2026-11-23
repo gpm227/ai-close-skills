@@ -1,6 +1,6 @@
 # Install a company-owned skills library
 
-The result is a standalone Git repository with the departmental skills, their release receipts and synthetic reporting checks. The company owns its hosting account and Claude workspace. The installer runs locally with Python 3.9+ and Git. It copies tracked files from one commit and initializes fresh history.
+The result is a standalone Git repository with the departmental skills, their release receipts and synthetic reporting checks. The company owns its hosting account and the workspace where the skills run. The installer runs locally with Python 3.9+ and Git. It copies tracked files from one commit and initializes fresh history.
 
 ## 1. Prepare the private copy
 
@@ -24,9 +24,15 @@ The admin creates an empty private repository owned by the company and confirms 
 gh repo create COMPANY/department-skills --private --source=. --remote=origin --push
 ```
 
-For a managed install, the business owns the organization, billing, and recovery access and can revoke the implementer's access. For an IT-led install, the CTO reviews repo scope, Claude permissions, approved data destinations, retention, and access removal. The team lead owns the department's standard. Configure review protection on the release branch where supported. Keep business data and employee run records out of the public project.
+For a managed install, the business owns the organization, billing, and recovery access and can revoke the implementer's access. For an IT-led install, the CTO reviews repo scope, workspace permissions, approved data destinations, retention, and access removal. The team lead owns the department's standard. Configure review protection on the release branch where supported. Keep business data and employee run records out of the public project.
 
-## 3. Connect Claude and verify delivery
+## 3. Install in ChatGPT and verify delivery
+
+Each file in `chatgpt/` is one upload for an eligible workspace. In ChatGPT, go to **Plugins → Skills → Create → Upload from your computer**, select the relevant file, then share the installed skill with your workspace from its menu. An outside partner installs their own copy. Workspace permissions apply. [OpenAI instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+
+In a new conversation, invoke the skill on your acceptance case. Ask for the installed release and compare its version and digest with the receipt in your company checkout. After approved edits, stamp the release, run `python3 company/package_chatgpt.py`, and upload the revised bundle. Record the result of a fresh run in that workspace.
+
+### Connect Claude and verify delivery
 
 A workspace Owner or Primary Owner confirms the supported plan and that Cowork and Skills are enabled. In organization settings under Plugins & skills, add a marketplace and select Sync from GitHub. Connect the company-owned private or internal GitHub repo. Grant the Claude GitHub App access to that repo and select the intended employee audience. For automatic updates, approve the required webhook permission and use a merged PR with a plugin version bump. The admin can also re-sync manually. [Organization marketplace settings](https://support.claude.com/en/articles/13837433-manage-plugins-for-your-organization)
 

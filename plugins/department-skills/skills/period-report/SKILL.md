@@ -15,6 +15,16 @@ Ask plain AI how orders are doing on May 18 and it compares 18 days of May with 
 
 Ask if the cutoff or metric is unclear. Treat dates as local reporting dates.
 
+## Calculate from the export
+
+For CSV input with ISO local dates, use the bundled calculator. Normalize column names and dates if necessary, preserve the original, and select one metric with one consistent unit. Resolve mixed units before running. Substitute the supplied cutoff and metric:
+
+```sh
+python3 scripts/compare.py daily.csv --metric orders --cutoff 2026-05-18
+```
+
+Return the resulting JSON as a file when downloads are available. On an error, return the exact missing date, duplicate, or bad value and the correction needed. With no code execution, calculate from the rows using the same checks and identify the manual calculation.
+
 ## Steps
 
 1. Current window: day 1 through the cutoff, inclusive.

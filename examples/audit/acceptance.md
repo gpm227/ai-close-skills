@@ -1,0 +1,1 @@
+All four records appear once for AP-4. P17 passes at the inclusive threshold. P18 is an exception by one minute. P19 is unknown until there is time evidence. P20 is out of scope. The action register contains P18 and P19. State the 4-of-61 judgmental sample. Keep the conclusion scoped to this sample. Cite both ledger and approval rows wherever available.
