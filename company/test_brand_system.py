@@ -18,7 +18,7 @@ class BrandPilot(unittest.TestCase):
         self.work = Path(temp.name)
         with ZipFile(ROOT / "chatgpt/build-brand-system.zip") as archive:
             archive.extractall(self.work)
-        self.data = json.loads((ROOT / "examples/brand-system/example.json").read_text())
+        self.data = json.loads((self.work / "build-brand-system/examples/example.json").read_text())
 
     def run_job(self):
         source = self.work / "brand.json"
@@ -44,7 +44,7 @@ class BrandPilot(unittest.TestCase):
     def test_failures_do_not_create_a_handoff(self):
         for field in ("uncleared", "missing_source", "duplicate_icons", "dense", "contrast", "cta"):
             with self.subTest(field=field):
-                self.data = json.loads((ROOT / "examples/brand-system/example.json").read_text())
+                self.data = json.loads((self.work / "build-brand-system/examples/example.json").read_text())
                 cards = self.data["sheet"]["cards"]
                 if field=="uncleared": cards[0]["refs"]=["D"]
                 if field=="missing_source": cards[0]["refs"]=["unseen"]

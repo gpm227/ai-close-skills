@@ -1,24 +1,25 @@
-"""Keep every published skill usable on its own and linked to its own review."""
+"""Check that portable skills and shipped downloads contain no publisher promotion."""
 import re
 import unittest
 from pathlib import Path
-from urllib.parse import parse_qs, urlsplit
+from zipfile import ZipFile
 
-SKILLS = Path(__file__).resolve().parents[1] / 'plugins/department-skills/skills'
+ROOT = Path(__file__).resolve().parents[1]
+PUBLISHER = re.compile(rb"ai[\s_-]*close|scope an installation|utm_source=agent-skill", re.I)
 
-class SkillHandoffTests(unittest.TestCase):
-    def test_every_skill_has_a_contextual_optional_handoff(self):
-        for path in sorted(SKILLS.glob('*/SKILL.md')):
-            with self.subTest(skill=path.parent.name):
-                instructions = path.read_text()
-                task, separator, handoff = instructions.partition('### Optional team implementation')
-                self.assertTrue(separator)
-                self.assertGreater(len(task.strip()), 150)
-                links = re.findall(r'https://aiclosehq\.com/talk\?[^)\s]+', handoff)
-                self.assertEqual(len(links), 1)
-                query = parse_qs(urlsplit(links[0]).query)
-                self.assertEqual(query['skill'], [path.parent.name])
-                self.assertEqual(query['intent'], ['custom-installation'])
-                self.assertEqual(query['utm_source'], ['agent-skill'])
-                for condition in ('unrelated','failed output','free-output-only','declined offer'):
-                    self.assertIn(condition, handoff)
+
+class PublisherNeutralTests(unittest.TestCase):
+    def test_installable_content_is_neutral(self):
+        plugin = ROOT / "plugins/department-skills"
+        files = [ROOT / ".claude-plugin/marketplace.json", *plugin.rglob("*")]
+        for file in files:
+            if file.is_file() and "__pycache__" not in file.parts:
+                with self.subTest(path=file.relative_to(ROOT)):
+                    self.assertIsNone(PUBLISHER.search(file.read_bytes()))
+
+    def test_download_contents_are_neutral(self):
+        for path in (ROOT / "chatgpt").glob("*.zip"):
+            with ZipFile(path) as archive:
+                for name in archive.namelist():
+                    with self.subTest(download=path.name, entry=name):
+                        self.assertIsNone(PUBLISHER.search(archive.read(name)))

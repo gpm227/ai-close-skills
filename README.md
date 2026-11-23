@@ -1,14 +1,12 @@
-# AI Close Skills
+# Department skills
 
-Instructions that make ChatGPT and Claude do the job right, starting with the mistakes they make when you just ask.
-
-Every Skill names one job, what to hand the AI, what comes back, the trap plain AI falls into, and how to check the result. Copy one into a chat and go.
+Start with the downloadable brand-system pilot. It includes the workflow, a working example and the code that generates the files. The remaining catalog entries are instructions at different stages of development.
 
 ## Build a brand system in ChatGPT
 
 Give ChatGPT a company overview PDF and the company website. Get an editable brand guide, a voice brief, a copy proof and a production brief for your chosen design tool, including Claude Design. Bring the rendered versions back to ChatGPT for two successive visual reviews against your approved reference.
 
-**[Download Build a Brand System](chatgpt/build-brand-system.zip?raw=true)** · [Inspect the skill](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Try the worked example](examples/brand-system/brief.md)
+**[Download Build a Brand System](chatgpt/build-brand-system.zip?raw=true)** · [Inspect the skill](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Try the worked example](plugins/department-skills/skills/build-brand-system/examples/brief.md)
 
 In an eligible ChatGPT workspace, open **Plugins → Skills → Create → Upload from your computer**. Select the single skill download. Open a new chat, attach the overview, paste the website URL and ask: “Build our brand system. Show me how it applies to a one-sheet a customer could use.” A partner in another eligible workspace can upload their own copy. [OpenAI's installation and sharing instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 
@@ -56,12 +54,10 @@ A free Skill gets one person to a good answer. To get the whole team there:
 - [Improve a skill](plugins/department-skills/skills/improve-skill/SKILL.md) turns one caught mistake into a tested fix.
 - The [deployment guide](company/DEPLOY.md) puts the Skills in your company's own repository, with an installer, release checks, rollback and a feedback log.
 
-Want it installed and maintained for you? [AI Close](https://aiclosehq.com/) does that.
-
 ## Contribute
 
 The most useful contribution is one example where the answer looked right and would have led someone to the wrong decision.
 
-- **Found a mistake?** [Open an issue](https://github.com/gpm227/ai-close-skills/issues/new) with the input, what you got, what you expected, and why it matters.
+- **Found a mistake?** Open an issue in this repository with the input, what you got, what you expected, and why it matters.
 - **Have a Skill your team uses?** Open a pull request with the instructions, an example someone else can run, and a way to tell if it worked. Use fake or cleared data.
 - **Missing a job?** Tell us what someone is trying to get done, what they start with, and what they need at the end.

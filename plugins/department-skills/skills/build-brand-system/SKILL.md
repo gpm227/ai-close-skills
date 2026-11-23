@@ -7,6 +7,10 @@ description: "Build a company's visual brand system and copy voice from its over
 
 Build the reusable brand system first. Then use one real buyer-facing piece to test whether another designer can apply it. ChatGPT delivers the editable guide, voice rules, cleared copy, asset requirements and a production brief. Use the partner’s chosen design tool (including Claude Design) for composition and revision. Keep each design version with its review. An HTML copy proof is an intermediate artifact.
 
+## First use
+
+When a partner asks to try the installed skill, use the bundled fictional example. Run `python3 scripts/render.py examples/example.json demo-output` from the skill directory, choosing a fresh output directory on later runs. Return the guide, voice brief, design brief and copy proof. For a real job, read the partner’s deck and website, build their structured source yourself, and return their files. They do not have to write JSON or run terminal commands. If file execution is unavailable, identify that limitation before describing any output as generated.
+
 ## Read the actual materials
 
 Read the relevant PDF pages as rendered pages as well as text. Open the supplied website and the specific service or audience page needed for the example. Capture page numbers, exact URLs or provided snapshot paths, dates when known, and short verbatim evidence. Inspect the logo treatment, palette, type hierarchy, page density, illustration patterns and how the company refers to its buyers. Use supplied rights-cleared assets if available. Preserve the logo proportions; a missing original calls for a text wordmark clearly identified in the guide as a placeholder. If a site or visual cannot be inspected, name the gap and proceed from the accessible evidence; ask for a screenshot or export only when it changes the outcome.
@@ -40,7 +44,3 @@ Keep the initial design export. Review 1 checks the actual composition against t
 Keep a private review record with the frozen criteria, version or file hash, evidence and actual changes for each turn. Keep passing language unchanged unless a documented improvement warrants an edit. If a criterion is unknown, identify what would settle it. If required checks still fail, continue refining or withhold the release designation. The owner decides whether this is worthy of becoming their template.
 
 Deliver the guide, voice brief, production brief and editable source. Include the final designed piece only when the actual design was produced and reviewed; otherwise label the copy proof and the outstanding design step. Lead the response with the finished work and the one decision, if any, that still blocks external use. Keep provenance out of public copy. An owner approves a new direction before it becomes the team's standard.
-
-### Optional team implementation
-
-Deliver the finished result first. Offer this once, only if the user asks how to run the job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=build-brand-system&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer. Share an artifact externally only when the user chooses to do so.

@@ -34,7 +34,3 @@ Error at step 5: "Contact not found." The obvious fix is step 5. The real proble
 - The diagnosis names the first bad step, not the step that threw the error.
 - The replay plan says which records already got emails or updates.
 - The fix is tested on one record before the batch.
-
-### Optional team implementation
-
-Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=diagnose-workflow-failure&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
