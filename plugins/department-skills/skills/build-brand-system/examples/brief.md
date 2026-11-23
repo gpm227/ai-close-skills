@@ -4,7 +4,7 @@ Rivet Bench is a fictional scenery repair shop. A stage manager has a broken sce
 
 **Deck, page 2 (private).** “Last season 18 pieces were back in two days.” That was one tour. “Never promise a completion date before inspection.” Keep the figure out of public copy.
 
-**Website capture, Repairs (public practice evidence).** “Show us the break.” The shop accepts a photo, inspects the joint and sends a repair plan before the stage manager approves the work. The intake form accepts repair photos at https://example.org/repair. No company-wide font specification or original logo was supplied. A snapshot establishes the displayed path; a live submission has not been tested.
+**Website capture, Repairs (public practice evidence).** “Show us the break.” The shop accepts a photo, inspects the joint and sends a repair plan before the stage manager approves the work. The intake form accepts repair photos at https://example.org/repair. No company-wide font specification or original logo was supplied. The capture shows the intake destination. Its upload capacity and live submission have not been tested. Treat the two views as preparation guidance.
 
 **Workshop source (cleared for this practice job).** Inspect the [editable repair intake plate](rivet-intake-plate.svg) and its [PNG export](rivet-intake-plate.png). It shows the back of one scenic flat, the marked joint in its actual location and the same opening enlarged. The two views explain what should be visible in the submitted photos. Its annotations, color roles and type apply to this drawing; their use elsewhere requires a separate decision.
 

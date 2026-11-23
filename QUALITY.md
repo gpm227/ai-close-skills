@@ -29,6 +29,8 @@ On the original brand pilot, the designer could see the intended composition and
 
 Apply the same reasoning to a different job. For account qualification, introduce a duplicate location and an already excluded company with incomplete data. Inspect both the complete decision ledger and the eligible-only sales file. If the data is incomplete, the rep needs to know what evidence to find. For a month-to-date comparison, remove a date: a directional conclusion from the incomplete export fails the case.
 
+The [same-input comparison](proof/quality/comparison/README.md) records what AI Close, CPO Labs and Anthropic produced from identical brand and pipeline inputs.
+
 ## Public references
 
 | Reference | Practice adopted |

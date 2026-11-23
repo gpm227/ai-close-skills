@@ -13,6 +13,8 @@ Agree the as-of timestamps, snapshot filters, currency basis, stages counted as 
 4. Flag dated or missing next steps, missing owners and genuinely stale deals. Use the team's age threshold and last meaningful activity/stage history. A last-modified timestamp is a proxy and may be an administrative edit. If the threshold is unknown, list ages for owner review. Reference specific deal IDs with an owner and a proposed next action.
 5. Return the bridge, the closing stage table, deal-level exceptions and decisions for the pipeline meeting. State which movement can be explained and which evidence would resolve the rest. Keep recommendations separate from changes in the CRM.
 
+For a forecast review with history, also check close dates pushed more than once, age in the current stage against comparable deals, and exposure with only one active buyer contact. Use sales-cycle or conversion baselines only when their cohort and sample are known. Show a blank or unavailable history as an evidence gap. Keep these risk signals separate from dollars in the movement bridge.
+
 [Work a two-snapshot bridge and a missing-history case](examples/practice.md).
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

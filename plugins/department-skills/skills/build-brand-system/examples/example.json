@@ -97,7 +97,7 @@
   "sheet": {
     "headline": "Show us the break.",
     "intro": "Two repair photos.",
-    "cta": "Send repair photos",
+    "cta": "Open repair intake",
     "destination": "https://example.org/repair",
     "refs": [
       "S",
@@ -107,9 +107,9 @@
       {
         "icon": "custom",
         "svg_path": "M2 7h5l2-3h6l2 3h5v13H2zM16 13a4 4 0 1 1-8 0 4 4 0 1 1 8 0",
-        "label": "You send both photos",
+        "label": "You prepare both views",
         "refs": [
-          "S"
+          "V"
         ]
       },
       {
