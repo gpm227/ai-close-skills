@@ -20,6 +20,20 @@ For A: “In examples/a/daily.csv, May 1–18 had 180 orders versus 180 on April
 
 Compare the parsed JSON with [A's expected result](a/expected.json) or [B's expected result](b/expected.json). A missing row must produce a nonzero exit and no JSON. Removing a covered day must never convert a decline into an apparent improvement.
 
+## Use a daily export with its original headers
+
+“How are orders tracking through February 2? Our store uses US month/day/year dates. Each row is a complete business day.”
+
+```csv
+Business Date,Orders Placed
+01/01/2026,4
+01/02/2026,6
+02/01/2026,7
+02/02/2026,8
+```
+
+With the pasted rows saved as `store.csv`, run `python3 scripts/compare.py store.csv --date-column "Business Date" --date-format "%m/%d/%Y" --metric "Orders Placed" --cutoff 2026-02-02`. February 1–2 recorded 15 orders against 10 on January 1–2, up 5 orders (50%).
+
 ## Different case
 
 “Report January 1 revenue. The complete daily export has December 1 at 0 USD and January 1 at 52.50 USD.”

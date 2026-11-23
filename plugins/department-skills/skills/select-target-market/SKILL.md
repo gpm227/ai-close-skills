@@ -11,6 +11,7 @@ Recommend a bounded segment for the stated offer, sales horizon and objective. D
 
 Get the candidate segments, offer, delivery limits and evidence of buying behavior. Confirm the deciding objective only when different plausible objectives would change the choice. If segment data is thin, make a provisional choice or give the shortest comparison that could resolve a tie.
 
+- If the owner has no shortlist, derive two or three candidate segments from who performs the job, how they do it today and what the offer can deliver. Label those segments hypotheses. With no buyer evidence, choose a segment to test first based on a stated practical reason, such as access to a decision-maker, without treating access as proof of demand. Specify the evidence that would justify committing, such as a usable sample and an agreed pilot date. Use the same test when comparing a second segment.
 - Name the actual workflow, buyer population and boundary used to identify each segment. A broad industry label alone makes a weak selection rule.
 - Apply serviceability gates first. Separate a technical requirement that blocks a trial from a buyer preference. Mark unverified gates **unknown**.
 - Compare viable segments on buyer-confirmed urgency, observed means of reaching a decision-maker, ability to deliver, and the owner's priority. Cite interviews by account, dated offers or pilot records with locators. Identify who operates, pays and approves using those sources. One observed role does not establish a universal title.
@@ -22,5 +23,11 @@ Get the candidate segments, offer, delivery limits and evidence of buying behavi
 Give the chosen segment, confidence and next test. Include a table with candidate, decisive gate, buying evidence and date, disposition and reversal condition. Define the observed buyer roles and a reproducible in/out/research rule. When all candidates fail or lack the deciding evidence, return the smallest time-bounded validation step with what the owner should observe before choosing.
 
 [Practice selecting among three dispatch markets](examples/practice.md).
+
+## Try it on your work
+
+What you sell, your delivery limits, and any segments or accounts you are weighing.
+
+> Which segment should we try first? Show the inclusion rule, the evidence behind the choice and what would make us switch.
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

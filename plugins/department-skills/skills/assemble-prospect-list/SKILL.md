@@ -7,10 +7,12 @@ description: "Builds a list of companies and contacts that match your rules, wit
 
 Create a dated company and contact list from approved sources and an existing buyer profile. Use the user's allowed data sources, target roles, serviceability rules, suppressions and as-of date. Never construct an address or imply that sourcing a record grants permission to contact it.
 
+If the user starts with a target and no list, use the available approved directory or public source to find candidate companies. Record the query, territory and coverage. Check each candidate against the eligibility rules before looking for a person. If the source is unavailable, ask for an export or a pasted entry with company name, URL or source locator, and the facts used to qualify it. Return the exact filter the user can run. Report how many qualifying rows the sources actually support against the number requested.
+
 ## Qualify accounts, then identify people
 
 1. Translate the eligibility rules into reproducible source filters. Record export date, columns, join key and manual checks. Keep a stable account ID and resolve ambiguous shared domains, franchises or parent-company matches before accepting a record.
-2. Screen all account exclusions, including current customers, open deals and any company-level suppressions. Separate confirmed exclusions from incomplete evidence. An unavailable exclusion source yields a research draft with the missing check identified.
+2. Apply the campaign's rules for existing customers and open deals. A renewal list may require customer status. A new-logo list may exclude it. Honor company-level suppressions in either case. Separate confirmed exclusions from incomplete evidence. An unavailable exclusion source yields a research draft with the missing check identified.
 3. For qualified accounts, match people by stable person ID or corroborated identity and employer. Check person-level suppressions and explicit departures before selecting any channel. Avoid attaching a namesake or a former employee to the company.
 4. Record the source of each role and address, the actual evidence date and when it was checked. A research visit today does not refresh an old directory's underlying employment date. Mark unconfirmed roles older than 12 months as stale (or use the owner's stated freshness standard). Unknown dates or conflicting roles belong in the review queue. Do not assign an email to a different person, infer a deliverability status, or guess a naming pattern.
 5. Keep an otherwise qualified company even if it has zero confirmed contacts. A confirmed contact may have a blank email. Distinguish a missing channel from a missing employment check.
@@ -20,5 +22,11 @@ Create a dated company and contact list from approved sources and an existing bu
 Company columns: account ID, name, domain, hard-rule evidence, source locator, date checked, disposition. Contact columns: account ID, person ID if available, name, role, sourced address if available, role and address source/date, date checked and freshness. List exceptions separately with source IDs, reason and next verification. Report distinct companies, current contacts and held records separately; verify every contact joins to one eligible company and none matches a confirmed suppression. Keep filters and as-of date with the result so another rep can rebuild it.
 
 [Practice with company and person suppressions, stale employment and an absent address](examples/practice.md).
+
+## Try it on your work
+
+The kinds of companies and roles you want, the intended use and a directory, account list or public research scope.
+
+> Build linked company and contact tables. Keep qualified companies in the list even when a current contact cannot be verified.
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

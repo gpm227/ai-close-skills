@@ -25,3 +25,5 @@ Reconcile four incoming IDs to four primary classifications, with additional act
 ## Edge prompt
 
 The only opt-out appears below a reply divider in quoted history. The newest sender is a colleague asking a product question. Identify who originally requested removal, maintain their suppression, verify whether the colleague is affected by its scope, and answer only a permitted recipient using approved facts.
+
+If the export also contains one delivery-delay notice with a retry scheduled and two identical rows for a single permanent unknown-mailbox notice, add two queue rows. The delivery owner checks the scheduled retry on the first address and corrects the second address before future use. Neither notice supplies a company-wide removal request.

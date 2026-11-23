@@ -5,7 +5,7 @@ description: "Compare vendor quotes, bids and renewals on equivalent volume, ser
 
 # Compare vendor proposals
 
-Get the actual proposals or excerpts, target start date, volume profile, comparison horizon, required capabilities and decision owner. Give proposals short identifiers and section or page locators. Separate vendor text, buyer assumptions and your calculations. If no priorities are supplied, avoid inventing preference weights.
+Start with the quotes or pasted pricing clauses. Pull out the billing period, included units, minimum term and exclusions before asking the buyer for anything. Where usage or term is unknown, show the fixed commitment and the cost as a function of the missing quantity. For example, “$400/month including 100 orders, then $2 per extra order” becomes `400 + 2 × max(orders − 100, 0)` per month. Compare over any shared period the proposals support and ask for the usage, start date or requirement that would actually change the choice. With only one quote, give its exposure and the terms to request from the next bidder. Give proposals short identifiers and section or page locators. Separate vendor text, buyer assumptions and your calculations. If no priorities are supplied, avoid inventing preference weights.
 
 1. Give each must-have a row with status *met*, *excluded* or *unconfirmed*, with the clause that supports it. A cheaper bid that has an unresolved mandatory feature stays conditional.
 2. Normalize units, tier rules, billing cadence, service level, currency and taxes where the quotes allow it. Apply tiers to each relevant month when billed monthly; a yearly average can hide overages. Distinguish a marginal tier from an all-units repricing. When terms are ambiguous, calculate both readings or request clarification.
@@ -14,5 +14,11 @@ Get the actual proposals or excerpts, target start date, volume profile, compari
 5. Return a comparison table, calculations keyed to clauses, one recommendation the evidence allows and the smallest set of vendor questions whose answers can change it. Include owners for unanswered questions. Honor explicit hard requirements before preferences.
 
 [Compare an annual prepayment and a monthly overage quote](examples/practice.md).
+
+## Try it on your work
+
+One or more quotes. Include expected usage and must-haves if known.
+
+> Compare total cost, cash timing and commitments on the same assumptions. Which vendor qualifies, and what unanswered question could change the choice?
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

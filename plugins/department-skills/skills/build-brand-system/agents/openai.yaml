@@ -1,4 +1,4 @@
 interface:
   display_name: "Build a Brand System"
-  short_description: "Turn a client deck and website into a guide and design brief"
-  default_prompt: "Use $build-brand-system with this company overview and website to deliver our brand system and brief the applied piece for our chosen design tool. Use our reference to review the rendered versions."
+  short_description: "Turn existing company materials into an editable brand guide"
+  default_prompt: "Use $build-brand-system with this available company materials to deliver an editable brand guide. Show how to apply one rule and identify any decision the sources leave open."

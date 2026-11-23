@@ -5,7 +5,7 @@ description: "Reviews cold emails or outbound messages, marks what hurts the rep
 
 # Review outbound copy
 
-Use when the writer has a draft and wants editorial judgment. Request the exact draft, recipient, required or locked text, intended action and evidence for claims. Preserve the original for comparison. If evidence is missing, the review can proceed; label the specific claim held or remove it from clean copy.
+Start with the exact draft. Use any recipient details, locked wording, intended action or claim evidence the writer supplies. Preserve the original for comparison. When the draft is all you have, review what you can see: competing asks, vague terms, implied promises and unsupported claims. If two actions compete and neither has clear priority, show the smallest edit for each choice and ask which action the owner can fulfill. Hold any affected claim until its evidence arrives.
 
 ## Edit with a record of what changed
 
@@ -15,5 +15,11 @@ Use when the writer has a draft and wants editorial judgment. Request the exact 
 4. Return an annotated draft or original-to-edit table, clean copy per touch and any unresolved evidence. Mark ready for owner review, revise, or hold, with a reason. Read the clean copy on its own. Verify action count and each surviving claim and its qualifiers. If the original passes, return it verbatim and say what you checked.
 
 [Practice a two-ask edit that keeps an approved claim intact](examples/practice.md).
+
+## Try it on your work
+
+The draft message. Include the audience, intended reply or claims evidence if you have them.
+
+> Mark the lines that could confuse the reader or undermine trust. Give me the smallest usable edit and flag anything I need to verify.
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

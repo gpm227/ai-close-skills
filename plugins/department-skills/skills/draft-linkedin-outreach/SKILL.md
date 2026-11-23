@@ -21,4 +21,10 @@ Return paste-ready drafts, stage and condition for each, and separate notes mapp
 
 [Practice on a speaker listing, with a pending-invite variation](examples/practice.md).
 
+## Try it on your work
+
+A recipient, a relevant public or supplied fact, your offer and the relationship or connection status.
+
+> Draft the LinkedIn message appropriate to our current relationship. Show when each follow-up would make sense and when to stop.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

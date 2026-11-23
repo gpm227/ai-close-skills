@@ -1,6 +1,7 @@
 """Build or verify standalone ChatGPT uploads from the skill directories."""
 import argparse
 import io
+import re
 from pathlib import Path
 from zipfile import ZipFile, ZipInfo
 
@@ -11,12 +12,24 @@ RESOURCE_DIRS = ("agents", "assets", "examples", "references", "scripts")
 
 
 def setup_note(skill):
+    instructions = (skill / "SKILL.md").read_text(encoding="utf-8")
+    starter = re.search(r"(?m)^## Try it on your work\n\n[^\n]+\n\n> [^\n]+", instructions)
+    if starter:
+        first_run = starter.group() + "\n\n"
+    else:
+        # Private company skills may use their own instruction structure.
+        first_run = "Open a fresh chat, give it the task and attach the material you want it to use.\n\n"
+    example = next((path for path in ("examples/practice.md", "examples/brief.md")
+                    if (skill / path).is_file()), None)
+    if example:
+        first_run += f"To try the skill with sample material, open [{example}]({example}).\n\n"
     opening = (
         "# Install this skill in ChatGPT\n\n"
         "Open Plugins → Skills → Create → Upload from your computer and select the original ZIP. "
-        "After the upload scan, start a fresh chat and try the worked practice case. "
+        "After the upload scan, start a fresh chat. "
         "[Workspace permissions and upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)\n\n"
     )
+    opening += first_run
     if (skill / "RELEASE.json").is_file():
         return opening + ("Your company owns this release. Read `company/DEPLOY.md` in the private repository "
                           "for team setup, updates and rollback. Use the included `RELEASE.json` to identify the version.\n")

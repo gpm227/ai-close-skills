@@ -41,4 +41,4 @@ Purpose: Give the recipient a low-pressure final opportunity tied to the owner f
 
 ## Second request
 
-“Write a sequence to a CFO. We make inventory software. Our only proof is a confidential draft; we do not know why this CFO now.” A useful answer asks for a real trigger and cleared artifact or product evidence. It can provide a labeled outline. It contains zero send-ready emails and does not turn a company category into a trigger.
+“Write a sequence to a CFO. We make inventory software. Our only proof is a confidential draft; we do not know why this CFO now.” Ask for a relevant event or a specific responsibility that the available offer addresses, plus an artifact or product fact cleared for outreach. Return a labeled outline until those gaps close.

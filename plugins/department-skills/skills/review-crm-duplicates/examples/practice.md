@@ -28,3 +28,5 @@ Three candidate pairs, one proposal. The losing record C2 is the only proposed r
 ## Edge prompt
 
 A third export links C2 to a similar name C7 at a different company using a recycled phone. Does the C1/C2 decision imply a three-record merge? Check every member and conflicting identifiers before making a cluster proposal. Distinguish a suspect candidate link from evidence of identity.
+
+Add C8 and C9 with only their CRM IDs, and C10 with a unique upstream ID and direct email. The six original records still yield three pairs. C8 and C9 need identifying data. C10 has identifiers but no candidate match. Reconcile nine records as six reviewed, two incomplete and one unmatched.

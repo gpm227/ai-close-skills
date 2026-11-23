@@ -47,4 +47,10 @@ One big customer chose you because you could start in a week. The obvious positi
 
 Reconstruct the intro, evidence ledger and missing-proof decision in [the calibration courier case](examples/practice.md).
 
+## Try it on your work
+
+What the company sells and who uses it. Add real buyer language or alternatives if available.
+
+> Write our positioning in words a buyer would recognize. Explain who should choose us, why and which parts still need customer evidence.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

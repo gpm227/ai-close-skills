@@ -38,10 +38,16 @@ The request is "logo for the one-sheet." The obvious pick is `logo-white.svg` be
 
 ## Check it
 
-- Every path points to a file that exists.
-- The asset is visible on the target background.
+- For files you opened, confirm the exact variant and path. For a manifest-only selection, give the listed path, say what remains unverified, and identify who can supply it.
+- Check visibility on the target background when the actual file is available.
 - Nothing internal-only goes into a public piece.
 
 Check a print-use request against [the manifest-only booth-sign case](examples/practice.md).
+
+## Try it on your work
+
+The intended placement, background and available asset folder or file inventory, including usage notes if known.
+
+> Find the approved asset for this use. Give me the exact file and version, the evidence for using it and any missing permission or specification.
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

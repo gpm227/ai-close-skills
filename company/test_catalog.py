@@ -17,6 +17,21 @@ class CatalogTest(unittest.TestCase):
         self.assertEqual(sorted(listed), sources)
         self.assertEqual(sorted(downloads), sources)
 
+    def test_first_requests_are_shipped_with_their_own_job(self):
+        prompts = set()
+        for path in SKILLS.glob("*/SKILL.md"):
+            name = path.parent.name
+            with self.subTest(skill=name), ZipFile(ROOT / "chatgpt" / (name + ".zip")) as archive:
+                setup = archive.read(f"{name}/SETUP.md").decode()
+                starter = re.search(r"(?m)^## Try it on your work\n\n([^\n]+)\n\n> ([^\n]+)", path.read_text())
+                self.assertIsNotNone(starter)
+                self.assertIn(starter.group(), setup)
+                self.assertNotIn(starter[2], prompts)
+                prompts.add(starter[2])
+                example = re.search(r"\]\((examples/[^)]+)\)", setup)
+                self.assertIsNotNone(example)
+                self.assertIn(f"{name}/{example[1]}", archive.namelist())
+
     def test_individual_downloads_include_the_practice_case(self):
         for path in SKILLS.glob("*/SKILL.md"):
             name = path.parent.name

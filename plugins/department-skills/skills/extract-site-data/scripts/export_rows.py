@@ -33,6 +33,10 @@ def cell(value, kind):
     return value
 
 
+def comparison_value(value, kind):
+    return Decimal(value) if value and kind == "number" else value
+
+
 def extract(document):
     fields = document["fields"]
     keys = document["key"]
@@ -67,21 +71,36 @@ def extract(document):
                 raise ValueError(f"Undeclared field on {url}, observation {index}")
             values = {name: cell(row.get(name), kind) for name, kind in fields.items()}
             source = dict(source_url=url, observed_date=observed, observation=index)
-            key = tuple(values[name] for name in keys)
-            if any(not part.strip() for part in key):
+            if any(not values[name].strip() for name in keys):
                 exceptions.append(dict(reason="missing key", values=values, **source))
                 continue
+            key = tuple(comparison_value(values[name], fields[name]) for name in keys)
             groups.setdefault(key, []).append((values, source))
 
-    records, conflicts, repeated = [], [], 0
-    for key, observations in groups.items():
+    records, conflicts, duplicate_groups, text_escapes = [], [], [], []
+    repeated = 0
+    for observations in groups.values():
         values, source = observations[0]
         retained = values.copy()
-        for name in fields:
-            if len({entry[name] for entry, ref in observations}) > 1:
+        identity = {name: values[name] for name in keys}
+        supplemental_fields = {}
+        for name, kind in fields.items():
+            published = {}
+            for entry, ref in observations:
+                if entry[name] != "":
+                    published.setdefault(comparison_value(entry[name], kind), entry[name])
+            if len(published) > 1:
                 retained[name] = ""
                 evidence = [{**ref, "value": entry[name]} for entry, ref in observations]
-                conflicts.append(dict(key=dict(zip(keys, key)), field=name, observations=evidence))
+                conflicts.append(dict(key=identity, field=name, observations=evidence))
+            elif published and retained[name] == "":
+                retained[name] = next(iter(published.values()))
+                supplemental_fields[name] = [ref for entry, ref in observations if entry[name] != ""]
+            if kind == "text" and safe_text(retained[name]) != retained[name]:
+                text_escapes.append(dict(key=identity, field=name, source_value=retained[name]))
+        if len(observations) > 1:
+            duplicate_groups.append(dict(key=identity, observations=[ref for entry, ref in observations],
+                                         supplemental_fields=supplemental_fields))
         records.append({**retained, "source_url": source["source_url"],
                         "observed_date": source["observed_date"]})
         repeated += len(observations) - 1
@@ -91,7 +110,8 @@ def extract(document):
                  observations=sum(page["observations"] for page in pages), retained=len(records),
                  repeated_key_observations=repeated, unresolved_key_observations=len(exceptions),
                  missing_fields={name: sum(row[name] == "" for row in records) for name in fields},
-                 pages=pages, key_exceptions=exceptions, conflicts=conflicts)
+                 pages=pages, key_exceptions=exceptions, conflicts=conflicts,
+                 duplicate_groups=duplicate_groups, text_escapes=text_escapes)
     return fields, records, audit
 
 

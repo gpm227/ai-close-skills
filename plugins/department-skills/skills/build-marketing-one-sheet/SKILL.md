@@ -18,4 +18,10 @@ Deliver source, tested print export when possible, and a short evidence note. A 
 
 [Practice with an editable, printable buying brief](examples/practice.md).
 
+## Try it on your work
+
+The buyer, their next decision, offer details, approved proof and the action to take.
+
+> Write a one-page leave-behind a buyer can forward after the meeting. Include the offer, evidence and next step, and flag anything that blocks public use.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

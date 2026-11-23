@@ -19,4 +19,10 @@ Treat expected conversion effects as hypotheses. A results claim needs a defined
 
 [Practice on a request form that cannot book a meeting](examples/practice.md).
 
+## Try it on your work
+
+The audience, offer, available proof and what actually happens after the visitor clicks.
+
+> Write landing-page copy for this offer, including a button that describes its destination. Flag claims I need to support before publishing.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

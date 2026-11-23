@@ -9,7 +9,7 @@ All rows are fictional. Use 15 May 2026 as the as-of date and treat the listed e
 - T2, contact export last checked 5 January 2025. Rowan Oates, operations director at A17, rowan@basin.example.
 - T3, account list from 7 May 2026. Jules Vale, buyer, B22. Jess Vale, buyer, C13.
 - T4, person-level suppression export from 14 May 2026. Rowan Oates, A17, associated with the address in T2. These are the only supplied suppressions.
-- Approved role is operations director. Build the two research tables for future manual review.
+- This is a new-logo campaign. Exclude current customers. Approved role is operations director. Build the two research tables for future manual review.
 
 **Request.** Show the eligible companies and current contacts. Include every exception by source ID and explain how to reproduce the selection.
 
@@ -22,3 +22,5 @@ The output must distinguish account-level and person-level checks. A confirmed r
 ## Edge prompt
 
 Remove T4. Add a current directory explicitly stating Rowan has left Basin, while T2 still lists them there. Keep the conflicting employment evidence with both dates, exclude Rowan from current contacts, and do not transfer their former address to Lee. If the entire suppression source is unavailable, label the output a research draft pending suppression verification.
+
+For a renewal campaign, change the rule to active customers only and keep the remaining source facts. B22 now enters the company list. Jules is listed as a buyer, so B22 still has zero confirmed operations directors. A17 lacks evidence of active customer status. An account can belong on a renewal list even when there is nobody on the contact list.

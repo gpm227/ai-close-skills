@@ -32,4 +32,10 @@ Retain each account ID once with the actual evidence type, count and scope, evid
 
 [Try both site-roster and published-count examples](examples/practice.md).
 
+## Try it on your work
+
+A list of companies, your qualification rules and any exclusions.
+
+> Mark every company pursue, exclude or research. Show the deciding fact or the exact fact we still need for each one.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

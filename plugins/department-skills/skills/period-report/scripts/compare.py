@@ -2,13 +2,13 @@
 import argparse
 import csv
 import json
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from decimal import Decimal, DecimalException, InvalidOperation, localcontext
 from fractions import Fraction
 from pathlib import Path
 
 
-def compare(path, metric, cutoff, unit_column=None):
+def compare(path, metric, cutoff, unit_column=None, date_column="date", date_format="iso"):
     start = cutoff.replace(day=1)
     if start == date.min:
         raise ValueError("The date range has no representable previous month")
@@ -21,13 +21,17 @@ def compare(path, metric, cutoff, unit_column=None):
     with path.open(encoding="utf-8-sig", newline="") as source:
         rows = csv.DictReader(source, strict=True)
         headers = rows.fieldnames or []
-        required = ["date", metric] + ([unit_column] if unit_column is not None else [])
+        required = [date_column, metric] + ([unit_column] if unit_column is not None else [])
         if len(set(required)) != len(required) or any(headers.count(key) != 1 for key in required):
             raise ValueError("Specify distinct, unambiguous date, metric and optional unit columns")
         for row in rows:
             line = rows.line_num
             try:
-                day = date.fromisoformat((row["date"] or "").strip())
+                raw_date = (row[date_column] or "").strip()
+                if date_format == "iso":
+                    day = date.fromisoformat(raw_date)
+                else:
+                    day = datetime.strptime(raw_date, date_format).date()
             except ValueError as error:
                 raise ValueError(f"Invalid date on line {line}") from error
             if not any(left <= day <= right for left, right in windows):
@@ -92,8 +96,12 @@ if __name__ == "__main__":
     parser.add_argument("--metric", required=True)
     parser.add_argument("--cutoff", required=True, type=date.fromisoformat)
     parser.add_argument("--unit-column", help="Require one nonempty unit across covered rows")
+    parser.add_argument("--date-column", default="date", help="Exact header of the local reporting date")
+    parser.add_argument("--date-format", default="iso", choices=("iso", "%m/%d/%Y", "%d/%m/%Y"),
+                        help="Use the date order documented by the source export")
     args = parser.parse_args()
     try:
-        print(render(compare(args.daily, args.metric, args.cutoff, args.unit_column)))
+        print(render(compare(args.daily, args.metric, args.cutoff, args.unit_column,
+                             args.date_column, args.date_format)))
     except (OSError, ValueError, DecimalException, csv.Error) as exc:
         parser.exit(1, f"Cannot compare: {exc}\n")

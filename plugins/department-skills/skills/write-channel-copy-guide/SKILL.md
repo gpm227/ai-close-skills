@@ -9,16 +9,13 @@ Give each channel a usable pattern, a real example, and a test that keeps the pr
 
 ## You'll need
 
-- **Your voice standard.**
-- **Claims you can back.**
-- **Where each button actually goes.**
-- **Approved examples** from each channel.
+Start with one approved message or supported promise, the requested channels, and what the reader can actually do in each. A voice standard, placement limits, and approved channel examples improve the result when available. If the owner has only an email, preserve its facts and label new channel treatments as proposals.
 
 ## Steps
 
 1. Take one real promise and write it for each channel.
-2. Homepage: covers the whole business. Detail page: shows inputs and finished work. Email: one decision per email. Buttons: say what clicking does.
-3. For each channel, write a before and after and say which words changed, which facts stayed fixed, and why.
+2. Choose a pattern for the placement's actual job. A detail page may show inputs and finished work. A service email may have one decision. Button text names the immediate outcome.
+3. For each channel with existing copy, show the before and after. For a new placement, label the first draft and name the approved source message it adapts. Explain which facts stayed fixed and why.
 4. Keep optional links visually and verbally separate from the main action.
 
 ## Check the path before adapting the words
@@ -29,7 +26,7 @@ Count the final visible words or characters, including spaces and punctuation, i
 
 ## What you get back
 
-A guide with, for each channel: the reader's question, a sensible length, an example, an editing note, and a check that the button matches its destination.
+A guide with, for each channel: the reader's question, a supplied limit or observed length of the example, an example, an editing note, and a check that the button matches its destination.
 
 ## The trap
 
@@ -41,5 +38,11 @@ The button says "Book a call." The form collects a preferred time and someone co
 - No channel version adds a benefit the others don't have.
 
 Apply the matrix to [a date request across web, mobile and service email](examples/practice.md).
+
+## Try it on your work
+
+The message, the channels and what the reader can actually do in each placement. Include voice rules if available.
+
+> Show how to express the same promise in each channel. Give me copy patterns, examples and an accurate next action for each placement.
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

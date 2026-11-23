@@ -1,19 +1,20 @@
 # Deploy AI Close skills in your company
 
-Start in ChatGPT. A team member can run a report, qualify accounts, write a brief or review a deliverable there. Bring in Claude Design when the job needs visual production. Bring in Claude Research when the decision depends on outside evidence. Return the files and findings to the same ChatGPT project so the next person can use the approved work.
+Start in ChatGPT. A team member can run a report, qualify accounts, write a brief or review a deliverable there. Bring in Claude Design when the job needs visual production. Bring in Claude Research when the decision depends on outside evidence. For recurring team jobs, keep approved files and findings in a shared ChatGPT project.
 
 | Work | Where to do it | What the next person receives |
 | --- | --- | --- |
 | Routine reporting, sales, marketing and operations | ChatGPT with the relevant installed skill | The checked report, account list, draft or decision, with its source and open questions |
-| Brand kits, one-sheets and design systems | ChatGPT prepares the brief → Claude Design builds it → ChatGPT reviews the rendered work | Editable design, rendered export, approved voice and visual rules |
+| Brand rules for writers and designers | ChatGPT uses the deck, website or approved material | Editable brand guide, source-backed rules and decisions for the owner |
+| Commissioned design or visual brand kit | ChatGPT prepares the brief → Claude Design produces the requested assets → owner reviews them | Editable design and checked exports for the requested placements |
 | Deep research and competitive analysis | ChatGPT scopes the decision → Claude Research investigates → ChatGPT applies the findings | Dated comparison with claim-level sources, evidence gaps and a recommendation for the decision owner |
 
 ## Try one skill in ChatGPT
 
 1. Pick a job in the [public skills catalog](https://github.com/gpm227/ai-close-skills/blob/main/CATALOG.md). Download that skill's ZIP from the reviewed revision. If someone forwarded a GitHub `SKILL.md` link, open the repository name in its breadcrumb, then select **All 37 Skills** in the README. The catalog lists a Download link beside each job. For a quick trial, use the public examples. For company-specific rules, use the private release below.
 2. In the company ChatGPT workspace, open **Plugins → Skills → Create → Upload from your computer**. Select the single skill ZIP. Wait for the scan. If the upload says **Needs Review**, inspect the flagged information. A **Blocked** upload cannot be used. Confirm the approved skill appears under **Installed**. OpenAI lists eligible Business, Enterprise, Healthcare and Edu workspaces. Availability depends on workspace permissions. If uploads are disabled, ask a workspace admin to enable them or share the approved skill. [ChatGPT skills and permissions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
-3. Create a ChatGPT project for the team's recurring work. Add its audience, owner, approved reference material and an example of an acceptable result. Invite only the intended participants. The project holds working context. Members get the reusable skill through the workspace's Skills directory. [ChatGPT projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
-4. Try **Compare this month with last month** (`period-report`) in a new chat. Attach `proof/a/daily.csv` from the reviewed repository and ask, “How did orders change month over month through May 18, 2026?” Expect 180 orders in each 18-day period, a 0% change. Save the returned JSON to check it below. A full April comparison would give the wrong answer.
+3. Start a fresh chat. Attach your own material and use the request under **Try it on your work** in the skill instructions or the ZIP's `SETUP.md`. For example, give **Compare vendor proposals** two quotes, expected volume and a mandatory requirement. Ask which offer qualifies and how much cash each requires over the same term.
+4. To check setup against a known answer, install **Compare this month with last month** (`period-report`) and attach `proof/a/daily.csv` from the reviewed repository in a new chat. Ask, “How did orders change month over month through May 18, 2026?” Expect 180 orders in each 18-day period, a 0% change. You can save the returned JSON for the check below.
 
 If Skills is unavailable and you want to evaluate a written workflow, supply its `SKILL.md` and referenced inputs in a fresh chat. Record that as a manual trial. A workflow that needs code or rendered files still needs those capabilities before its result can be checked.
 
@@ -21,11 +22,11 @@ If Skills is unavailable and you want to evaluate a written workflow, supply its
 
 ### Make a brand kit from a deck and a website
 
-In ChatGPT, run **Build a brand system** with the company overview deck, website URL, audience and intended buyer action. Supply a finished piece the brand owner trusts if one exists. Ask ChatGPT for the editable guide, voice brief, evidence behind the copy, and production brief. Resolve any disagreement between the deck and website that changes the buyer promise. The owner selects the claims and assets cleared for the design handoff.
+For a guide, give ChatGPT the available deck, site URL or capture, the intended reader and any approved assets. Ask for an editable guide a new writer or designer can use today. Check the source behind each material rule and resolve disagreements that change the buyer promise. Deliver the guide and the owner's open decisions. A guide can be the entire job.
 
-In Claude, select **Output → Design** or open **Artifacts** and choose a Design template. Supply the cleared brief, copy, brand references and assets. Ask, “Build an editable one-sheet for this audience. Use the approved copy and logo. Make the buyer's next step visible at final size.” Where the workspace supports design systems, the brand owner can turn the approved rules, logos and typography into a reusable system. [Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) · [Set up a design system](https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design)
+When you need a designed asset, tell ChatGPT the placement, audience, buyer action and required format. Give Claude Design the cleared brief, copy, assets and a finished reference the owner trusts. In Claude, select **Output → Design** or open **Artifacts** and choose a Design template. Teams with design-system access can use the approved identity for future pieces. [Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) · [Set up a design system](https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design)
 
-Before production, open the owner’s chosen reference at full size and as a thumbnail. State what its main image explains and which buyer action is visible. Record previously rejected directions. Use the client’s own subject, artwork and type decisions in the new piece. Return the editable design reference and its exported page to the ChatGPT project. Review the first export against the agreed brand and buyer criteria. Take specific edits back to Claude Design and review the next export at delivery size. Keep each version with its review. A copy proof is ready for layout. Hide the name and ask a fresh reader what business the image belongs to and what they would do next. A technically correct, interchangeable design returns to composition. The brand owner approves the rendered design for reuse. If you only have a brief, record visual production as pending.
+Return the editable file and export to the owner. Check the real placement at delivery size, including legibility, approved claims, asset rights and the destination of the buyer action. Ask for revisions when the work misses an agreed requirement. Save the approved version with its source files.
 
 ### Answer a competitive question
 
@@ -36,6 +37,8 @@ Ask for one row per comparable offer with the plan, seats, price, currency, bill
 ## Install a company-owned release
 
 The team lead owns what a good output looks like. A workspace admin controls access. A repository maintainer owns versions, release checks and rollback. One person can cover several roles. Keep client files, company rules, decisions and employee run records in company-approved locations. Use cleared or synthetic examples in the public repository.
+
+**Set up shared working context.** When a colleague needs to repeat an accepted job, create a ChatGPT project, add the audience, owner, approved inputs and an example of an acceptable result, and invite the intended participants. Members install the reusable skill through the workspace's Skills directory. [ChatGPT projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
 
 **Prepare the private repository.** Start from a clone of the [public repository](https://github.com/gpm227/ai-close-skills) with Git and Python 3.9 or newer. Check out the reviewed revision first. From that checkout, replace the example company name and choose a new destination outside the clone.
 

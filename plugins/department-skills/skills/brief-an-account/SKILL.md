@@ -20,4 +20,10 @@ Start with the change worth asking about and one neutral opening question. Inclu
 
 [Practice with a planned opening and a contradictory CRM note](examples/practice.md).
 
+## Try it on your work
+
+A company name or website, your offer and the reason you are considering outreach.
+
+> Brief me on this account. Cite the facts, distinguish what we are inferring and give me one opening question grounded in the evidence.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

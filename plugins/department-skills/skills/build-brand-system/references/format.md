@@ -1,5 +1,7 @@
 # Editable brand file
 
+Use this optional format for a structured internal master or an applied proof. For an ordinary guide request, write the editable Markdown guide directly as described in SKILL.md.
+
 Write UTF-8 JSON. Each reference in refs is a source ID. Every source has an id, locator (PDF page, URL or snapshot section), excerpt and clearance: public, internal or unconfirmed. The source register stays in the internal guide.
 
 | Key | Required content |

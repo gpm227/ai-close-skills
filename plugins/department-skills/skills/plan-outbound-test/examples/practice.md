@@ -26,7 +26,7 @@ Randomize at account level before Day 0. Both contacts inherit their group's ass
 
 **Readout.** Count distinct assigned accounts with at least one explicit request for a walkthrough within 14 days, divided by all assigned accounts in that arm. Record delivery counts separately. An automated reply, referral alone or repeated request adds no qualifying account. Read both arms after the final account’s full window. Track held walkthroughs as a separate downstream count. With no baseline or agreed minimum difference, present counts and uncertainty for the next test. This run cannot establish a winner by itself.
 
-**Checker's example.** A has 30 assigned groups. Two requests came from the same group, a second group asked once and two other groups bounced. A's rate is 2/30 (6.7%). Keep the bounces in the assigned denominator.
+**Checker's example.** A has 30 assigned groups. Two requests came from the same group and a second group asked once. Delivery records show that 28 groups received at least one email. A has 2/30 (6.7%) positive among assigned groups and 2/28 (7.1%) among reached groups. If B has 30 assigned, 30 reached and two positive groups, both B measures are 2/30 (6.7%). The small difference among reached groups disappears on the primary measure.
 
 ## Second request
 

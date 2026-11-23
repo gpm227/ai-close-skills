@@ -37,3 +37,16 @@ No arithmetic residual: 120 + 30 + 15 − 70 − 10 = 85. D4's reason is unresol
 ## Different case
 
 “Only the closing snapshot is available and the company wants weighted pipeline. No stage probabilities are supplied.” Return Sep 30 gross stage exposure by currency and the current exceptions. Explain which dates, historical snapshot and probability schedule would support movement and weighted estimates. A candidate result that adds USD and EUR, classifies D4 as lost, or claims a pipeline growth rate fails.
+
+## Walk into a pipeline meeting with one CRM export
+
+“Which open proposals need attention today?” This September 30 export joins contacts to opportunities. All amounts are the parent opportunity amount in USD.
+
+| Opportunity ID | Contact | Stage | Amount | Owner | Next step |
+| --- | --- | --- | ---: | --- | --- |
+| O-7 | A | Proposal | 40,000 | Lee | Oct 3 review |
+| O-7 | B | Proposal | 40,000 | Lee | Oct 3 review |
+| O-8 | C | Proposal | | Jin | |
+| O-9 | D | Proposal | 0 | Jo | Oct 2 scoping |
+
+Proposal has three distinct open deals. Two have amounts on record, totaling USD 40,000. O-8's missing amount makes the full stage value unknown. O-7's two contact rows refer to one USD 40,000 opportunity. O-9 has a recorded zero. At today's meeting ask Jin to confirm O-8's value and identify a next action and date. This snapshot supports that decision without making a claim about pipeline growth.

@@ -46,6 +46,54 @@ class PackagedExtractionTest(unittest.TestCase):
         self.assertEqual(audit["unresolved_key_observations"], 0)
         self.assertEqual(audit["page_counts"], {"read": 2, "failed": 1, "pending": 0, "excluded": 0})
         self.assertEqual(audit["missing_fields"]["phone"], 1)
+        self.assertEqual(audit["text_escapes"], [
+            {"key": {"id": "B2"}, "field": "name", "source_value": "=North Annex"},
+        ])
+
+    def test_merge_supplemental_fields_and_quarantine_real_disagreements(self):
+        document = json.loads(self.example.read_text(encoding="utf-8"))
+        # An index omits a phone published on the detail page. A second source
+        # actually disagrees on the name, so only that field needs review.
+        document["pages"][0]["rows"][0]["phone"] = None
+        document["pages"][1]["rows"][0]["name"] = "Oak Depot"
+        input_path = self.workspace / "overlap.json"
+        input_path.write_text(json.dumps(document), encoding="utf-8")
+        result = self.run_export(input_path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        with (self.output / "records.csv").open(encoding="utf-8", newline="") as source:
+            branch = next(csv.DictReader(source))
+        self.assertEqual(branch["phone"], "555-0101")
+        self.assertEqual(branch["name"], "")
+        self.assertEqual(branch["source_url"], "https://directory.example/p1")
+        audit = json.loads((self.output / "coverage.json").read_text(encoding="utf-8"))
+        group, = audit["duplicate_groups"]
+        self.assertEqual(group["key"], {"id": "B1"})
+        self.assertEqual(len(group["observations"]), 2)
+        self.assertEqual(group["supplemental_fields"]["phone"], [
+            {"source_url": "https://directory.example/p2", "observed_date": "2026-06-12", "observation": 1},
+        ])
+        conflict, = audit["conflicts"]
+        self.assertEqual(conflict["field"], "name")
+        self.assertEqual([item["value"] for item in conflict["observations"]], ["Oak Yard", "Oak Depot"])
+
+    def test_decimal_spellings_agree_without_losing_text_identity(self):
+        rows = [{"size": "2", "product": "01", "rate": "20.00"},
+                {"size": "2.0", "product": "01", "rate": "20"},
+                {"size": "2", "product": "1", "rate": "0"}]
+        document = {"fields": {"size": "number", "product": "text", "rate": "number"},
+                    "key": ["size", "product"],
+                    "pages": [{"url": "https://prices.example/list", "status": "read",
+                               "observed_date": "2026-06-12", "rows": rows}]}
+        input_path = self.workspace / "rates.json"
+        input_path.write_text(json.dumps(document), encoding="utf-8")
+        result = self.run_export(input_path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        with (self.output / "records.csv").open(encoding="utf-8", newline="") as source:
+            output_rows = list(csv.DictReader(source))
+        self.assertEqual([(r["product"], r["rate"]) for r in output_rows], [("01", "20.00"), ("1", "0")])
+        audit = json.loads((self.output / "coverage.json").read_text(encoding="utf-8"))
+        self.assertEqual(audit["conflicts"], [])
+        self.assertEqual(audit["repeated_key_observations"], 1)
 
     def test_unread_page_cannot_supply_records(self):
         document = json.loads(self.example.read_text(encoding="utf-8"))

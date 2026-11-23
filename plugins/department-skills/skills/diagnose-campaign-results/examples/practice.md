@@ -28,4 +28,12 @@ The A bounce is from an attempt old enough to assess. Omit p6 from the mature co
 
 ## Different case
 
-“Same export, but each variant has only the count of outbound messages. Several people got three messages and the calendar has no campaign IDs.” Show message-level delivery with the available data. Recipient reply rates and attributable meetings are unknown. Ask for a deduplicated recipient export and meeting attribution; do not label unknown meetings zero.
+“Our dashboard shows 110 messages sent for A and 60 for B this week. Several people got three touches. The calendar has no campaign IDs. Which one should we scale?”
+
+| This week's evidence | A | B |
+| --- | ---: | ---: |
+| Attempted messages | 110 | 60 |
+| Confirmed delivered messages | Unknown | Unknown |
+| Unique delivered people, responders and attributable bookings | Unknown | Unknown |
+
+Hold the scaling decision. The 50-message difference measures send volume. Ask campaign operations for message ID, recipient ID, variant, sent time and final delivery status. Check that each attempted message has one final outcome, then calculate delivered messages divided by attempted messages for each variant. To judge meetings, also obtain campaign-linked booking IDs and timestamps.

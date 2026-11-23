@@ -19,4 +19,10 @@ Deliver the thesis, strongest counterargument and its consequence, evidence-to-c
 
 [Practice an editorial argument with a real counterexample](examples/practice.md).
 
+## Try it on your work
+
+An expert observation, the audience, and any examples, data or counterexamples supporting the argument.
+
+> Build a publishable argument around this observation. Give the strongest counterargument, the limits of the evidence and what the reader could do differently.
+
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

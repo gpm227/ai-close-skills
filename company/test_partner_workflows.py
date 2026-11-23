@@ -69,6 +69,23 @@ class PartnerWorkflows(unittest.TestCase):
                                               "--metric", "orders", "--cutoff", "2026-05-18"])
             self.assertEqual(json.loads(output), json.loads((fixture / "expected.json").read_text()))
 
+    def test_reporting_export_headers_and_date_order(self):
+        runner = self.script("period-report", "compare.py")
+        daily = self.workspace / "store.csv"
+        cmd = [sys.executable, runner, daily, "--date-column", "Business Date",
+               "--metric", "Orders Placed", "--cutoff", "2026-02-02"]
+        dates = [date(2026, month, day) for month in (1, 2) for day in (1, 2)]
+        for layout in ("%m/%d/%Y", "%d/%m/%Y"):
+            with self.subTest(layout=layout):
+                records = [f"{day.strftime(layout)},{orders}" for day, orders in zip(dates, (4, 6, 7, 8))]
+                daily.write_text("Business Date,Orders Placed\n" + "\n".join(records))
+                output = json.loads(subprocess.check_output(cmd + ["--date-format", layout]))
+                self.assertEqual((output["prior_total"], output["current_total"], output["change_pct"]),
+                                 (10, 15, 50))
+                unconfirmed_layout = subprocess.run(cmd, capture_output=True)
+                self.assertNotEqual(unconfirmed_layout.returncode, 0)
+                self.assertFalse(unconfirmed_layout.stdout)
+
     def test_reporting_leap_month_missing_zero_and_duplicates(self):
         runner = self.script("period-report", "compare.py")
         daily = self.workspace / "daily.csv"

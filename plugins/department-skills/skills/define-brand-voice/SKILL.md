@@ -13,7 +13,7 @@ Recover the editorial decisions that distinguish this company's writing. When th
 - **Before and after pairs.** Drafts and the edited versions that got approved. Ten pairs beats a hundred finished pieces.
 - **Who reads it,** and where (website, email, proposals).
 
-Set aside two or three pieces before you start. You'll test the guide on them.
+If you have several independent pieces, reserve an unused passage for testing and keep enough source material to infer rules. With one approved email or one edited pair, use it now. State which channel it represents.
 
 ## Steps
 
@@ -25,15 +25,15 @@ Set aside two or three pieces before you start. You'll test the guide on them.
 
 ## Preserve the editor's evidence
 
-Give each independently edited pair a locator, editor authority, channel and audience. One line reused in six channels is one edit. Freeze the unused test pieces before inferring rules. Record each rule as approved (explicit owner standard), observed (repeated source pattern), or proposed (single instance, conflict or extension). A repeated edit supports an observation; the owner controls formal adoption.
+Give each independently edited pair a locator, editor authority, channel and audience. One line reused in six channels is one edit. Set aside any available test passage before inferring rules. Record each rule as approved (explicit owner standard), observed (repeated source pattern), or proposed (single instance, conflict or extension). A repeated edit supports an observation; the owner controls formal adoption.
 
 Write examples that a new writer may use. Replace private names, pricing or internal phrasing with original teaching examples cleared for that audience. Preserve approved legal lines. When two approved pieces conflict, look for channel or audience boundaries, then leave any unresolved choice with the owner. If no edit pairs are available, derive a provisional guide from the approved pieces and label the inference.
 
-Test against an untouched passage, recording the original, revised text and source facts preserved. If the owner's actual edit is known, compare after drafting. A judgement made by the author of the guide cannot be reported as an independent editor match.
+When an untouched passage exists, test against it, recording the original, revised text and source facts preserved. If the owner's actual edit is known, compare after drafting. With a single source, show one proposed instruction and apply it to a new, clearly labeled illustrative line that preserves the facts. For example, an approved edit from “We’ll handle it” to “Your coordinator will confirm the date” supports naming the responsible person in scheduling messages. It provides no evidence of how the team writes proposals. Mark the unseen-sample test pending. A judgement made by the author of the guide cannot be reported as an independent editor match.
 
 ## What you get back
 
-A short guide: up to five rules, each with a before and after, plus the result of testing it on the pieces you set aside. Changes that need the owner's call are listed separately.
+A short guide: up to five rules, each with a before and after, plus an untouched-passage result when available or an illustrative application when working from one sample. Changes that need the owner's call are listed separately.
 
 ## The trap
 
@@ -45,5 +45,11 @@ The editor changed "We leverage cutting-edge AI" to "We check every report again
 - No rule rests on a single example without being marked provisional.
 
 Use [the repair co-op editing exercise](examples/practice.md) to distinguish a repeatable rule, a channel exception and a held-out check.
+
+## Try it on your work
+
+One or more pieces of approved writing. Add an editorial correction or audience note if available.
+
+> Extract usable voice rules. Show a rewrite for each rule, explain where it applies and distinguish confirmed preferences from hypotheses.
 
 **Using this skill for the first time?** On the public GitHub page, open the repository name above this file. In its README, **All 37 Skills** takes you to the individual downloads and **deployment guide** covers team setup. In a downloaded ZIP, open `SETUP.md` for the installation and source links. In a company copy, start at `company/DEPLOY.md`. For native installation, follow [OpenAI’s upload instructions](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).

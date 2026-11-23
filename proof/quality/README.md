@@ -1,5 +1,7 @@
 # Reproduce the library trials
 
+[Read the standalone review of all 37 skills](standalone-review.md) for the later first-use tests and repairs.
+
 Three fresh workers each received twelve independent fictional requests. The workers used the matching skill without the reviewer's answer key. The reviewer checked the actual outputs against criteria fixed before the run. The separate brand-system trial used a fictional deck and a captured site. All material in this directory is synthetic.
 
 | Job | Result | Inspect the evidence |
