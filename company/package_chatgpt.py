@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "plugins/department-skills/skills"
 OUTPUT = ROOT / "chatgpt"
 RESOURCE_DIRS = ("agents", "assets", "examples", "references", "scripts")
+# This edition includes the catalog, deployment guide and the reviewed downloads.
+PUBLIC_EDITION = "https://github.com/gpm227/ai-close-skills/blob/4637172068a9be34d32764b05c07a5dd33c586df"
 
 
 def setup_note(skill):
@@ -37,9 +39,8 @@ def setup_note(skill):
         return opening + ("Your company owns this release. Read `company/DEPLOY.md` in the private repository "
                           "for team setup, updates and rollback. Use the included `RELEASE.json` to identify the version.\n")
     return opening + (
-        "For other downloads or team setup, open the "
-        "[public edition notes](https://github.com/gpm227/ai-close-skills/pull/5). "
-        "Its description links to the catalog and deployment guide (`company/DEPLOY.md`).\n"
+        f"[Browse the skills in this edition]({PUBLIC_EDITION}/CATALOG.md) · "
+        f"[Read the deployment guide]({PUBLIC_EDITION}/company/DEPLOY.md)\n"
     )
 
 

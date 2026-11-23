@@ -27,15 +27,10 @@ class PublisherNeutralTests(unittest.TestCase):
                             links = re.findall(
                                 rb"https://github\.com/gpm227/ai-close-skills/blob/([a-f0-9]{40})/"
                                 rb"(CATALOG\.md|company/DEPLOY\.md)(?=\))", content)
-                            if links:
-                                self.assertCountEqual([page for _, page in links],
-                                                      [b"CATALOG.md", b"company/DEPLOY.md"])
-                                self.assertEqual(len({revision for revision, _ in links}), 1)
-                                for revision, page in links:
-                                    source_link = b"https://github.com/gpm227/ai-close-skills/blob/" + revision + b"/" + page
-                                    content = content.replace(source_link, b"")
-                            else:
-                                edition = b"https://github.com/gpm227/ai-close-skills/pull/5)"
-                                self.assertEqual(content.count(edition), 1)
-                                content = content.replace(edition, b")")
+                            self.assertCountEqual([page for _, page in links],
+                                                  [b"CATALOG.md", b"company/DEPLOY.md"])
+                            self.assertEqual(len({revision for revision, _ in links}), 1)
+                            for revision, page in links:
+                                source_link = b"https://github.com/gpm227/ai-close-skills/blob/" + revision + b"/" + page
+                                content = content.replace(source_link, b"")
                         self.assertIsNone(PUBLISHER.search(content))
