@@ -23,7 +23,7 @@ Open an issue with the job, the input someone starts with, the artifact they nee
 2. Name it after the job, in kebab case: `cold-email`, not `outreach-master`.
 3. Write the description as a routing sentence. Start with "When the user wants…", then name the situations, then point neighbouring jobs at their own skill. It is the only part a router reads.
 4. Keep the five house sections: Bring, What comes back, The trap and the check, Company hooks, Related skills.
-5. Add the row to `SKILLS.md` with a status.
+5. List a published skill once under its primary job in [the library](SKILLS.md). For a proposed marketing skill, record its status in the [marketing roadmap](MARKETING-ROADMAP.md).
 6. Run `bash tools/check.sh`. It must pass.
 
 ## What makes a skill good here

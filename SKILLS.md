@@ -1,109 +1,75 @@
-# Skill index
+# Find a skill
 
-53 skills, one job each. Every skill follows the [house contract](docs/SKILL-TEMPLATE.md): bring, what comes back, the trap, the check, and where your house rules hook in.
+Pick the question closest to yours. Each row shows what to bring and what you’ll get back. For a ZIP, follow the [ChatGPT setup guide](company/DEPLOY.md#run-one-job-in-chatgpt). For a Markdown file, attach it to a chat with your material.
 
-Status: **ready** ships in this release. **Next** is the following batch. **Mapped** is named, scoped and unbuilt.
+[Sales](#sales) · [Marketing](#marketing) · [Operations](#operations) · [Reporting](#reporting) · [Analytics](#analytics)
 
-## Foundation
+## Sales
 
-| Skill | Job | Status |
-| --- | --- | --- |
-| [product-marketing](skills/product-marketing/SKILL.md) | Build the company context every other skill reads | ready |
+| Skill | Bring | What you get | Get the file |
+| --- | --- | --- | --- |
+| [Define the ideal customer profile](plugins/department-skills/skills/define-icp/SKILL.md) | A description of what you deliver, whom you can serve and any customer, lost-deal or poor-fit examples you have. | A qualification card with inclusion, exclusion and evidence rules | [Download](chatgpt/define-icp.zip?raw=true) |
+| [Select a target market](plugins/department-skills/skills/select-target-market/SKILL.md) | What you sell, your delivery limits, and any segments or accounts you are weighing. | A first segment, its boundaries and a reason to reconsider | [Download](chatgpt/select-target-market.zip?raw=true) |
+| [Build a target-account list](plugins/department-skills/skills/build-target-accounts/SKILL.md) | A list of companies, your qualification rules and any exclusions. | One decision and its evidence for every supplied account | [Download](chatgpt/build-target-accounts.zip?raw=true) |
+| [Build a prospect list](plugins/department-skills/skills/assemble-prospect-list/SKILL.md) | The kinds of companies and roles you want, the intended use and a directory, account list or public research scope. | Linked company and contact tables with source-backed records | [Download](chatgpt/assemble-prospect-list.zip?raw=true) |
+| [Brief an account before outreach](plugins/department-skills/skills/brief-an-account/SKILL.md) | A company name or website, your offer and the reason you are considering outreach. | A dated account brief and a credible opening question | [Download](chatgpt/brief-an-account.zip?raw=true) |
+| [Prepare a sales call](plugins/department-skills/skills/prepare-sales-call/SKILL.md) | Who is on the call, what you want to learn or agree, and any account or conversation notes. | A call card with questions, responses and a next step | [Download](chatgpt/prepare-sales-call.zip?raw=true) |
+| [Prepare a sales playbook](skills/sales-enablement/SKILL.md) | Deal stage, call notes, objections and approved proof | A call plan, objection responses and handoff notes another rep can use | [Get the instructions](skills/sales-enablement/SKILL.md?raw=true) |
+| [Build a sales presentation](plugins/department-skills/skills/build-sales-deck/SKILL.md) | The buyer, the decision you want from the meeting and your offer or supporting notes. | A buyer decision deck or slide manuscript with speaker notes | [Download](chatgpt/build-sales-deck.zip?raw=true) |
+| [Write a cold email sequence](plugins/department-skills/skills/draft-outbound-email/SKILL.md) | An offer, the recipient’s role or responsibility and the next step you want. Add a relevant trigger if available. | A first email, follow-ups and stop conditions | [Download](chatgpt/draft-outbound-email.zip?raw=true) |
+| [Fix a cold email sequence](skills/cold-email/SKILL.md) | Your sequence, target audience, offer and any reply data | Revised emails, a reason to contact each segment and stop conditions | [Get the instructions](skills/cold-email/SKILL.md?raw=true) |
+| [Draft LinkedIn outreach](plugins/department-skills/skills/draft-linkedin-outreach/SKILL.md) | A recipient, a relevant public or supplied fact, your offer and the relationship or connection status. | Connection or follow-up drafts appropriate to the relationship | [Download](chatgpt/draft-linkedin-outreach.zip?raw=true) |
+| [Review outbound copy](plugins/department-skills/skills/review-outbound-copy/SKILL.md) | The draft message. Include the audience, intended reply or claims evidence if you have them. | A marked-up review and minimally edited copy | [Download](chatgpt/review-outbound-copy.zip?raw=true) |
+| [Triage sales replies](plugins/department-skills/skills/triage-sales-replies/SKILL.md) | Reply messages with identifiers and the preceding outbound message when available. | A response queue, drafts and suppression actions | [Download](chatgpt/triage-sales-replies.zip?raw=true) |
 
-## Positioning and research
+## Marketing
 
-| Skill | Job | Status |
-| --- | --- | --- |
-| customer-research | Turn calls and interviews into buyer language and objections | Next |
-| competitor-profiling | Profile one competitor from public evidence | Mapped |
-| competitors | Build and maintain the competitive table | Mapped |
-| marketing-psychology | Apply behavioural principles without the manipulation | Mapped |
-| reverse-engineer-marketing | Work backwards from a competitor's funnel to their strategy | Mapped |
+| Skill | Bring | What you get | Get the file |
+| --- | --- | --- | --- |
+| [Build a company brief](skills/product-marketing/SKILL.md) | Your website, deck, pricing or customer notes | An approved brief covering buyers, offers, proof and language | [Get the instructions](skills/product-marketing/SKILL.md?raw=true) |
+| [Define the brand](plugins/department-skills/skills/define-brand-positioning/SKILL.md) | What the company sells and who uses it. Add real buyer language or alternatives if available. | Positioning, buyer alternatives and evidence for the difference | [Download](chatgpt/define-brand-positioning.zip?raw=true) |
+| [Build a brand system](plugins/department-skills/skills/build-brand-system/SKILL.md) | A deck, website, capture or approved piece of writing, plus the intended reader. | An editable, sourced brand guide with open owner decisions | [Download](chatgpt/build-brand-system.zip?raw=true) |
+| [Define brand voice](plugins/department-skills/skills/define-brand-voice/SKILL.md) | One or more pieces of approved writing. Add an editorial correction or audience note if available. | Voice rules and before-and-after examples, with confidence limits | [Download](chatgpt/define-brand-voice.zip?raw=true) |
+| [Define the visual standard](plugins/department-skills/skills/define-visual-standards/SKILL.md) | Approved design files, exports or screenshots, and the surface where the rules will be applied. | Source-backed design rules and values still to confirm | [Download](chatgpt/define-visual-standards.zip?raw=true) |
+| [Find the approved brand asset](plugins/department-skills/skills/retrieve-brand-assets/SKILL.md) | The intended placement, background and available asset folder or file inventory, including usage notes if known. | An exact asset selection or the evidence needed to clear one | [Download](chatgpt/retrieve-brand-assets.zip?raw=true) |
+| [Review work against the brand standard](plugins/department-skills/skills/review-brand-work/SKILL.md) | The draft and its intended placement. Add an approved reference for a brand-fidelity decision. | A release decision and corrections tied to specific rules | [Download](chatgpt/review-brand-work.zip?raw=true) |
+| [Write company and product descriptions](plugins/department-skills/skills/write-brand-copy/SKILL.md) | Company or product facts, where each description will appear, any length limits and approved wording. | Company or product descriptions labeled by placement | [Download](chatgpt/write-brand-copy.zip?raw=true) |
+| [Define copy by channel](plugins/department-skills/skills/write-channel-copy-guide/SKILL.md) | The message, the channels and what the reader can actually do in each placement. Include voice rules if available. | Reusable patterns and copy examples for each channel | [Download](chatgpt/write-channel-copy-guide.zip?raw=true) |
+| [Package and price an offer](skills/offers/SKILL.md) | Delivery limits, buyer alternatives and a price floor | Offer terms, exclusions and a check on what your team can deliver | [Get the instructions](skills/offers/SKILL.md?raw=true) |
+| [Build an offer from evidence](plugins/department-skills/skills/substantiate-offer/SKILL.md) | Notes on what you deliver, to whom, on what terms, plus any promised or observed results. | An offer with deliverables, exclusions and substantiated claims | [Download](chatgpt/substantiate-offer.zip?raw=true) |
+| [Build a proof library](plugins/department-skills/skills/build-proof-library/SKILL.md) | Case notes, testimonials, results or an existing claims register. Include sources and reuse permissions where known. | A reusable register of wording, evidence and usage rights | [Download](chatgpt/build-proof-library.zip?raw=true) |
+| [Write conversion copy](plugins/department-skills/skills/write-conversion-copy/SKILL.md) | The audience, offer, available proof and what actually happens after the visitor clicks. | Page copy, supported claims and a button matched to its destination | [Download](chatgpt/write-conversion-copy.zip?raw=true) |
+| [Rewrite a page and check its claims](skills/copywriting/SKILL.md) | Page draft, its intended action and proof you can publish | Revised copy and the evidence behind each claim | [Get the instructions](skills/copywriting/SKILL.md?raw=true) |
+| [Create a marketing one-sheet](plugins/department-skills/skills/build-marketing-one-sheet/SKILL.md) | The buyer, their next decision, offer details, approved proof and the action to take. | A buyer-facing page with proof and a specific next step | [Download](chatgpt/build-marketing-one-sheet.zip?raw=true) |
+| [Develop a point of view](plugins/department-skills/skills/develop-thought-leadership/SKILL.md) | An expert observation, the audience, and any examples, data or counterexamples supporting the argument. | An argument, evidence, counterargument and practical implication | [Download](chatgpt/develop-thought-leadership.zip?raw=true) |
+| [Write a LinkedIn post](plugins/department-skills/skills/write-linkedin-post/SKILL.md) | A firsthand observation or interview notes, the author's relationship to the work and any details cleared for publication. | A draft grounded in the author's experience and clearances | [Download](chatgpt/write-linkedin-post.zip?raw=true) |
 
-## Copy and content
+## Operations
 
-| Skill | Job | Status |
-| --- | --- | --- |
-| [copywriting](skills/copywriting/SKILL.md) | Write or rewrite page copy, with a claims ledger | ready |
-| copy-editing | Tighten finished copy without changing its argument | Next |
-| content-strategy | Decide what to publish, for whom, and why | Next |
-| emails | Lifecycle and campaign email, not cold outreach | Next |
-| social | Posts for the channels you actually maintain | Mapped |
-| video | Scripts and shot plans for short-form and demo video | Mapped |
-| image | Briefs for generated or commissioned visuals | Mapped |
+| Skill | Bring | What you get | Get the file |
+| --- | --- | --- | --- |
+| [Compare vendor proposals](plugins/department-skills/skills/compare-vendor-proposals/SKILL.md) | One or more quotes. Include expected usage and must-haves if known. | Comparable costs, binding terms and the deciding question | [Download](chatgpt/compare-vendor-proposals.zip?raw=true) |
+| [Write reusable task instructions](plugins/department-skills/skills/standardize-task-instructions/SKILL.md) | A walkthrough of the last time you did the task. Add an accepted result if available. | Reusable instructions and a test of the finished work | [Download](chatgpt/standardize-task-instructions.zip?raw=true) |
+| [Design a CRM handoff](plugins/department-skills/skills/design-workflow-automation/SKILL.md) | A description or screenshot of the handoff you want to automate. Add a sample record if available. | A build specification with mappings, retry behavior and tests | [Download](chatgpt/design-workflow-automation.zip?raw=true) |
+| [Find where a workflow failed](plugins/department-skills/skills/diagnose-workflow-failure/SKILL.md) | The expected result and what you observed, plus any record IDs, event logs or source and destination snapshots. | An evidenced failure location and a bounded recovery plan | [Download](chatgpt/diagnose-workflow-failure.zip?raw=true) |
+| [Review CRM duplicates](plugins/department-skills/skills/review-crm-duplicates/SKILL.md) | A CRM export with record IDs and available identity fields, such as company, email or domain. | Merge proposals with field choices and an exception queue | [Download](chatgpt/review-crm-duplicates.zip?raw=true) |
+| [Improve a skill](plugins/department-skills/skills/improve-skill/SKILL.md) | The instructions that ran, one input, the actual result and what should have happened. | A proposed instruction change with failure and regression checks | [Download](chatgpt/improve-skill.zip?raw=true) |
 
-## Conversion
+## Reporting
 
-| Skill | Job | Status |
-| --- | --- | --- |
-| [cro](skills/cro/SKILL.md) | Find the leaking step and change one thing | ready |
-| signup | Fix the signup flow itself | Next |
-| onboarding | Get a new account to its first real result | Next |
-| popups | Decide whether a popup is the right tool at all | Mapped |
-| paywalls | Price and place the upgrade moment | Mapped |
-| ab-testing | Design and read a test that can settle the question | Next |
-| analytics | Define the events and the questions they answer | Next |
-| conversion-tracking | Make sure the numbers mean what they claim | Mapped |
-| attribution | Decide what to credit, and be honest about the limits | Mapped |
+| Skill | Bring | What you get | Get the file |
+| --- | --- | --- | --- |
+| [Compare this month with last month](plugins/department-skills/skills/period-report/SKILL.md) | Daily totals with dates, the metric you care about and your cutoff date. | Matched date ranges, totals, percent change and coverage gaps | [Download](chatgpt/period-report.zip?raw=true) |
+| [Review the sales pipeline](plugins/department-skills/skills/review-sales-pipeline/SKILL.md) | An open-deal export with deal IDs, stages and amounts. Add a prior snapshot or change history if available. | Deal-level actions and a movement reconciliation where history exists | [Download](chatgpt/review-sales-pipeline.zip?raw=true) |
 
-## Offers and pricing
+## Analytics
 
-| Skill | Job | Status |
-| --- | --- | --- |
-| [offers](skills/offers/SKILL.md) | Package what is sold, including what is excluded | ready |
-| pricing | Set the plan structure and the price | Next |
-| lead-magnets | Build something worth an email address | Mapped |
-| free-tools | Scope a tool that earns its build cost | Mapped |
+| Skill | Bring | What you get | Get the file |
+| --- | --- | --- | --- |
+| [Diagnose campaign results](plugins/department-skills/skills/diagnose-campaign-results/SKILL.md) | Campaign counts or an event export. Include dates and recipient or account IDs when available. | Funnel counts, their denominators and one measurable test | [Download](chatgpt/diagnose-campaign-results.zip?raw=true) |
+| [Find where visitors drop out](skills/cro/SKILL.md) | Page or form, counts at each step, dates and traffic sources | The first change to test, its metric and what would make you reverse it | [Get the instructions](skills/cro/SKILL.md?raw=true) |
+| [Extract buyer insights from calls](plugins/department-skills/skills/extract-buyer-insights/SKILL.md) | Call transcripts or notes with speakers identified where possible, plus the decision the findings should inform. | Buyer evidence by call, counterexamples and sample limits | [Download](chatgpt/extract-buyer-insights.zip?raw=true) |
+| [Plan an outbound campaign](plugins/department-skills/skills/plan-outbound-test/SKILL.md) | The audience, offer, outreach capacity and result you want to measure. | A pilot or comparison plan with a decision rule | [Download](chatgpt/plan-outbound-test.zip?raw=true) |
+| [Extract a table from public pages](plugins/department-skills/skills/extract-site-data/SKILL.md) | The public pages or saved captures, the fields you need and what one output row should represent. | A sourced CSV and an account of missing or conflicting fields | [Download](chatgpt/extract-site-data.zip?raw=true) |
 
-## Acquisition
-
-| Skill | Job | Status |
-| --- | --- | --- |
-| seo-audit | Audit a site's search position and what to fix first | Next |
-| ai-seo | Get cited in AI answers without pretending to game them | Mapped |
-| programmatic-seo | Build pages at scale that are worth indexing | Mapped |
-| schema | Structured data that matches the page | Mapped |
-| site-architecture | Organise pages around buyer questions | Mapped |
-| link-building | Earn links that would exist without you asking | Mapped |
-| directory-submissions | Choose the directories worth being in | Mapped |
-| aso | App store listing and screenshots | Mapped |
-| ads | Paid search and social, budget to read-out | Next |
-| ad-creative | Concepts and copy for paid placements | Mapped |
-| [cold-email](skills/cold-email/SKILL.md) | Outreach with one verifiable reason and one ask | ready |
-| prospecting | Build the list before writing a word | Mapped |
-| influencer-marketing | Brief creators without buying fake enthusiasm | Mapped |
-| community-marketing | Build a place people return to | Mapped |
-| co-marketing | Partner campaigns where both sides bring an audience | Mapped |
-| public-relations | Earn coverage with something worth covering | Mapped |
-| events | Plan an event that produces conversations, not badges | Mapped |
-
-## Lifecycle and go-to-market
-
-| Skill | Job | Status |
-| --- | --- | --- |
-| referrals | Design a referral loop people actually complete | Mapped |
-| launch | Sequence a launch around one decision | Next |
-| marketing-plan | Turn goals into a plan you can defend | Mapped |
-| marketing-ideas | Generate ideas that fit the constraint you have | Mapped |
-| marketing-council | Run a review that improves work rather than smoothing it | Mapped |
-| marketing-loops | Recurring work that compounds | Mapped |
-| revops | Instrument the handoff from marketing to revenue | Mapped |
-| [sales-enablement](skills/sales-enablement/SKILL.md) | Give a rep what they need to run the next call | ready |
-| sms | Short messages with a reason to be read | Mapped |
-| churn-prevention | Find the accounts about to leave and act | Mapped |
-
-## Bridges to the department library
-
-Where a job needs analysis rather than production, the AI Close department library already holds the deeper version. Use it rather than rebuilding the work here.
-
-| Job | Department skill |
-| --- | --- |
-| Month-over-month reporting | [Compare this month with last month](plugins/department-skills/skills/period-report/SKILL.md) |
-| Campaign funnel diagnosis | [Diagnose campaign results](plugins/department-skills/skills/diagnose-campaign-results/SKILL.md) |
-| Account qualification from a list | [Build a target-account list](plugins/department-skills/skills/build-target-accounts/SKILL.md) |
-| Prospect list assembly | [Build a prospect list](plugins/department-skills/skills/assemble-prospect-list/SKILL.md) |
-| Buyer insights from calls | [Extract buyer insights from calls](plugins/department-skills/skills/extract-buyer-insights/SKILL.md) |
-| Outbound replies | [Triage sales replies](plugins/department-skills/skills/triage-sales-replies/SKILL.md) |
-| Offer substantiation | [Build an offer from evidence](plugins/department-skills/skills/substantiate-offer/SKILL.md) |
-| Automation diagnosis | [Diagnose a failed GTM automation](plugins/department-skills/skills/diagnose-workflow-failure/SKILL.md) |
-| Sales call preparation | [Prepare a sales call](plugins/department-skills/skills/prepare-sales-call/SKILL.md) |
+For upcoming marketing skills, see the [marketing roadmap](MARKETING-ROADMAP.md).

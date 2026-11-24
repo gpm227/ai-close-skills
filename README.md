@@ -1,91 +1,71 @@
-# AI Close skills
+# AI Close Skills
 
-Marketing skills for people who have to sell something. Every skill ends in an artifact you can use: a page, an offer, a sequence, a call plan. None of them ends in a document about the work.
+What are you working on? Pick a job, bring the files you have, and try it in ChatGPT or Claude.
 
-Built for revenue teams working with ChatGPT, Claude or a coding agent. One shared understanding of your business, then one instruction file per job.
+[Sales](#sales) · [Marketing](#marketing) · [Operations](#operations) · [Reporting](#reporting) · [Analytics](#analytics)
 
-## Contents
+[Browse all 43 skills](SKILLS.md) · [Install](#install) · [Set up your team](company/DEPLOY.md)
 
-1. [Use a skill in ChatGPT or Claude](#install)
-2. [What each marketing skill delivers](#what-you-get-every-time)
-3. [Choose a job](#start-with-the-job-in-front-of-you)
-4. [Set up your company context](#it-learns-your-business-once)
-5. [Marketing skills by area and release status](#what-is-in-this-release)
-6. [Department skills, downloads and team deployment](#works-alongside-the-department-library)
+## Sales
+
+> I have a call tomorrow. What do we know about this account, and what should I ask?
+
+Bring the account notes and the last conversation. Get a call plan with questions, evidence to bring up and a next step for the buyer. If you’re still choosing whom to call, start with the customer profile.
+
+[Prepare a sales call](plugins/department-skills/skills/prepare-sales-call/SKILL.md) · [Define your ideal customer](plugins/department-skills/skills/define-icp/SKILL.md) · [All sales skills](SKILLS.md#sales)
+
+## Marketing
+
+> Here’s our deck and website. What should the next designer keep consistent?
+
+Turn the material you already have into a brand guide with rules for copy, type, color and imagery. If you’re working on a page instead, bring the draft and the claims you can back up.
+
+[Build a brand guide](plugins/department-skills/skills/build-brand-system/SKILL.md) · [Rewrite a page](skills/copywriting/SKILL.md) · [All marketing skills](SKILLS.md#marketing)
+
+## Operations
+
+> One vendor bills monthly. The other wants a year up front. Which quote fits us?
+
+Attach both quotes, expected usage and your must-haves. See the cost on the same terms, when the cash is due and what to ask before you sign. You can also turn a recurring task into instructions a colleague can follow.
+
+[Compare vendor proposals](plugins/department-skills/skills/compare-vendor-proposals/SKILL.md) · [Document a recurring task](plugins/department-skills/skills/standardize-task-instructions/SKILL.md) · [All operations skills](SKILLS.md#operations)
+
+## Reporting
+
+> Are orders down this month, or are we comparing half a month with a full one?
+
+Bring daily totals and the date you want to report through. Get comparable periods, the change and any missing dates. For a pipeline meeting, use two deal snapshots to show what opened, closed or moved.
+
+[Compare monthly totals](plugins/department-skills/skills/period-report/SKILL.md) · [Report pipeline changes](plugins/department-skills/skills/review-sales-pipeline/SKILL.md) · [All reporting skills](SKILLS.md#reporting)
+
+## Analytics
+
+> Fewer people completed our form. Where did we start losing them?
+
+Bring visits, form starts and submissions for each period, split by traffic source if you have it. See which step changed and what to check first. For interview data, trace a recurring theme back to the calls where it appeared.
+
+[Find the drop-off](skills/cro/SKILL.md) · [Analyze customer interviews](plugins/department-skills/skills/extract-buyer-insights/SKILL.md) · [All analytics skills](SKILLS.md#analytics)
 
 ## Install
 
-**ChatGPT.** Open a project. Attach the `SKILL.md` for the job and the material listed under **Bring**. Start with [company context](skills/product-marketing/SKILL.md) if you expect to run several jobs. Save the approved result as `close-context.md` and add it to your project files. For a single job, start directly with that skill. A first request for [copywriting](skills/copywriting/SKILL.md) is “Rewrite this page for a clinic manager. The action is to request a demo. Use only the attached proof and show me which claims you left out.”
+**ChatGPT.** Open the [skill directory](SKILLS.md) and choose a job. If it has a Markdown file, attach that file and your material in a fresh chat. If it has a ZIP, upload it through Skills in a supported workspace, or unzip it and attach the instructions and any supporting files the job needs. [ChatGPT setup](company/DEPLOY.md#run-one-job-in-chatgpt)
 
-**Claude Code.** Add the public marketplace once and install the marketing plugin. Run the commands inside Claude Code.
+**Claude Code.** Add the marketplace once. The first plugin includes the 37 department skills. The second adds six skills for company briefs, offers, copy, outreach, sales calls and conversion analysis.
 
 ```text
 /plugin marketplace add gpm227/ai-close-skills
+/plugin install department-skills@department-workflows
 /plugin install aiclose-skills@department-workflows
 ```
 
-**Other agents with a skills folder.** Install a single marketing skill by name. For example:
+**Other agents.** Install one skill by name. This command gets the monthly reporting skill:
 
 ```sh
-npx skills add gpm227/ai-close-skills --skill copywriting
+npx skills add gpm227/ai-close-skills --skill period-report
 ```
 
-## What you get every time
+## For your team
 
-| Part | What it does |
-| --- | --- |
-| **Bring** | The four or five inputs the job needs, and what separates a usable answer from a thin one |
-| **What comes back** | The artifact, item by item, in the order you will use it |
-| **The trap** | The specific wrong answer a plain request produces, with an example |
-| **The check** | A test you can run on the answer in under a minute |
-| **Company hooks** | Exactly where your own rules, prices and proof override the defaults |
+[Add your house rules](CUSTOMISING.md) · [Deploy and update skills](company/DEPLOY.md) · [Suggest a change](CONTRIBUTING.md) · [Contact Greg](mailto:greg@aiclosehq.com)
 
-The trap and the check are the point. An answer you cannot grade is an answer you cannot ship.
-
-## Start with the job in front of you
-
-**A page that is not converting.** Give `cro` the URL, the conversion rate and the traffic mix. It writes the path as a chain with a rate at each step, names the weakest one, and gives you a single change for this week plus the read that would tell you it worked.
-
-**Copy that sounds like everyone else's.** Give `copywriting` the draft, the page's one job and the proof you can publish. It keeps your argument, fixes the buried lead, and returns a claims ledger listing what it declined to claim and what would unlock it.
-
-**An offer nobody is buying.** Give `offers` the delivery reality, the buyer's alternative and your price floor. It returns the offer as a table, including the exclusions, plus the test of whether you could honour the guarantee ten times in a row.
-
-[Browse the 53 marketing jobs and their release status](SKILLS.md).
-
-## It learns your business once
-
-Run `product-marketing` first. It reads your site, deck, pricing page and call notes, then writes `.agents/close-context.md`: what you sell, who qualifies, how you are different, what you charge, which proof you may publish and which claims you refuse to make.
-
-The other marketing skills look for that file or an attached copy before asking for inputs. You stop re-explaining your business, and the answers start matching the business.
-
-Then add your own rules in `custom/`. Banned phrases, price floor, required disclaimers, the framework your team already uses. House rules override the skill's method; the context document overrides everyone on facts. [How customisation works](CUSTOMISING.md).
-
-## What is in this release
-
-| Area | Jobs in index | Ready to use |
-| --- | ---: | --- |
-| [A. Foundation](SKILLS.md#foundation) | 1 | [product-marketing](skills/product-marketing/SKILL.md) |
-| [B. Positioning and research](SKILLS.md#positioning-and-research) | 5 | Planned |
-| [C. Copy and content](SKILLS.md#copy-and-content) | 7 | [copywriting](skills/copywriting/SKILL.md) |
-| [D. Conversion](SKILLS.md#conversion) | 9 | [cro](skills/cro/SKILL.md) |
-| [E. Offers and pricing](SKILLS.md#offers-and-pricing) | 4 | [offers](skills/offers/SKILL.md) |
-| [F. Acquisition](SKILLS.md#acquisition) | 17 | [cold-email](skills/cold-email/SKILL.md) |
-| [G. Lifecycle and go-to-market](SKILLS.md#lifecycle-and-go-to-market) | 10 | [sales-enablement](skills/sales-enablement/SKILL.md) |
-
-Six skills are written to the house standard. Twelve more are scoped and next. The rest are named and mapped in [SKILLS.md](SKILLS.md), with the job each one covers and where an existing department skill already does the analysis.
-
-We would rather ship six skills that hold up than fifty-three that do not. The status column is the honest one; check it before you rely on a name.
-
-## Works alongside the department library
-
-The [37 department skills](DEPARTMENTS.md#skills-by-area) cover reporting, sales, outbound, marketing, brand and operations. Choose a job in the [ChatGPT download catalog](CATALOG.md) or follow the [team deployment guide](company/DEPLOY.md). Use the [cross-reference](SKILLS.md#bridges-to-the-department-library) when a marketing deliverable needs a deeper analysis, such as qualifying the account list before drafting cold email.
-
-For a custom company installation, contact [Greg at AI Close](mailto:greg@aiclosehq.com).
-
-## Contributing
-
-The most useful contribution is a case where an answer looked right and would have cost you money. [CONTRIBUTING.md](CONTRIBUTING.md) covers the report format, the skill checklist, and the rule that no placement is for sale.
-
-## Licence
-
-MIT. Structure and taxonomy adapted from [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills), used under the same licence. Every skill here is rewritten for revenue teams and follows the house contract above.
+[MIT license](LICENSE). The marketing collection adapts the taxonomy of [Corey Haines’ marketing skills](https://github.com/coreyhaines31/marketingskills).
