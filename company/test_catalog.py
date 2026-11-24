@@ -33,6 +33,7 @@ class CatalogTest(unittest.TestCase):
                 self.assertIn(f"{name}/{example[1]}", archive.namelist())
 
     def test_individual_downloads_include_the_practice_case(self):
+        license_text = (ROOT / "LICENSE").read_bytes()
         for path in SKILLS.glob("*/SKILL.md"):
             name = path.parent.name
             with self.subTest(skill=name), ZipFile(ROOT / "chatgpt" / (name + ".zip")) as archive:
@@ -42,9 +43,12 @@ class CatalogTest(unittest.TestCase):
                 example = "examples/brief.md" if name == "build-brand-system" else "examples/practice.md"
                 self.assertIn(example, instructions)
                 self.assertEqual(archive.read(f"{name}/{example}"), (path.parent / example).read_bytes())
+                self.assertEqual(archive.read(f"{name}/LICENSE"), license_text)
                 for item in archive.namelist():
                     relative = Path(item).relative_to(name)
                     if relative.as_posix() == "SETUP.md":
                         self.assertIn(b"company/DEPLOY.md", archive.read(item))
+                    elif relative.as_posix() == "LICENSE":
+                        self.assertEqual(archive.read(item), (SKILLS.parent / "LICENSE").read_bytes())
                     else:
                         self.assertEqual(archive.read(item), (path.parent / relative).read_bytes())
