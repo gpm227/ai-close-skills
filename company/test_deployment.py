@@ -42,6 +42,7 @@ class DeploymentTest(unittest.TestCase):
     def test_install_and_replay(self):
         market = json.loads((self.company / ".claude-plugin/marketplace.json").read_text())
         self.assertEqual(market["name"], "sample-company")
+        self.assertEqual(len(market["plugins"]), 1)
         self.assertEqual(market["plugins"][0]["source"], "./plugins/department-skills")
         expected_sha = subprocess.check_output(["git", "-C", SOURCE, "rev-parse", "HEAD"], text=True).strip()
         self.assertEqual(json.loads((self.company / "UPSTREAM.json").read_text())["commit"], expected_sha)

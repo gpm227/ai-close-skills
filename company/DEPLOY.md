@@ -2,6 +2,10 @@
 
 Start with one job in ChatGPT. Pick a result someone needs this week and use an input they recognize. A vendor quote, a CRM export or a customer email is enough for several jobs in the [skills catalog](../CATALOG.md).
 
+For marketing work such as page copy, cold email or offer design, use the [marketing index on GitHub](https://github.com/gpm227/ai-close-skills/blob/main/SKILLS.md). Choose a **ready** skill, open its `SKILL.md`, and attach it and the **Bring** inputs to a ChatGPT project. Add your approved `close-context.md` and any house rules as project files. Keep company material in your private workspace. For competitive research, use Claude to collect dated sources, then bring the evidence into the job. Use Claude Design when the deliverable is a design or a brand kit.
+
+The installation and version checks below cover the **37 department skills**. The six marketing skills have their own [setup and Claude plugin instructions](https://github.com/gpm227/ai-close-skills#install).
+
 | What you need | Where to work | What to keep |
 | --- | --- | --- |
 | An everyday sales, marketing, reporting or operations job | ChatGPT with the relevant skill | The usable result, its source and anything the owner still needs to decide |

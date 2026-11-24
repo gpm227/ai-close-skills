@@ -8,6 +8,15 @@
       "name": "department-skills",
       "source": "./plugins/department-skills",
       "description": "37 departmental skills with individual ChatGPT downloads, worked examples and checks for the finished work."
+    },
+    {
+      "name": "aiclose-skills",
+      "description": "Revenue marketing skills for teams that sell: a shared company context, then one instruction file per job. Every skill states what to bring, what comes back, the mistake a plain request makes, and how to check the answer.",
+      "source": "./"
     }
-  ]
+  ],
+  "metadata": {
+    "description": "Revenue skills for AI agents: positioning, copy, conversion, offers, outbound and enablement, each with the trap and the check.",
+    "version": "0.1.0"
+  }
 }

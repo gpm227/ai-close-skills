@@ -33,7 +33,7 @@ class CatalogTest(unittest.TestCase):
                 self.assertIn(f"{name}/{example[1]}", archive.namelist())
 
     def test_individual_downloads_include_the_practice_case(self):
-        license_text = (ROOT / "LICENSE").read_bytes()
+        license_text = (ROOT / "plugins/department-skills/LICENSE").read_bytes()
         for path in SKILLS.glob("*/SKILL.md"):
             name = path.parent.name
             with self.subTest(skill=name), ZipFile(ROOT / "chatgpt" / (name + ".zip")) as archive:
