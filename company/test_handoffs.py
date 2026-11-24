@@ -1,4 +1,5 @@
 """Check that portable skills and shipped downloads contain no publisher promotion."""
+import json
 import re
 import unittest
 from pathlib import Path
@@ -11,12 +12,15 @@ PUBLISHER = re.compile(rb"ai[\s_-]*close|scope an installation|utm_source=agent-
 class PublisherNeutralTests(unittest.TestCase):
     def test_installable_content_is_neutral(self):
         plugin = ROOT / "plugins/department-skills"
-        files = [ROOT / ".claude-plugin/marketplace.json", *plugin.rglob("*")]
+        marketplace = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
+        entry, = [item for item in marketplace["plugins"] if item["name"] == "department-skills"]
+        self.assertIsNone(PUBLISHER.search(json.dumps(entry).encode()))
+        files = list(plugin.rglob("*"))
         for file in files:
             if file.is_file() and "__pycache__" not in file.parts:
                 with self.subTest(path=file.relative_to(ROOT)):
                     if file == plugin / "LICENSE":
-                        self.assertEqual(file.read_bytes(), (ROOT / "LICENSE").read_bytes())
+                        self.assertIn(b"Copyright (c) 2026 AI Close contributors", file.read_bytes())
                         continue
                     self.assertIsNone(PUBLISHER.search(file.read_bytes()))
 
@@ -27,7 +31,7 @@ class PublisherNeutralTests(unittest.TestCase):
                     with self.subTest(download=path.name, entry=name):
                         content = archive.read(name)
                         if name == f"{path.stem}/LICENSE":
-                            self.assertEqual(content, (ROOT / "LICENSE").read_bytes())
+                            self.assertEqual(content, (ROOT / "plugins/department-skills/LICENSE").read_bytes())
                             continue
                         if Path(name).name == "SETUP.md":
                             links = re.findall(

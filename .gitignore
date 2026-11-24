@@ -1,0 +1,7 @@
+.agents/
+.DS_Store
+*.zip
+__pycache__/
+*.pyc
+custom/*
+!custom/README.md

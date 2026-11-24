@@ -42,7 +42,8 @@ def install(source, revision, destination, name):
                 raise ValueError(f"Selected revision lacks {required}")
         market = staging / paths[0]
         config = json.loads(market.read_text())
-        config.update(name=name, owner={"name": name})
+        department, = (entry for entry in config["plugins"] if entry["source"] == "./plugins/department-skills")
+        config = {"name": name, "owner": {"name": name}, "plugins": [department]}
         market.write_text(json.dumps(config, indent=2) + "\n")
         plugin = staging / paths[1]
         for skill in (plugin / "skills").glob("*/SKILL.md"):
