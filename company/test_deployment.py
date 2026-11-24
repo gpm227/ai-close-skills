@@ -1,6 +1,7 @@
 """Exercise the company deployment and feedback path using synthetic data."""
 import importlib.util
 import json
+import re
 import sqlite3
 import subprocess
 import sys
@@ -8,6 +9,8 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from urllib.parse import urlsplit
+from zipfile import ZipFile
 
 SOURCE = Path(__file__).resolve().parents[1]
 
@@ -45,8 +48,34 @@ class DeploymentTest(unittest.TestCase):
         self.assertEqual(self.run_command("git", "remote").strip(), "")
         published = len(list(Path(SOURCE, "plugins/department-skills/skills").glob("*/SKILL.md")))
         self.assertEqual(len(list(self.plugin.glob("skills/*/RELEASE.json"))), published)
+        archives = sorted((self.company / "chatgpt").glob("*.zip"))
+        self.assertEqual(len(archives), published)
+        for archive in archives:
+            with self.subTest(skill=archive.stem), ZipFile(archive) as installed:
+                base = self.plugin / "skills" / archive.stem
+                for rel in ("RELEASE.json", "SKILL.md"):
+                    self.assertEqual(installed.read(f"{archive.stem}/{rel}"), (base / rel).read_bytes())
+        self.run_command(sys.executable, "company/package_chatgpt.py", "--check")
         self.run_command(*self.install, status=1)
         self.run_command(sys.executable, "company/release.py", "verify", str(self.plugin))
+
+    def test_company_readme_and_catalog_lead_to_installed_files(self):
+        readme = self.company / "README.md"
+        catalog = self.company / "CATALOG.md"
+        guide = self.company / "company/DEPLOY.md"
+        self.assertIn("](CATALOG.md)", readme.read_text())
+        self.assertIn("](chatgpt/)", readme.read_text())
+        self.assertNotEqual(readme.read_bytes(), guide.read_bytes())
+        if "## Share a company release" in guide.read_text().splitlines():
+            self.assertIn("](company/DEPLOY.md#share-a-company-release)", readme.read_text())
+        downloads = re.findall(r"\]\(chatgpt/([\w-]+)\.zip\?raw=true\)", catalog.read_text())
+        self.assertEqual(sorted(downloads), sorted(p.stem for p in (self.company / "chatgpt").glob("*.zip")))
+        for source in (readme, catalog, guide, *(self.company / "proof").rglob("*.md")):
+            for target in re.findall(r"\]\(([^ )]+)\)", source.read_text()):
+                link = urlsplit(target)
+                if not link.scheme and link.path:
+                    with self.subTest(source=source.relative_to(self.company), target=target):
+                        self.assertTrue((source.parent / link.path).exists())
 
     def test_change_and_rollback(self):
         skill = self.receipt.with_name("SKILL.md")
@@ -96,6 +125,14 @@ class DeploymentTest(unittest.TestCase):
         report = json.loads(self.feedback("reconcile", str(inventory), status=1))
         self.assertEqual(report["missing_capture"], ["missing"])
         self.assertEqual(report["checked"], 2)
+
+    def test_report_rejects_extra_fields(self):
+        artifact = self.company / "extra.json"
+        values = json.loads(self.expected.read_text())
+        values["headline"] = "Orders fell 40%."
+        artifact.write_text(json.dumps(values))
+        result = self.run_command(sys.executable, "proof/check.py", "a", artifact, status=1)
+        self.assertEqual(json.loads(result)["evidence"], [{"field": "headline", "error": "Unexpected field"}])
 
     def test_capture_survives_checker_interruption(self):
         spec = importlib.util.spec_from_file_location("installed_feedback", self.company / "company/feedback.py")

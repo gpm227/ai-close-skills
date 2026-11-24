@@ -5,7 +5,7 @@ description: "Defines what the business sells, who chooses it and why, in words 
 
 # Define the brand
 
-Plain AI writes positioning that could belong to any company in the category: "the trusted partner for innovative solutions." Take the name off and nobody could tell whose it is.
+Deliver one buyer-recognizable category, a specific reason to choose it, and the conditions under which another alternative is the better fit. For a named placement using approved positioning, use the description-writing skill.
 
 ## You'll need
 
@@ -25,6 +25,12 @@ If you have no customer conversations, the result is provisional. Say so and nam
 5. Pick one category a buyer would recognize.
 6. Write a plain intro a customer could repeat, then the reason to choose you, then the limits of that promise.
 
+## Resolve competing explanations
+
+Keep a decision ledger separate from customer-facing wording. Record the claim, the speaker or document, the exact locator and date if known, whether the buyer said it or the team inferred it, and what it establishes. Separate ability to deliver (current terms or operating evidence), reason to buy (buyer evidence), and permission to publish. Recurring mentions support a pattern. A single win may support a hypothesis; it cannot establish prevalence, industry leadership or a service commitment.
+
+When the payer and user choose for different reasons, select one primary decision for the intro and give the other audience its own proof in the talk track. Include a loss or non-fit where available. If the reason buyers switch remains unknown, name exactly what to ask in the next interview and deliver the supported category and mechanism now.
+
 ## What you get back
 
 A one-page brief: audience, buying moment, alternatives, category, promise, proof, open questions. Plus a one-sentence intro and a one-minute version for sales calls.
@@ -39,6 +45,12 @@ One big customer chose you because you could start in a week. The obvious positi
 - Every difference has a mechanism and evidence.
 - A customer could repeat the one-sentence intro.
 
-### Optional team implementation
+Reconstruct the intro, evidence ledger and missing-proof decision in [the calibration courier case](examples/practice.md).
 
-Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=define-brand-positioning&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
+## Try it on your work
+
+What the company sells and who uses it. Add real buyer language or alternatives if available.
+
+> Write our positioning in words a buyer would recognize. Explain who should choose us, why and which parts still need customer evidence.
+
+**Get the download.** On GitHub, keep the branch or commit shown for this file. Open `CATALOG.md` in the repository’s file tree and download `define-brand-positioning.zip`. If someone sent you the ZIP, open its `SETUP.md` for the first run. For a company release, use `company/DEPLOY.md` in your private repository.

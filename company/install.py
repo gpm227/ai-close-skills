@@ -24,7 +24,8 @@ def install(source, revision, destination, name):
     commit = git(source, "rev-parse", "--verify", "--end-of-options", revision + "^{commit}").decode().strip()
     paths = [".claude-plugin/marketplace.json", "plugins/department-skills", "proof",
              "company/release.py", "company/feedback.py", "company/run-record.json", "company/DEPLOY.md"]
-    entries = git(source, "ls-tree", "-rz", commit, "--", *paths).split(b"\0")
+    optional = ["company/package_chatgpt.py", "CATALOG.md"]
+    entries = git(source, "ls-tree", "-rz", commit, "--", *paths, *optional).split(b"\0")
     with tempfile.TemporaryDirectory(dir=destination.parent) as work:
         staging = Path(work) / "company"
         staging.mkdir()
@@ -50,9 +51,25 @@ def install(source, revision, destination, name):
                              "and return its version and plugin_sha256. If unavailable, say so.\n")
         (staging / "UPSTREAM.json").write_text(json.dumps({
             "repository": "gpm227/ai-close-skills", "commit": commit}, indent=2) + "\n")
-        (staging / ".gitignore").write_text(".local/\n__pycache__/\n")
-        shutil.copyfile(staging / "company/DEPLOY.md", staging / "README.md")
+        (staging / ".gitignore").write_text(".local/\n__pycache__/\n*.pyc\n")
         subprocess.run([sys.executable, str(staging / "company/release.py"), "stamp", str(plugin)], check=True)
+        packager = staging / "company/package_chatgpt.py"
+        if packager.is_file():
+            subprocess.run([sys.executable, str(packager)], check=True)
+        catalog = "CATALOG.md" if (staging / "CATALOG.md").is_file() else "plugins/department-skills/skills"
+        guide = "company/DEPLOY.md"
+        readme = (
+            f"# {name} skills\n\n"
+            f"[Choose a job in this company's skill catalog]({catalog}). "
+            "If your administrator has shared the skill, install that copy from your workspace.\n\n"
+        )
+        if packager.is_file():
+            readme += ("For a new ChatGPT upload, use the matching ZIP from "
+                       "[this company release](chatgpt/).\n\n")
+        if "## Share a company release" in (staging / guide).read_text().splitlines():
+            readme += f"[Share a company release]({guide}#share-a-company-release) · "
+        readme += f"[Deployment, verification and rollback]({guide})\n"
+        (staging / "README.md").write_text(readme)
         git(staging, "init", "-q", "-b", "main")
         # Reserve the destination exclusively before publishing the prepared contents.
         destination.mkdir(mode=0o700)

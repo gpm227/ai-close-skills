@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shift handoff workshop</title>
+<style>
+@page { size: Letter; margin: .66in; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #172a37; background: white; font: 17px/1.45 Arial, Helvetica, sans-serif; }
+main { margin: 2rem auto; max-width: 7.18in; padding: 0 20px; }
+h1,h2,p,figure,dl,dd { margin: 0; }
+header { display: grid; grid-template-columns: 1fr auto; gap: .6rem 1rem; align-items: end; }
+h1 { font: 750 clamp(2.45rem,7vw,3.7rem)/.99 Arial, Helvetica, sans-serif; letter-spacing: -.055em; max-width: 8em; }
+.offer { margin-top: .85em; max-width: 31em; }
+.fee { text-align: right; margin-bottom: .12em; }
+.fee strong { display: block; font-size: 1.9em; line-height: 1; }
+.fee span { white-space: nowrap; }
+a { color: #103f5a; }
+figure { margin: 1.45em 0 1.25em; border: 2px solid #172a37; break-inside: avoid; }
+figcaption { padding: .52em 1em; border-bottom: 1px dashed #485965; font-weight: bold; font-size: .85em; }
+.ticket { border-left: .7rem solid #eca334; padding: 1em 1.05em; display: grid; grid-template-columns: 1fr 1fr; gap: .5em 1.4em; }
+dt { font-size: .77em; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+dd { font-weight: bold; line-height: 1.15; margin-top: .24em; }
+.equipment { font: bold 2.65em/1 "Courier New",monospace; text-transform: uppercase; letter-spacing: -.09em; }
+.repair { font-size: 1.42em; }
+.owner { background: #172a37; color: white; border: 2px solid #172a37; padding: .65em 1.05em .8em; print-color-adjust: exact; }
+.owner dd { font-size: 1.55em; }
+h2 { font-size: 1.35em; line-height: 1.2; margin-bottom: .35em; }
+.scope { margin-top: .58em; }
+footer { border-top: 2px solid #172a37; margin-top: 1.1em; padding-top: .75em; }
+footer strong,footer a { display: block; }
+footer a { overflow-wrap: anywhere; width: fit-content; }
+@media (max-width: 480px) { header,.ticket { grid-template-columns: 1fr; } .fee { text-align: left; } .fee strong { display:inline; margin-right: .3em; } }
+@media print {
+  main { max-width: none; margin: 0; padding: 0; }
+  body { font-size: 13pt; }
+  h1 { font-size: 40pt; }
+  .ticket { border-left-width: 9pt; }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Shift handoff workshop</h1>
+<div class="fee"><strong>$480</strong><span>60 minutes · One revision</span></div>
+</header>
+<p class="offer">Build an editable handoff sheet for one depot in a remote workshop. <a href="mailto:workshops@example.org">Request workshop dates</a>.</p>
+<figure>
+<figcaption>Illustrative handoff row</figcaption>
+<dl class="ticket">
+<div><dt>Equipment ID</dt><dd class="equipment">Cart 04</dd></div>
+<div><dt>Open repair</dt><dd class="repair">Check left wheel</dd></div>
+</dl>
+<dl class="owner"><dt>Receiving owner</dt><dd>Evening supervisor</dd></dl>
+</figure>
+<section>
+<h2>Who owns the open repair?</h2>
+<p>The sheet pairs each equipment ID with the person responsible on the next shift.</p>
+<p class="scope">Send a sample handoff before the session. You receive the editable sheet and one revision. Software setup is outside the workshop.</p>
+</section>
+<footer>
+<strong>For workshop dates</strong>
+<a href="mailto:workshops@example.org">workshops@example.org</a>
+</footer>
+</main>
+</body>
+</html>

@@ -1,44 +1,26 @@
 ---
 name: review-brand-work
-description: "Reviews a draft against your approved brand standard, marks exactly what fails and why, and fixes only that. Use for brand review, copy review against guidelines, \"does this sound like us,\" or checking work before it ships."
+description: "Review an existing draft, design or placement against its approved brand standard. Quote each failing span, preserve locked language, trace the real destination, and give an explicit release decision. Use for brand QA, preflight, and checking whether work sounds or looks like the company."
 ---
 
 # Review work against the brand standard
 
-Plain AI reviews copy by rewriting all of it. Good lines get lost, a fact quietly changes, and nobody can tell which edits were required and which were taste.
+Start with the draft and its placement. Collect the standard, approved examples, locked language, supporting evidence, destination or size limit relevant to that placement. If there is no guide, use the owner's explicit requirements and any supplied approved comparator. A single comparator can illustrate a preference. It cannot establish a binding house rule.
 
-## You'll need
+With only a draft, still check internal contradictions, inconsistent names, unclear actions and supplied limits. Return the usable edits. Mark broader brand fit or destination verification unknown and name the one reference needed to resolve it. A line such as “Book Tuesday” above “We will email you to confirm availability” supports changing the button to “Request Tuesday” from the draft itself. The live booking outcome still needs verification.
 
-- **The standard,** and which version.
-- **The draft,** and where it'll appear.
-- **The facts it relies on.**
-- **Past corrections,** if any.
+1. Inventory the actual artifact by placement. Include desktop/mobile buttons and print variants where applicable. Assign local IDs to unnumbered rules. Mark exact locks, discretionary preferences and evidence-dependent claims. A preference becomes binding only with owner approval.
+2. Read each placement as a buyer. Compare the CTA's immediate consequence with the supplied or inspected destination. Distinguish a verified click from a screenshot or a supplied URL. Trace each material claim, including its qualifier, to current evidence for that channel. In a visual review, locate the issue in the rendered version (page, component, screen size, or region). If only text is supplied, leave visual checks unknown.
+3. Quote the smallest failing span. Name the rule, why the mismatch matters, and the smallest edit. Preserve every passing line. Keep a locked claim verbatim in the working draft when it conflicts with the rules, flag the collision and hold that placement. Never “fix” formal approval by silently changing the approved sentence.
+4. Recheck clean copy in placement order. At explicit limits count final visible characters/words using the owner's units and include punctuation and spaces in character counts. Inspect the revised layout if one exists. Record unknowns honestly.
+5. Deliver the complete paste-ready version followed by a separate review table: placement, rule/claim ID, before verdict (pass/fail/unknown), exact evidence or missing source, correction, after verdict. Mark each placement **ready**, **hold**, or **needs verification** with its particular release condition. An established disqualifying problem takes precedence over missing evidence. Keep proposed rules and personal preferences separate from edits. When everything passes, return the original verbatim.
 
-Keep review material inside the team unless it's cleared.
+Practice on [the locked print headline and two web buttons](examples/practice.md). A passing desktop placement does not approve a conflicting mobile or print variant.
 
-## Steps
+## Try it on your work
 
-1. Read it as a first-time buyer would.
-2. For each problem, quote the smallest failing piece, name the rule, the consequence, and the smallest fix.
-3. Keep fact and permission problems separate from style.
-4. Leave every passing line alone.
-5. Recheck the fixed draft.
-6. If the same problem keeps showing up because the standard doesn't cover it, write a proposed rule separately. The lead approves rules.
+The draft and its intended placement. Add an approved reference for a brand-fidelity decision.
 
-## What you get back
+> Check this piece against the supplied standard. Identify each issue by location, propose the smallest correction and give me a release decision.
 
-A pass, fail or unknown for each rule, the revised draft, and any proposed rule change on its own.
-
-## The trap
-
-The draft is already approved and meets every rule, but the reviewer prefers different wording. The obvious move is to "improve" it. Return it unchanged and put the preference in a note.
-
-## Check it
-
-- Every edit maps to a named rule.
-- No fact changed between draft and revision.
-- Approved copy that passes comes back untouched.
-
-### Optional team implementation
-
-Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=review-brand-work&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
+**Get the download.** On GitHub, keep the branch or commit shown for this file. Open `CATALOG.md` in the repository’s file tree and download `review-brand-work.zip`. If someone sent you the ZIP, open its `SETUP.md` for the first run. For a company release, use `company/DEPLOY.md` in your private repository.

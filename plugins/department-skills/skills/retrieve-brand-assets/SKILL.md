@@ -5,7 +5,7 @@ description: "Finds the right logo, icon, image or font for a specific use from 
 
 # Find the approved brand asset
 
-Plain AI hands you a logo file path it made up, or the white logo for a white page.
+Find the existing approved asset for the requested placement, down to its particular variant and usage rights. Creating a new logo or rebuilding a missing master is a different job.
 
 ## You'll need
 
@@ -22,6 +22,12 @@ Plain AI hands you a logo file path it made up, or the white logo for a white pa
 4. If it carries information, write alt text. If it's decorative, say so.
 5. If two versions conflict, show the difference and ask the owner.
 
+## Rank candidates by permitted use
+
+Filter by owner approval, publication rights, territory and term where applicable, channel, colorway and background, format, target dimensions and effective resolution. Compare versions using the released manifest or owner decision. A newer filename or more recent download does not establish approval. Verify that an SVG is a true vector at the needed placement or discloses embedded rasters. A slide font installed locally does not establish embedding or redistribution rights.
+
+Return one selected master or an explicit “no approved match.” Record the exact supplied path or link, asset ID/release if available, rights evidence and locator, actual checks, and reason for eliminating the closest alternative. Separate files opened and rendered from manifest-only candidates. If access fails, give the exact file or permission required and a labeled temporary fallback appropriate to the channel. Never recolor, invent or redistribute a substitute as the approved original.
+
 ## What you get back
 
 A short list: exact file path or link, version, where it's for, any usage limits, and a fallback.
@@ -32,10 +38,16 @@ The request is "logo for the one-sheet." The obvious pick is `logo-white.svg` be
 
 ## Check it
 
-- Every path points to a file that exists.
-- The asset is visible on the target background.
+- For files you opened, confirm the exact variant and path. For a manifest-only selection, give the listed path, say what remains unverified, and identify who can supply it.
+- Check visibility on the target background when the actual file is available.
 - Nothing internal-only goes into a public piece.
 
-### Optional team implementation
+Check a print-use request against [the manifest-only booth-sign case](examples/practice.md).
 
-Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=retrieve-brand-assets&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
+## Try it on your work
+
+The intended placement, background and available asset folder or file inventory, including usage notes if known.
+
+> Find the approved asset for this use. Give me the exact file and version, the evidence for using it and any missing permission or specification.
+
+**Get the download.** On GitHub, keep the branch or commit shown for this file. Open `CATALOG.md` in the repository’s file tree and download `retrieve-brand-assets.zip`. If someone sent you the ZIP, open its `SETUP.md` for the first run. For a company release, use `company/DEPLOY.md` in your private repository.

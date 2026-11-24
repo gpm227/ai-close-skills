@@ -5,35 +5,26 @@ description: "Pulls what buyers actually said out of call transcripts or notes, 
 
 # Extract buyer insights from calls
 
-Plain AI summarizes calls in its own words. The seller's suggestion gets reported as the buyer's need, and one loud customer becomes "a common theme."
+Analyze what buyers said about a specific job, decision or concern. Work from identifiable transcripts or notes and account mappings. Separate internal research from clearance to publish any quote.
 
-## You'll need
+## Code the evidence
 
-- **Transcripts or notes,** with who said what.
-- **Which accounts** each call belongs to.
-- **What you're trying to learn.**
+1. Assign each call, account and utterance an ID, speaker and locator (timestamp, turn or note line). Preserve exact words for quotes. Label paraphrased meeting notes as notes. For unattributed text, keep speaker or account unknown.
+2. Classify evidence as **buyer-originated**, **seller suggestion with buyer response**, or **analyst inference**. Record disagreement, prompts and tentative assent. Silence is missing evidence. Do not elevate a seller-led “sure” into a confirmed buyer priority.
+3. Group equivalent buyer meanings into named themes. State the eligible account denominator and count distinct supporting account IDs once. When only some buyers were asked a question, show how many accounts were asked, how many answered, and which accounts raised the topic independently. Keep unasked and unanswered accounts out of any percentage that claims to summarize answers. Show contradictory accounts and evidence of a different workflow separately. An unmapped call can illustrate a remark but cannot establish another distinct account.
+4. Distinguish a question about a feature from evidence of a missing capability, budget or purchase intent. Flag possible expansion only when a buyer identifies new need, scope or decision-maker. Attach the quote and the shortest question that would confirm ownership or impact.
+5. When sources disagree, preserve the difference by entity, role or moment. Small samples support observations about the supplied accounts. Do not convert counts into a market forecast.
 
-## Steps
+## Deliver
 
-1. For every insight, quote the buyer or point to the exact line.
-2. Label every point as one of: the buyer said it, the seller suggested it, or it's your inference.
-3. Count themes by distinct accounts, not by mentions.
-4. Only flag an upsell or expansion if the buyer described a new need, scope or decision-maker. Write the question that would confirm it.
+Lead with a short brief in the buyer's language. Include a theme table with support count/denominator, distinct account IDs, verbatim or paraphrased evidence and counterexamples. Add explicitly labeled inferences, expansion questions and a small ledger of ambiguous or excluded quotes with reasons. Recompute counts from unique IDs and spot-check every quotation against its origin before delivery.
 
-## What you get back
+[Practice with repeat calls, seller-led assent and a possible regional expansion](examples/practice.md).
 
-A short brief in the buyer's own language, a theme table (theme, accounts mentioning it, quotes), possible opportunities with evidence, and questions to confirm them.
+## Try it on your work
 
-## The trap
+Call transcripts or notes with speakers identified where possible, plus the decision the findings should inform.
 
-Seller: "A lot of teams find reporting is a headache. Is that true for you?" Buyer: "Yeah, sure." The obvious write-up is "Buyer says reporting is a pain point." The seller said it. The buyer agreed politely. Record it as weak.
+> What did buyers actually say about this issue? Show the evidence by call, distinguish quotations from notes and tell me what this sample can support.
 
-## Check it
-
-- Every insight has a quote or line reference.
-- Theme counts are distinct accounts.
-- Nothing the seller said is attributed to the buyer.
-
-### Optional team implementation
-
-Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=extract-buyer-insights&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
+**Get the download.** On GitHub, keep the branch or commit shown for this file. Open `CATALOG.md` in the repository’s file tree and download `extract-buyer-insights.zip`. If someone sent you the ZIP, open its `SETUP.md` for the first run. For a company release, use `company/DEPLOY.md` in your private repository.

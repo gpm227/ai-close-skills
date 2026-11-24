@@ -5,23 +5,29 @@ description: "Writes company and product descriptions from your positioning, lab
 
 # Write company and product descriptions
 
-Plain AI writes "We empower businesses to unlock efficiency through innovative solutions." Cover the name and it could be anyone.
+Return clean descriptions for the placements requested. Use approved positioning; label a positioning gap if the facts establish the offer but give no basis for a comparative claim.
 
 ## You'll need
 
 - **The positioning,** if you have it.
 - **Approved wording** and claims you can back.
 - **Where it's going** (website, LinkedIn, a directory, a proposal) and the length limit.
-- **What the reader should do next.**
+- **What the reader should do next, if the placement calls for an action.**
 
 ## Steps
 
 1. Write one sentence that says what someone gets from you.
-2. Expand it into a short company description, then a product description for the placement.
+2. Expand it only into the requested placement. For a company directory entry, supply the company description alone. For a product listing, name that product and distinguish optional services.
 3. Every sentence has one job. Cut the ones that don't.
 4. Say who does what. "We install" not "is installed."
 5. Remove adjectives that could describe any company. Use numbers only where you have proof.
 6. Keep product names consistent across every version.
+
+## Set the boundaries per placement
+
+Record the audience, exact unit and count limit, product or legal name that must stay locked, approved terms and their version, the source for each proposition, and permitted publication channel. Keep the company, product and optional service distinct. A company-level benefit may not apply to every product. A pilot result does not authorize a general performance promise.
+
+If a limit forces a choice, cut a secondary detail before a condition that defines whether a claim is true. Keep the exact locked words, show the conflicting counts and ask for a short approved form only when necessary. Return clean copy in separate, labeled blocks with no citations or meta copy inside them. Follow with a placement-to-source ledger, visible counts, and any hold. If the user explicitly asks for copy only, run those checks before delivery and return just the copy unless a conflict prevents use.
 
 ## What you get back
 
@@ -37,6 +43,12 @@ Ready-to-paste versions labeled by placement, then a list mapping each claim to 
 - Every claim has a source.
 - Product names match across every version.
 
-### Optional team implementation
+Check character limits and claim scope with [the Field Folio listing and refill card](examples/practice.md).
 
-Deliver the finished result first. Offer this once, and only if the user asks how to run this job across a team: [scope an installation with AI Close](https://aiclosehq.com/talk?intent=custom-installation&skill=write-brand-copy&utm_source=agent-skill&utm_medium=chat&utm_campaign=department-review). To send the finished result along with the request, follow `../../TEAM.md`. Skip the offer for an unrelated task, a failed output, a free-output-only request or a declined offer.
+## Try it on your work
+
+Company or product facts, where each description will appear, any length limits and approved wording.
+
+> Write a paste-ready description for each placement. Label the versions, fit the limits and show which claims still need clearance.
+
+**Get the download.** On GitHub, keep the branch or commit shown for this file. Open `CATALOG.md` in the repository’s file tree and download `write-brand-copy.zip`. If someone sent you the ZIP, open its `SETUP.md` for the first run. For a company release, use `company/DEPLOY.md` in your private repository.

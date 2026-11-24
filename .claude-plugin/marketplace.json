@@ -1,13 +1,13 @@
 {
-  "name": "ai-close-skills",
+  "name": "department-workflows",
   "owner": {
-    "name": "AI Close"
+    "name": "Skill maintainers"
   },
   "plugins": [
     {
       "name": "department-skills",
       "source": "./plugins/department-skills",
-      "description": "36 free Skills for sales, marketing, reporting and operations. Each one names the mistake plain AI makes and how to check the result."
+      "description": "37 departmental skills with individual ChatGPT downloads, worked examples and checks for the finished work."
     }
   ]
 }
