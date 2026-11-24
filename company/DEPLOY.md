@@ -1,14 +1,14 @@
 # Deploy AI Close skills
 
-Start with one job in ChatGPT. Pick a result someone needs this week and use an input they recognize. A vendor quote, a CRM export or a customer email is enough for several jobs in the [skills catalog](../CATALOG.md).
+Choose a job in **Sales, Marketing, Operations, Reporting or Analytics**. Bring a file you already use, such as two vendor quotes, daily order counts or notes from your last customer call. [Browse all skills](https://github.com/gpm227/ai-close-skills/blob/main/SKILLS.md)
 
-For marketing work such as page copy, cold email or offer design, use the [marketing index on GitHub](https://github.com/gpm227/ai-close-skills/blob/main/SKILLS.md). Choose a **ready** skill, open its `SKILL.md`, and attach it and the **Bring** inputs to a ChatGPT project. Add your approved `close-context.md` and any house rules as project files. Keep company material in your private workspace. For competitive research, use Claude to collect dated sources, then bring the evidence into the job. Use Claude Design when the deliverable is a design or a brand kit.
+Start in ChatGPT. If the skill has a ZIP, use the [download catalog](../CATALOG.md) and follow the steps below. For a Markdown download, attach the file and your inputs in a fresh chat. You can keep an approved company brief and house rules in a private project for repeat jobs.
 
-The installation and version checks below cover the **37 department skills**. The six marketing skills have their own [setup and Claude plugin instructions](https://github.com/gpm227/ai-close-skills#install).
+The company installer below packages the 37 department skills. For the six additional skills distributed as Markdown or through Claude, see the [installation instructions](https://github.com/gpm227/ai-close-skills#install).
 
 | What you need | Where to work | What to keep |
 | --- | --- | --- |
-| An everyday sales, marketing, reporting or operations job | ChatGPT with the relevant skill | The usable result, its source and anything the owner still needs to decide |
+| Everyday work across the five areas | ChatGPT with the relevant skill | The usable result, its source and anything the owner still needs to decide |
 | Brand rules from a deck, website or approved writing | ChatGPT | An editable guide a writer or designer can use |
 | A commissioned visual asset or designed brand kit | ChatGPT prepares the brief. Claude Design produces the work. | The editable source, approved export and owner’s decision |
 | Deep research or competitive analysis | ChatGPT defines the decision. Claude Research investigates. | Dated evidence, comparable terms and a recommendation in ChatGPT |
