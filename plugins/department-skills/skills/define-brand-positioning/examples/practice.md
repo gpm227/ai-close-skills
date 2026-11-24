@@ -11,7 +11,7 @@ Write the introduction a lab supervisor can repeat to purchasing. Work only with
 | L1 | Loss interview, procurement lead | Another plant required on-site calibration. It declined the courier service. |
 | N1 | Rep note | An introductory pickup happened next day. No recurring next-day service level is documented. |
 
-## Worked response
+## Who the pickup service is for
 
 **Intro.** “Gauge Ferry collects instrument cases for your calibration lab and returns them with a signed custody record.”
 

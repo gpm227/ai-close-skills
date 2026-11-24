@@ -15,7 +15,7 @@ Use one point for each criterion. Score the output of a named version on a named
 | 5. Difficult input | A conflict, incomplete sample, blocked source or unknown permission produces a bounded result and the next action needed to resolve it. |
 | 6. Usable handoff | A fresh person can use the result with only the intended deliverables. It includes the qualifying details, destination, owners or assets the task requires. |
 | 7. Preserved constraints | Protected wording, permitted audience, excluded contacts, scope and other material restrictions survive the transformation. |
-| 8. Worked practice case | A reader can start from supplied input and compare their output with an example and observable checks. An alternate case forces a different decision. |
+| 8. Practice inputs and expected result | A reader can start from supplied input and compare their output with an example and observable checks. An alternate case forces a different decision. |
 | 9. Portable delivery | The individual ZIP includes its instructions, cases and required local resources. Referenced commands and paths work from the unpacked skill. Record native installation separately. |
 | 10. Independent evidence | Someone outside the editing pass tries a new case, grades the actual artifact and records remaining gaps. For a revision, rerun the same input on the previous version when available. |
 
@@ -23,7 +23,7 @@ For visual jobs, reject a piece the owner considers interchangeable even when it
 
 The [recorded trials](proof/quality/README.md) include the requests, answer keys, actual artifacts and findings.
 
-## Worked comparison
+## What the brand handoff left out
 
 On the original brand pilot, the designer could see the intended composition and copy, but the handoff omitted the actual colors, type stacks and icon choices. The private guide held those decisions. To test an improvement, give a second designer only the intended design brief and assets. Ask for the three color roles, type and fallback, the wordmark treatment, and an icon assignment. Compare their answers with the supplied source material. Then inspect whether confidential notes appeared in anything intended for transfer.
 

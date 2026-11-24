@@ -4,7 +4,7 @@
 
 **Inputs.** Event E1: source=form-A, contact_id=P7, sequence=10, email=lee@example.test. Event E2: same source/contact, sequence=11, email=lee.new@example.test. Source guarantees strictly increasing sequence per contact. Assume CRM supports conditional contact updates by stored sequence.
 
-## Worked design
+## How a form submission reaches the CRM
 
 | Step | Mapping or operation | Expected evidence |
 | --- | --- | --- |

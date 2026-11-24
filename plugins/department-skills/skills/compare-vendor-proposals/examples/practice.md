@@ -4,7 +4,7 @@
 
 **Quote A §2:** $400/month including 300 cases/month; $2 for each additional case in that month. No setup fee; billed monthly in arrears at month-end. Month-to-month, cancellable before a new month begins. **A §4:** SSO included. **Quote B §1:** $8,400 non-cancellable, prepaid for the year; covers up to 600 cases in each calendar month. **B §3:** additional cases above 600 cost $4 each; no setup fee. B does not address SSO. Both quotes include support; compare 12 complete months beginning on the first.
 
-## Worked decision
+## What each quote would cost
 
 | Item | A | B |
 | --- | --- | --- |

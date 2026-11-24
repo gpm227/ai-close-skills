@@ -12,7 +12,7 @@
 
 From the skill directory use `python3 scripts/export_rows.py examples/observations.json directory-output`. Compare `records.csv` with the output below, and verify the independent page and listing counts in `coverage.json`. Use a fresh destination on repeats.
 
-## Worked CSV
+## Directory records as CSV
 
 ```csv
 "id","name","phone","source_url","observed_date"

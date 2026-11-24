@@ -11,7 +11,7 @@ Pick a logo for a fictional shop's public white-background booth sign, 600 mm wi
 | M3 | marks/v3/rail-white.png, white 180 × 60 raster | Current for dark web headers only. |
 | M4 | images/partner-train.jpg | Photo licensed to a single internal training deck. |
 
-## Worked result
+## Which logo to use on the sign
 
 **Select provisionally:** `marks/v3/rail-dark.svg` (M1), v3. The declared use, public-print rights, vector format, white background and 600 mm width match the request. Minimum reported width is 30 mm. The supplied manifest establishes a candidate; the file itself has not been opened. Ask for M1 or authorized access before production. Once opened, inspect the viewBox, aspect ratio, trims/clear space and a print-size crop. Confirm the printer's accepted vector format before delivery.
 

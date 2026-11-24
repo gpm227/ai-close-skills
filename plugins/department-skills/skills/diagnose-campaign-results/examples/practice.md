@@ -15,7 +15,7 @@
 
 **Event export.** Jun 2: p1 human-positive r1, p1 human-positive r1 (duplicate), p2 automated out-of-office r2, p4 human-negative r3. Jun 3: p1 booked m1 from reply, p5 booked m2 directly via campaign link. Jun 9: p6 human-positive r4. All event timestamps 09:00. No held-meeting data supplied.
 
-## Worked result
+## Where the campaign lost people
 
 | Mature cohort | Delivered / attempted | Human responders / delivered | Positive / delivered | Booked people / delivered | Held |
 | --- | --- | --- | --- | --- | --- |

@@ -8,7 +8,7 @@
 - Q1, customer email, line 3: “We can see the queue.” A2 permits those exact words in private sales decks until May 31, 2026. No website approval.
 - F1, public product sheet v3, Export section: “Download the queue as a CSV.” Product owner requests recheck at the next release.
 
-## Worked register
+## Which claims can we publish?
 
 | ID / type | Reusable wording and disposition | Evidence and permission | Recheck |
 | --- | --- | --- | --- |

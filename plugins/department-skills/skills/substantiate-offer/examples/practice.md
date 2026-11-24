@@ -8,7 +8,7 @@
 - S2, closed pilot log, March, rows 1–3: two teams reported faster approval, one gave no timing result. No timings, comparison group or publication permission.
 - S3, delivery owner note: no refund or performance guarantee authorized.
 
-## Worked offer
+## The $900 launch offer
 
 **For a regional publisher:** Get an approval map and a configured review queue for one publication for $900. We deliver both within ten business days after we receive your complete approver list and one sample issue. Integrations are outside this package.
 

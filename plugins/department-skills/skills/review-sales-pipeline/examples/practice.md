@@ -14,7 +14,7 @@ Two snapshots from the same CRM filters, Aug 31 and Sep 30 (all monetary amounts
 
 Stage rules: Discovery and Proposal are open; Won is closed. D2's signed booking value is known. CRM creation record H3 dates D3’s creation to Sep 6. D4 has no history export.
 
-## Worked result
+## What changed in the pipeline
 
 | USD open bridge | Signed change (thousands) | Evidence |
 | --- | ---: | --- |

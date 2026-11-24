@@ -20,7 +20,7 @@ If the owner supplies only a description of the offer, draft the buyer's job and
 
 ## Deliver the qualification card
 
-Lead with the buyer, problem and deliverable. Supply one row per rule: rule ID, gate or signal, owner-approved or proposed, subject and unit, exact test, acceptable source, effect of uncertainty. Follow with worked rows showing account ID, decisive rule, evidence and disposition. State which rule the owner would need to settle to admit a borderline account. Check that a second rep can reproduce each result with the same evidence.
+Lead with the buyer, problem and deliverable. Supply one row per rule: rule ID, gate or signal, owner-approved or proposed, subject and unit, exact test, acceptable source, effect of uncertainty. Then show how you classified each account, with its ID, the deciding rule and the evidence. State which rule the owner would need to settle to admit a borderline account. Check that a second rep can reproduce each result with the same evidence.
 
 [Practice with chilled depots, a franchise and an unverified customer](examples/practice.md).
 

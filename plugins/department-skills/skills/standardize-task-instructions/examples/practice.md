@@ -4,7 +4,7 @@
 
 **Request.** “Write instructions our coordinators can run every Friday. Show how a new coordinator would call them.”
 
-## Worked SOP
+## How to prepare the weekly store report
 
 1. Obtain the week label, required store IDs and each submitted (week, store ID, unit count) record. Scope records to the requested week. Escalate duplicate in-scope store counts for reconciliation, and retain out-of-scope IDs in a note.
 2. Return columns `store_id | units` in store-ID order. Empty submissions are listed as `missing`; a numeric zero is retained. For multiple required stores, append `All stores` only when each has one confirmed count. List the missing or disputed store ID and the required follow-up when a total is withheld. Do not infer a required heading color.

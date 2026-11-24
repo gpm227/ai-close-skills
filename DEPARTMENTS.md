@@ -22,9 +22,9 @@ The [marketing library](README.md) sits alongside these department skills. This 
 
 Say you have two quotes for the software that runs your support desk. One vendor bills monthly. The other wants a year up front. You need to know which one to sign.
 
-Give **Compare vendor proposals** the quotes, your expected monthly volume, and the features you need. In the worked example, the annual plan costs $1,200 less at 500 cases a month. Your team requires single sign-on, and the cheaper quote leaves it out of the terms. Alongside the cost comparison, you get a question to send the vendor. “Is single sign-on included at this price for the full year?”
+Give **Compare vendor proposals** the quotes, your expected monthly volume, and the features you need. At 500 cases a month, one vendor would charge $9,600 over the year. The other wants $8,400 up front. Your team requires single sign-on, and only the first vendor includes it in writing. Before taking the cheaper offer, ask the second vendor, “Is single sign-on included at this price for the full year?”
 
-You can check the arithmetic and the missing term yourself. Then try the same skill on the two quotes sitting in your inbox. [Download the skill](chatgpt/compare-vendor-proposals.zip?raw=true) · [Read the quotes and worked comparison](plugins/department-skills/skills/compare-vendor-proposals/examples/practice.md)
+You can check the arithmetic and the missing term yourself. Then try the same skill on the two quotes sitting in your inbox. [Download the skill](chatgpt/compare-vendor-proposals.zip?raw=true) · [See both quotes and the cost breakdown](plugins/department-skills/skills/compare-vendor-proposals/examples/practice.md)
 
 ## Commercial Services
 

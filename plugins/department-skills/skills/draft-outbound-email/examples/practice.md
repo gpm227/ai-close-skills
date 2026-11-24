@@ -11,7 +11,7 @@
 | P2, guide, p. 2, cleared for outreach | Shows how to mark an exception open and carry it forward unsigned |
 | P3, client interview, private | One site said sign-off was faster. No permission to quote and no timing study |
 
-## Worked draft
+## Emails to the lab operations lead
 
 **Touch 1 · Day 0**
 

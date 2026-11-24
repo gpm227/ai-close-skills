@@ -10,7 +10,7 @@ S2, approved demonstration sheet, row 3, permits an illustrative open repair row
 
 A1, owner-supplied action: email `workshops@example.org` to request dates. No self-booking or quote tool. The address is reserved for this example.
 
-## Worked artifact
+## The one-sheet for depot operators
 
 [Open the editable Letter one-sheet](one-sheet.html). It includes scope, price, a labeled demonstration row, the buyer's input and one email action. The action and price are each visible without opening a second page. The email is printed as text so the paper copy still works.
 
