@@ -4,7 +4,7 @@
 
 **Frozen standard C1** (team lead, REV3): Percent change is null when the previous window totals zero. **R41 receipt:** skill v1.4.2; inputs current 52, prior 0; original output `{"change_pct":null}`. **Evaluator Q7:** “fail: expected 0, saw null”. **Reproduction on v1.4.2:** same input, same output. All data is synthetic.
 
-## Worked change request
+## What failed and what to change
 
 | Question | Finding / disposition |
 | --- | --- |

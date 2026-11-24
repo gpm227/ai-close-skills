@@ -1,5 +1,5 @@
 {
   "name": "department-skills",
-  "version": "0.8.1",
-  "description": "37 departmental skills with individual ChatGPT downloads, worked examples and checks for the finished work."
+  "version": "0.8.2",
+  "description": "37 department skills for ChatGPT and Claude. Each download includes instructions, sample inputs and a way to check the result."
 }

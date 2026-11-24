@@ -4,7 +4,7 @@
 
 Fictional Line Press wants a web-to-slide guide. T1, released CSS `release.css`, defines body ink `#17343A`, background `#FFFFFF`, action `#18565B`, and heading stack `"Freight Text", Georgia, serif`. T2, export of an older screenshot, looks teal; there is no token value in the image. L1 licenses the heading font for the company website only. Slide 4 uses a heavier heading. No slide template, logo master, or evidence for an established spacing scale is supplied.
 
-## Worked standard
+## Approved colors and type fallbacks
 
 | Role | Web | Slides / action | Evidence status |
 | --- | --- | --- | --- |

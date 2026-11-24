@@ -12,7 +12,7 @@
 | Destination receipt R17 | Authoritative complete lookup after the queue drained: E17/task absent |
 | Destination receipt R18 | Lookup service unavailable; no destination evidence |
 
-## Worked recovery ledger
+## Which steps to retry
 
 | Event | Contact | Task | Disposition |
 | --- | --- | --- | --- |

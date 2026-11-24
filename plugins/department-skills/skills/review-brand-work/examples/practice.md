@@ -10,7 +10,7 @@ Fictional service team. The print headline is locked by owner approval A7. R1 re
 | Desktop web button | “Book a repair” |
 | Mobile web button | “Book now” |
 
-## Worked review
+## Edits to the print card and buttons
 
 **Clean placement copy**
 

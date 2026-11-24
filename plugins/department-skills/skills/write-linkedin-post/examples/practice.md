@@ -8,7 +8,7 @@
 - V1, authored style samples: “I checked the sheet again.” / “Nine orders. I can work with that.” Tone is terse, first-person and concrete.
 - C1, private client anecdote: A customer asked for a refund. The author did not witness it. Exclude it.
 
-## Worked post
+## The founder’s post
 
 On Friday I nearly changed Monday’s shift because I read the reprint report wrong.
 

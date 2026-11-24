@@ -7,7 +7,7 @@
     {
       "name": "department-skills",
       "source": "./plugins/department-skills",
-      "description": "37 departmental skills with individual ChatGPT downloads, worked examples and checks for the finished work."
+      "description": "37 department skills for ChatGPT and Claude. Each download includes instructions, sample inputs and a way to check the result."
     },
     {
       "name": "aiclose-skills",

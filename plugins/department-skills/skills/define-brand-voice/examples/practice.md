@@ -11,7 +11,7 @@ Fictional repair co-op, approved edits for customer updates. The pairs are disti
 | E3 | “Dear Ms Roy” → “Hi Jaya” in one welcome email to an existing customer. |
 | T1 | Holdout draft: “The adjustment is being evaluated.” The job ticket records that Omar is checking the latch and emails after the test. |
 
-## Worked guide
+## The editor’s rule
 
 | Scope | Rule, exception and evidence | Application |
 | --- | --- | --- |

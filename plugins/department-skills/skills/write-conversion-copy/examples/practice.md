@@ -11,7 +11,7 @@ Fictional source packet:
 - F2, confirmation copy: “We received your request. Our team will email you to arrange a demo.” No response-time commitment.
 - R1, internal draft: “Recover 35% of missed revenue.” No source or clearance.
 
-## Worked handoff
+## Page copy for demo requests
 
 | Placement | Copy |
 | --- | --- |

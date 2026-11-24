@@ -6,7 +6,7 @@
 
 Supplied notes: I1, four of five interviews mentioned locating overdue service. I2, one mentioned ease of setup. I3, integrations came up only in our planning meeting. Both versions must offer the same walkthrough. Campaign owner prefers to enroll no more than five new accounts daily. All names and numbers are fictional.
 
-## Worked handoff
+## Opening lines and how to test them
 
 **Decision.** Test whether leading with an overdue-service question merits a larger trial. I1 supports overdue work. I2 supports setup as the runner-up. Integrations is an unverified third hypothesis. Compare the selected opening with a neutral feature introduction.
 

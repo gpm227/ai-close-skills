@@ -4,7 +4,7 @@
 
 A fictional tool library wants a channel guide for its hose pressure tester. C1 (approved product page) says members can request a date and the desk confirms availability by email. C2 (website form) collects an email and requested date, then states “Request received.” C3 (staff email) accepts a member's reply containing a preferred date. C4 (mobile design) allows 12 visible characters, including spaces, on the web-form button. An older screenshot says “Reserve now.”
 
-## Worked channel guide
+## Copy for each placement
 
 **Shared facts.** The reader is a member. A date request precedes the availability email. A sent form never reserves the tester by itself.
 

@@ -33,7 +33,7 @@ When instructions disagree, resolve in this order:
 
 Never put a fact in a house-rule file. A price recorded in two places will one day be wrong in one of them.
 
-## A worked house rule
+## Rules for homepage copy
 
 `custom/copywriting.md`:
 

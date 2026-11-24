@@ -8,7 +8,7 @@
 - N2, brief 17: a named owner was available and the file still waited a day because the buyer had not supplied product dimensions.
 - V1, expert's own phrasing: “I check what the file is waiting for before I change the meeting.”
 
-## Worked argument
+## What the approval records support
 
 **Thesis.** Appoint a final reviewer when a ready file is waiting on an ownership decision. If a required input is missing, name who will supply it first.
 

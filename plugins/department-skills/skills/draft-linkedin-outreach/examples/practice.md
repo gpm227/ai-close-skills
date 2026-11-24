@@ -4,7 +4,7 @@
 
 “I'm not connected to Kim yet. Draft an invitation and follow-ups. I maintain an equipment handoff worksheet and would like to compare how teams design it.” Fictional source E1, program p. 2: “Kim Yen, session chair, depot equipment handoffs.” E2, the sender's cleared worksheet: an open repair row has both an equipment ID and a receiving owner. The sender did not attend and has never met Kim.
 
-## Worked draft
+## Invitation and follow-up messages
 
 | Stage | Paste-ready text | Basis |
 | --- | --- | --- |

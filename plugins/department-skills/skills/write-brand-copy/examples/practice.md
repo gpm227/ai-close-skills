@@ -4,7 +4,7 @@
 
 Fictional Field Folio offers a paper field notebook and a refill. F1 (approved catalog): the company supplies weather-resistant field notebooks for survey crews; Field Folio Grid Refill is squared paper for the reusable cover. F2 (pack): “48 sheets.” F3 (private sales note): one crew wrote in rain for a week. Write a directory description of at most 90 characters and a product card. Keep the approved product name unchanged.
 
-## Worked deliverables
+## Directory listing and product card
 
 **Directory — 69 of 90 characters.**
 
