@@ -60,6 +60,9 @@ def bundle(skill):
     content = io.BytesIO()
     with ZipFile(content, "w") as archive:
         items = {path.relative_to(skill.parent).as_posix(): path.read_bytes() for path in files}
+        plugin_license = skill.parent.parent / "LICENSE"
+        if plugin_license.is_file():
+            items[f"{skill.name}/LICENSE"] = plugin_license.read_bytes()
         items[f"{skill.name}/SETUP.md"] = setup_note(skill).encode("utf-8")
         for name, content_bytes in sorted(items.items()):
             entry = ZipInfo(name)

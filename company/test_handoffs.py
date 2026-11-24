@@ -15,6 +15,9 @@ class PublisherNeutralTests(unittest.TestCase):
         for file in files:
             if file.is_file() and "__pycache__" not in file.parts:
                 with self.subTest(path=file.relative_to(ROOT)):
+                    if file == plugin / "LICENSE":
+                        self.assertEqual(file.read_bytes(), (ROOT / "LICENSE").read_bytes())
+                        continue
                     self.assertIsNone(PUBLISHER.search(file.read_bytes()))
 
     def test_download_contents_are_neutral(self):
@@ -23,6 +26,9 @@ class PublisherNeutralTests(unittest.TestCase):
                 for name in archive.namelist():
                     with self.subTest(download=path.name, entry=name):
                         content = archive.read(name)
+                        if name == f"{path.stem}/LICENSE":
+                            self.assertEqual(content, (ROOT / "LICENSE").read_bytes())
+                            continue
                         if Path(name).name == "SETUP.md":
                             links = re.findall(
                                 rb"https://github\.com/gpm227/ai-close-skills/blob/([a-f0-9]{40})/"
