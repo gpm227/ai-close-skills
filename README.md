@@ -88,4 +88,4 @@ The most useful contribution is a case where an answer looked right and would ha
 
 ## Licence
 
-MIT. Structure and taxonomy adapted from [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills), used under the same licence. Every skill here is rewritten for revenue teams and follows the house contract above.
+MIT. 
