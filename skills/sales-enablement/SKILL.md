@@ -2,7 +2,7 @@
 name: sales-enablement
 description: "When the user wants reps to run a conversation without them: a call plan, objection responses, a leave-behind, a deck for a specific meeting, or an audit of assets nobody uses. Covers what each asset is for, which stage it belongs to, and what to stop sending. For the offer being sold, see offers. For the page the buyer saw first, see copywriting."
 metadata:
-  version: 0.1.0
+  version: 0.1.1
 ---
 
 # Sales enablement
@@ -46,6 +46,8 @@ Read `.agents/close-context.md` or `.agents/product-marketing.md`. The proof reg
 5. **Build one leave-behind.** The thing the buyer forwards to the person who was not on the call. One page: the problem, the mechanism, the proof, the price shape, the next step.
 6. **Audit what exists.** Ask which assets were sent in the last twenty deals. Everything else goes on the stop-sending list.
 7. **Give the rep the exit.** The strongest asset often tells the rep when to walk away.
+
+For an account-specific call, bring over the checked event, source, account ID and signal ID from the rep's brief when available. Separate the company's announcement from what this buyer has confirmed. When the status changes, replace the affected opening or slide and keep the buyer's own agenda. Add the held meeting's ID and the rep's qualification decision to the handoff only after the meeting.
 
 ## Output format
 

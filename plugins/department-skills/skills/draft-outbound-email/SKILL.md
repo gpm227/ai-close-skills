@@ -15,6 +15,8 @@ An event is one possible opening. For role-based outreach, a supplied responsibi
 
 ## Build and review the sequence
 
+For a brief-based draft, keep the supplied account ID, signal ID, source, event status and last check with the review notes. Use only an angle cleared for this recipient and campaign. When evidence about the event has expired, changed or is on hold, identify the affected sentence and required recheck before drafting that angle. A role-based introduction remains available on its own evidence. Preserve the channel plan and any earlier reply or opt-out across channels.
+
 - Lead with a traceable fact and explain why the offer relates to it. Use the operator's task, the manager's team decision or the budget owner's constraint as appropriate. Phrase an unknown recipient practice as a question only if it serves the one intended ask.
 - Give each touch one independent, recipient-sized action. Count invitations and imperatives as well as questions. “Reply if useful and pick a time here” is two actions with no question mark. A later message offers different evidence, a usable excerpt or an answer to a plausible objection. If no new basis exists, omit that touch and explain the gap.
 - Keep each body under 120 words and subject under six words. Carry qualifications into the message itself. The final touch closes courteously. Stop planned follow-ups on a reply, opt-out or hard bounce.

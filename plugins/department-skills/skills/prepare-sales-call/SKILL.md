@@ -9,6 +9,8 @@ Make a one-page card the rep can use while listening. Establish the call type (c
 
 ## Write the conversation
 
+When an account brief comes with the meeting, put the account ID, signal ID, current status, source and check date in the rep's margin. State which part of the opening the source supports. If the event is stale, disputed or superseded, replace that line with a neutral question based on the buyer's own agenda or another supported fact. A booked call remains worth preparing even when its original outreach angle no longer applies.
+
 1. Open in at most two sentences. Reflect the actual reason for contact and who requested it. Time it aloud; aim for under 15 seconds. For a booked call, pick up the buyer's stated agenda. For a cold call, ask whether the person owns the relevant job or can spare a moment.
 2. Give the rep one question the buyer can disagree with and a short follow-up sequence. Each follow-up should depend on what the buyer says. Probe their current process, evidence of a problem and its owner before proposing the product.
 3. Provide four exact lines with a decision and exit: **interested** (agree one concrete step, owner and timing), **wrong person** (ask for a role or permitted introduction), **bad timing** (ask whether and when to revisit), **no** (close without pushing). If the buyer requests no further contact, end the call and route the request through the team's suppression process. Mark it pending until confirmed.

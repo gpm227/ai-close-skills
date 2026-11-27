@@ -9,6 +9,8 @@ Use for a private invitation or direct message to one professional. A public pos
 
 ## Decide which messages belong
 
+If a rep supplies an account brief, use the signal marked usable for this angle. Carry the account ID, signal ID, source and check date into the rep's notes outside the message. Verify whose action the source describes and why this recipient's responsibilities connect to it. On a hold, expired evidence or conflicting update, say which fact needs checking and withhold the signal-based draft. Another independently verified reason may support a separate draft when requested. If the rep already drafted against an older status, identify which line to retire.
+
 | Relationship now | Return |
 | --- | --- |
 | No connection or pending invite | For a new invitation, one note under 200 characters including spaces, with no sales pitch. For a pending invite, leave the invitation alone. Label later messages conditional on acceptance. |
