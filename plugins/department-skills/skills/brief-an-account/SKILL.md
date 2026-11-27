@@ -18,6 +18,14 @@ Write a one-page pre-outreach brief that helps a rep ask a credible question. Us
 
 Start with the change worth asking about and one neutral opening question. Include the company snapshot, a dated fact ledger, hypotheses with falsifiers and current alternatives. Add one line on what the rep should recheck before contact. Do a final read with the source notes hidden: a rep should be able to tell a buyer-confirmed fact from an inference just by reading the brief. The opening should still work if the buyer rejects your strongest hypothesis.
 
+When the next person will use the brief for outreach or a call, include a row they can copy into their account record. Preserve supplied account and signal IDs. If no IDs exist, assign clearly labeled local references. Use the same signal ID when its status changes and keep the prior dated observation.
+
+| Account ID / signal ID | What changed | Evidence | Who would care | Decision for this use |
+| --- | --- | --- | --- | --- |
+| One account and one event | Signal type, site, event date or planned window, current status | Source locator, publication date and date checked | Responsible role, evidence for that responsibility and one question | Use or hold this angle, why, and what to recheck before use |
+
+Check the requested signal against the source. A branch relocation can confirm a move while providing no evidence of net expansion. A permit application supports a question about plans only if the campaign accepts planned events. Keep account fit as a separate decision. If no usable change is found, return that finding and a next research step. When a later source changes a fact, flag the affected draft or call card for review and preserve independent facts. Route a repeated *instruction* error for a tested skill correction.
+
 [Practice with a planned opening and a contradictory CRM note](examples/practice.md).
 
 ## Try it on your work

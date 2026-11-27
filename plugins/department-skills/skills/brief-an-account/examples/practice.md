@@ -26,3 +26,26 @@ Accept an open question such as “How do dispatch and dock teams share the end-
 ## Edge prompt
 
 A new dated notice P2 says the permit was denied and the project suspended. Revise the brief, remove or update the Ames hypothesis, preserve the Cedar Falls fact and explain why today's question changes or still works.
+
+## Take the brief into outreach and a call
+
+Use the same source excerpts in each step. The rep's account ID is R01. Morgan's supplied profile lists responsibility for dispatch operations. The team offers a shareable dispatch-to-dock handoff checklist; Morgan is already connected with the rep on LinkedIn. Their pilot accepts documented *planned* sites, and a person reviews every draft.
+
+1. Ask for an account brief as of March 6. Copy its event row into a fresh chat with the LinkedIn drafting instructions. Request one DM offering the checklist. Give the email skill the same row to prepare an alternative for review. Keep each draft's source notes outside the message.
+2. Morgan books a conversation about shift handoffs. Take the same row to call preparation. Ask for one opening question and an empty post-call log.
+3. Add P2, a March 10 buyer notice suspending Ames. Ask what should change. Keep the original assignment and mark the planned-opening angle on hold. Identify and retire lines based on the expansion; retain independent Cedar Falls evidence and prepare the booked call around Morgan's stated agenda. A new fact updates this account's brief. Only a workflow that keeps promoting the superseded fact needs a rule review.
+
+**Check the handoff.** A March 6 draft may ask “Would the dispatch-to-dock checklist be useful as you plan the Ames site?” It must preserve the uncertainty about opening. After P2, the rep should see the same account and signal references, the new dated status, and which drafts need changing. The call can open with “What would you like to improve about the shift handoff?” Neither version establishes that the Cedar Falls hiring was caused by Ames.
+
+## Try two bank briefs
+
+This independent fictional case uses only the supplied material. As of October 9, 2026, both banks meet the approved account profile. The campaign accepts a confirmed additional operating branch in the last 30 days. It offers branch operations leaders a cash-pickup planning checklist.
+
+| Account | Buyer notice dated October 6 | Recipient's supplied role |
+| --- | --- | --- |
+| B01, Harbor Birch Bank | H1: “On October 5 we opened an additional branch on River Street.” | Tess manages branch operations |
+| B02, Juniper Vale Bank | J1: “On October 5 our existing Pine Street branch moved to Oak Street.” | Sam manages branch operations |
+
+**Request.** Produce a brief and a decision on the expansion angle for each bank. Show the review notes and one opening for any bank that meets the event rule.
+
+**Check.** B01 supports asking Tess “How are you planning cash pickups for the River Street branch?” Preserve H1 and October 5. B02 remains an eligible account. J1 documents a relocation, which supplies no evidence of an additional branch. Hold the expansion angle and record what would clear it. Neither notice establishes a cash problem, a current vendor or savings.

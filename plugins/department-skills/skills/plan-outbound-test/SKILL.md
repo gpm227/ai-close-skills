@@ -17,6 +17,10 @@ Use this when a team must decide which approach to repeat. A request for five em
 
 ## Handoff
 
+For a signal-based test, record the account, signal ID and type, source/status as of assignment, the responsible role and assigned arm. A later correction can stop a touch without changing the original assignment. Predefine how multiple qualifying signals select a primary one; retain the others as context. Keep missing tags, known absence of a trigger and a deliberately assigned control distinct. To test the effect of *mentioning* a signal, assign eligible accounts with that same verified signal to a signal-led or neutral first touch. Comparing triggered and untriggered companies alone cannot isolate the message effect.
+
+Agree what makes a held meeting qualified and who records that decision. Capture the meeting ID and recorded disposition with its date. Track booked, held, qualified-held and awaiting qualification separately. Choose a follow-up window long enough for meetings to occur. A missing seller assessment is still pending.
+
 For a first pilot with one available message, the decision may be “Can our rep handle replies from this audience?” Keep one cohort, record how many eligible accounts enter, how many are reached, how many reply and whether replies receive timely attention. Agree on what would warrant a second batch, a revision or a pause. A single cohort can answer the operational question but cannot tell the team whether different wording would perform better.
 
 Return a one-page test brief with the selected question and its basis, a rep sequence with exits, the measurement definition and the decision at readout. Include the treatment differences for a comparison, or the cohort and operating limits for a pilot. Include a counts example if the team might disagree about attribution. Deliver the plan as a draft.

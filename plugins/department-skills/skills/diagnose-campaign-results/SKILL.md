@@ -15,6 +15,10 @@ Start with the export, pasted dashboard or figures the user has. Record what eac
 
 [Practice with duplicate replies, an immature cohort and a direct booking](examples/practice.md).
 
+When assignment includes account signals, break out each primary signal type and arm using the tags frozen before outreach. Join by account and assignment IDs, keeping recipient, meeting and signal IDs for traceability. Show unknown tags separately and use the recorded no-signal category only when confirmed. Avoid counting the same account or meeting in several signal totals.
+
+For each mature cohort show assigned and reached accounts, distinct delivered people and positive responders, then linked booked, held and qualified-held meetings. Report distinct accounts with a qualified-held meeting per assigned account when evaluating account outcomes. Count a meeting once even if two contacts attended. Record qualification only from an actual held meeting and the owner's agreed criteria. Show pending assessments and unavailable fields explicitly. If asked for contacts per positive reply, divide unique delivered people by unique positive responders; mark zero responders as undefined. Label comparisons of unmatched signal cohorts descriptive.
+
 ## Try it on your work
 
 Campaign counts or an event export. Include dates and recipient or account IDs when available.

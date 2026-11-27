@@ -37,3 +37,19 @@ The A bounce is from an attempt old enough to assess. Omit p6 from the mature co
 | Unique delivered people, responders and attributable bookings | Unknown | Unknown |
 
 Hold the scaling decision. The 50-message difference measures send volume. Ask campaign operations for message ID, recipient ID, variant, sent time and final delivery status. Check that each attempted message has one final outcome, then calculate delivered messages divided by attempted messages for each variant. To judge meetings, also obtain campaign-linked booking IDs and timestamps.
+
+## Read a campaign by signal
+
+This separate fictional pilot observes all activity through the end of the agreed follow-up window. Each account has one assignment. Bookings and qualifications are linked to that assignment. The team qualifies a held meeting when the buyer confirms a recurring process, the owner and a specific result to improve.
+
+| Account / primary signal at assignment | Delivered recipients | Positive responders | CRM booking and disposition |
+| --- | --- | --- | --- |
+| A1 / branch opening | P1, P2 | P1, P2 | M1 held with both people; all three criteria recorded |
+| A2 / branch opening | P3 | none | M2 booked directly; buyer did not attend |
+| A3 / branch opening | none; P4 bounced | none | none |
+| A4 / relocation | P5 | P5 | M3 held; owner has not recorded qualification |
+| A5 / missing tag | P6 | none | none |
+
+**Request.** Which signals have generated qualified calls? Show account reach, contacts per positive responder, and the meeting evidence behind the answer.
+
+**Check.** For branch openings, two of three assigned accounts were reached. Three people received the draft and two responded positively, or 1.5 delivered contacts per positive responder. Two meetings were booked, one was held and one was qualified: one qualified account out of three assigned. M1 counts once. For relocation, one of one accounts was reached. One delivered contact replied, and M3 remains pending after the meeting. For the missing tag, one of one accounts was reached, and no positive response makes contacts per positive responder undefined. Preserve the unknown category. The groups observed here cannot establish that mentioning a branch opening caused a qualified call.

@@ -2,7 +2,7 @@
 name: cold-email
 description: "When the user wants to write or fix cold outreach: a first email, a follow-up sequence, subject lines, or a sequence that is not getting replies. Covers one verifiable reason to write, one ask, stop conditions, and deliverability basics. For LinkedIn messages, see social. For qualifying the list first, see prospecting. For replies that arrive, see sales-enablement."
 metadata:
-  version: 0.1.0
+  version: 0.1.1
 ---
 
 # Cold email
@@ -39,7 +39,7 @@ Read `.agents/close-context.md` or `.agents/product-marketing.md`. Use the quali
 
 ## How to do the job
 
-1. **Find the reason before the words.** A trigger: a job posting that implies a project, a product change, a public commitment, a competitor's outage, a new market. If there is no trigger, the email is a newsletter.
+1. **Find the reason before the words.** Use a dated change at the account or a documented responsibility connected to a useful offer. When a brief is supplied, keep its account ID, signal ID, source, check date and current status in the rep's notes. A job posting can establish that someone is hiring. The project and its urgency need their own evidence. Hold an expired or contradicted angle and flag any existing draft that uses it.
 2. **Write the first line about them, specifically.** One sentence, verifiable, no flattery. "You opened a Denver warehouse in March and are hiring two operations managers" beats "love what you're building".
 3. **Connect to a problem in their words.** One sentence. Not your category, not your mechanism. The problem as their peer would describe it.
 4. **One ask, sized to the relationship.** A question is cheaper than a meeting. "Is this on your list this quarter?" gets answers. "Do you have 30 minutes?" gets silence.
@@ -51,7 +51,7 @@ Return the sequence as a draft. Sending or scheduling requires the user’s expl
 
 ## Output format
 
-**Why this person, now:** one line naming the trigger and its source.
+**Reason for this draft** — one line connecting the event or responsibility to this person, with its source in the review notes.
 
 **Email 1** — subject options, body, one ask.
 
